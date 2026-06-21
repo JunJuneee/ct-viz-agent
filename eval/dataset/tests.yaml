@@ -1,0 +1,314 @@
+# Test dataset for the interpret prompt. Each case = a natural-language question
+# (+ optional caller hints) and assertions on the resulting QueryPlan.
+#
+# `output` in javascript assertions is the QueryPlan JSON string. Helper idiom:
+#   const p = JSON.parse(output);
+#
+# Categories: chart-type selection · ranking rules · scope gating
+#             title reframing · filter extraction · caller-hint override
+
+# ---------------------------------------------------------------------------
+# 1. bar_chart — neutral distribution by phase (NO sort/topN)
+# ---------------------------------------------------------------------------
+- description: "distribution by phase → bar_chart, groupBy phase, no ranking"
+  vars:
+    query: "Show the distribution of breast cancer trials by phase"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).status === 'ok'
+    - type: javascript
+      value: JSON.parse(output).visualizationType === 'bar_chart'
+    - type: javascript
+      value: JSON.parse(output).groupBy === 'phase'
+    - type: javascript
+      value: JSON.parse(output).sort === undefined && JSON.parse(output).topN === undefined
+    - type: javascript
+      value: /cancer/i.test(JSON.parse(output).filters.condition || '')
+
+# ---------------------------------------------------------------------------
+# 2. ranking with explicit number → sort=desc, topN=5
+# ---------------------------------------------------------------------------
+- description: "top 5 sponsors → bar_chart, sort desc, topN 5"
+  vars:
+    query: "What are the top 5 sponsors by number of diabetes trials?"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).visualizationType === 'bar_chart'
+    - type: javascript
+      value: JSON.parse(output).groupBy === 'sponsor'
+    - type: javascript
+      value: JSON.parse(output).sort === 'desc'
+    - type: javascript
+      value: JSON.parse(output).topN === 5
+    - type: javascript
+      value: /diabetes/i.test(JSON.parse(output).filters.condition || '')
+
+# ---------------------------------------------------------------------------
+# 3. ranking implied, no number → sort=desc, topN=10 (prompt default)
+# ---------------------------------------------------------------------------
+- description: "most countries (no number) → sort desc, topN 10 default"
+  vars:
+    query: "Which countries have the most COVID-19 trials?"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).visualizationType === 'bar_chart'
+    - type: javascript
+      value: JSON.parse(output).groupBy === 'country'
+    - type: javascript
+      value: JSON.parse(output).sort === 'desc'
+    - type: javascript
+      value: JSON.parse(output).topN === 10
+
+# ---------------------------------------------------------------------------
+# 4. ranking ascending → sort=asc
+# ---------------------------------------------------------------------------
+- description: "fewest → sort asc"
+  vars:
+    query: "Which conditions have the fewest Pfizer-sponsored trials?"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).visualizationType === 'bar_chart'
+    - type: javascript
+      value: JSON.parse(output).sort === 'asc'
+    - type: javascript
+      value: /pfizer/i.test(JSON.parse(output).filters.sponsor || '')
+
+# ---------------------------------------------------------------------------
+# 5. phase ranking is FORBIDDEN — even "most" must not set sort for groupBy=phase
+# ---------------------------------------------------------------------------
+- description: "groupBy phase never gets sort/topN"
+  vars:
+    query: "Which phase has the most melanoma trials?"
+  assert:
+    # Model may group by phase (then no sort) OR pick another framing; if phase,
+    # sort/topN must be unset.
+    - type: javascript
+      value: |
+        const p = JSON.parse(output);
+        return p.groupBy === 'phase' ? (p.sort === undefined && p.topN === undefined) : true;
+
+# ---------------------------------------------------------------------------
+# 6. time_series — trend over time
+# ---------------------------------------------------------------------------
+- description: "over time → time_series, groupBy year, no sort"
+  vars:
+    query: "How has the number of Alzheimer's disease trials changed over time?"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).visualizationType === 'time_series'
+    - type: javascript
+      value: JSON.parse(output).groupBy === 'year'
+    - type: javascript
+      value: JSON.parse(output).sort === undefined && JSON.parse(output).topN === undefined
+
+# ---------------------------------------------------------------------------
+# 7. time_series + since YEAR → startYearMin
+# ---------------------------------------------------------------------------
+- description: "per year since 2015 → time_series + startYearMin 2015"
+  vars:
+    query: "Number of vaccine trials per year since 2015"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).visualizationType === 'time_series'
+    - type: javascript
+      value: JSON.parse(output).filters.startYearMin === 2015
+
+# ---------------------------------------------------------------------------
+# 8. comparison (drugs) → grouped_bar_chart + comparison.values
+# ---------------------------------------------------------------------------
+- description: "compare two drugs → grouped_bar_chart, comparison intervention"
+  vars:
+    query: "Compare Keytruda vs Opdivo trials by phase"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).visualizationType === 'grouped_bar_chart'
+    - type: javascript
+      value: JSON.parse(output).comparison && JSON.parse(output).comparison.dimension === 'intervention'
+    - type: javascript
+      value: |
+        const c = JSON.parse(output).comparison;
+        const v = ((c && c.values) || []).map(x => String(x).toLowerCase());
+        return v.length >= 2 && ['keytruda','opdivo'].every(d => v.some(x => x.includes(d)));
+
+# ---------------------------------------------------------------------------
+# 9. comparison (conditions)
+# ---------------------------------------------------------------------------
+- description: "compare two conditions → grouped_bar_chart, comparison condition"
+  vars:
+    query: "Compare the number of breast cancer and lung cancer trials"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).visualizationType === 'grouped_bar_chart'
+    - type: javascript
+      value: JSON.parse(output).comparison && JSON.parse(output).comparison.dimension === 'condition'
+
+# ---------------------------------------------------------------------------
+# 10. histogram — numeric distribution
+# ---------------------------------------------------------------------------
+- description: "enrollment distribution → histogram on enrollment"
+  vars:
+    query: "What is the distribution of enrollment sizes for obesity trials?"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).visualizationType === 'histogram'
+    - type: javascript
+      value: JSON.parse(output).histogram && JSON.parse(output).histogram.field === 'enrollment'
+
+# ---------------------------------------------------------------------------
+# 11. scatter_plot — relate two numeric fields
+# ---------------------------------------------------------------------------
+- description: "relate enrollment and start year → scatter_plot"
+  vars:
+    query: "Is there a relationship between enrollment size and start year for COVID-19 trials?"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).visualizationType === 'scatter_plot'
+    - type: javascript
+      value: |
+        const s = JSON.parse(output).scatter;
+        return !!s && ['enrollment','start_year'].includes(s.x) && ['enrollment','start_year'].includes(s.y) && s.x !== s.y;
+
+# ---------------------------------------------------------------------------
+# 12. network_graph — co-occurrence
+# ---------------------------------------------------------------------------
+- description: "co-occurrence network → network_graph with source/target"
+  vars:
+    query: "Show the co-occurrence network between sponsors and the drugs they study"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).visualizationType === 'network_graph'
+    - type: javascript
+      value: |
+        const n = JSON.parse(output).network;
+        const ok = ['sponsor','drug','condition'];
+        return !!n && ok.includes(n.source) && ok.includes(n.target);
+
+# ---------------------------------------------------------------------------
+# 13. unsupported — patient counts (registry counts trials, not patients)
+# ---------------------------------------------------------------------------
+- description: "patient counts by country → unsupported"
+  vars:
+    query: "How many COVID-19 patients are there in each country?"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).status === 'unsupported'
+
+# ---------------------------------------------------------------------------
+# 14. unsupported — drug prices
+# ---------------------------------------------------------------------------
+- description: "drug price → unsupported"
+  vars:
+    query: "What is the price of Keytruda?"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).status === 'unsupported'
+
+# ---------------------------------------------------------------------------
+# 15. unsupported — medical advice
+# ---------------------------------------------------------------------------
+- description: "medical advice → unsupported"
+  vars:
+    query: "Is it safe to take metformin during pregnancy?"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).status === 'unsupported'
+
+# ---------------------------------------------------------------------------
+# 16. needs_clarification — too vague
+# ---------------------------------------------------------------------------
+- description: "'show me trials' → needs_clarification"
+  vars:
+    query: "Show me trials"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).status === 'needs_clarification'
+    - type: javascript
+      value: typeof JSON.parse(output).notes === 'string' && JSON.parse(output).notes.length > 0
+
+# ---------------------------------------------------------------------------
+# 17. needs_clarification — broad topic, no dimension
+# ---------------------------------------------------------------------------
+- description: "'tell me about cancer' → needs_clarification"
+  vars:
+    query: "Tell me about cancer"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).status === 'needs_clarification'
+
+# ---------------------------------------------------------------------------
+# 18. title reframing — "patients" question is answerable as TRIALS, title must
+#     not claim to measure patients (prompt's worked example)
+# ---------------------------------------------------------------------------
+- description: "most COVID patients by country → unsupported (registry counts trials, not patients)"
+  vars:
+    query: "Which countries have the most COVID-19 patients?"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).status === 'unsupported'
+    - type: javascript
+      value: typeof JSON.parse(output).notes === 'string' && JSON.parse(output).notes.length > 0
+
+# ---------------------------------------------------------------------------
+# 19. neutral breakdown by phase (no ranking words) → no sort
+# ---------------------------------------------------------------------------
+- description: "breakdown by phase → bar_chart, no sort"
+  vars:
+    query: "Give me a breakdown of how melanoma trials are distributed across phases"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).visualizationType === 'bar_chart'
+    - type: javascript
+      value: JSON.parse(output).groupBy === 'phase'
+    - type: javascript
+      value: JSON.parse(output).sort === undefined && JSON.parse(output).topN === undefined
+
+# ---------------------------------------------------------------------------
+# 20. status filter extraction (RECRUITING) + groupBy country
+# ---------------------------------------------------------------------------
+- description: "recruiting trials by country → status filter + groupBy country"
+  vars:
+    query: "How many currently recruiting diabetes trials are there in each country?"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).groupBy === 'country'
+    - type: javascript
+      value: |
+        const st = JSON.parse(output).filters.status || [];
+        return st.map(s => String(s).toUpperCase()).some(s => s.includes('RECRUIT'));
+
+# ---------------------------------------------------------------------------
+# 21. phase filter extraction
+# ---------------------------------------------------------------------------
+- description: "Phase 3 cancer trials by country → phase filter PHASE3"
+  vars:
+    query: "Show Phase 3 cancer trials grouped by country"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).groupBy === 'country'
+    - type: javascript
+      value: (JSON.parse(output).filters.phase || []).includes('PHASE3')
+
+# ---------------------------------------------------------------------------
+# 22. sponsor_class dimension
+# ---------------------------------------------------------------------------
+- description: "industry vs academic → groupBy sponsor_class"
+  vars:
+    query: "Break down HIV trials by sponsor type (industry vs academic vs government)"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).visualizationType === 'bar_chart'
+    - type: javascript
+      value: JSON.parse(output).groupBy === 'sponsor_class'
+
+# ---------------------------------------------------------------------------
+# 23. caller hint override — vague query, but structured hint pins the condition
+# ---------------------------------------------------------------------------
+- description: "caller hint: condition=Asthma is treated as authoritative"
+  vars:
+    query: "How have the trials changed over time?"
+    condition: "Asthma"
+  assert:
+    - type: javascript
+      value: JSON.parse(output).visualizationType === 'time_series'
+    - type: javascript
+      value: /asthma/i.test(JSON.parse(output).filters.condition || '')

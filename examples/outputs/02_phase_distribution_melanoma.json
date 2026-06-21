@@ -1,0 +1,1759 @@
+{
+  "request": {
+    "query": "How are melanoma trials distributed across phases?",
+    "condition": "melanoma"
+  },
+  "response": {
+    "visualization": {
+      "type": "bar_chart",
+      "title": "Distribution of Melanoma Trials Across Phases",
+      "encoding": {
+        "x": {
+          "field": "category",
+          "type": "ordinal",
+          "label": "Phase"
+        },
+        "y": {
+          "field": "trial_count",
+          "type": "quantitative",
+          "label": "Trial Count"
+        }
+      },
+      "data": [
+        {
+          "category": "Early Phase 1",
+          "trial_count": 64,
+          "citations": [
+            {
+              "nct_id": "NCT00470379",
+              "excerpt": "Early Phase 1 — \"Vaccine Therapy and Resiquimod in Treating Patients With Stage II, Stage III, or Stage IV Melanoma That Has Been Completely Removed by Surgery\"",
+              "url": "https://clinicaltrials.gov/study/NCT00470379"
+            },
+            {
+              "nct_id": "NCT06216938",
+              "excerpt": "Early Phase 1 — \"RP1 in Primary Melanoma to Reduce the Risk of Sentinel Lymph Node Metastasis\"",
+              "url": "https://clinicaltrials.gov/study/NCT06216938"
+            },
+            {
+              "nct_id": "NCT04891718",
+              "excerpt": "Early Phase 1 — \"CIVO Intratumoural Microdosing of Anti-Cancer Therapies in Australia\"",
+              "url": "https://clinicaltrials.gov/study/NCT04891718"
+            }
+          ]
+        },
+        {
+          "category": "Not Applicable",
+          "trial_count": 406,
+          "citations": [
+            {
+              "nct_id": "NCT03512457",
+              "excerpt": "Not Applicable — \"Skin Self-Examination Education During Mammography\"",
+              "url": "https://clinicaltrials.gov/study/NCT03512457"
+            },
+            {
+              "nct_id": "NCT03246412",
+              "excerpt": "Not Applicable — \"Nevus Doctor Clinical Decision Support for GPs\"",
+              "url": "https://clinicaltrials.gov/study/NCT03246412"
+            },
+            {
+              "nct_id": "NCT04941430",
+              "excerpt": "Not Applicable — \"7T MRI Scan for the Early Detection of Melanoma Brain Metastases\"",
+              "url": "https://clinicaltrials.gov/study/NCT04941430"
+            }
+          ]
+        },
+        {
+          "category": "Not Specified",
+          "trial_count": 627,
+          "citations": [
+            {
+              "nct_id": "NCT04485442",
+              "excerpt": "Not Specified — \"Patient Reported Outcome Measures After Treatment of Skin Cancers on the Face\"",
+              "url": "https://clinicaltrials.gov/study/NCT04485442"
+            },
+            {
+              "nct_id": "NCT01018004",
+              "excerpt": "Not Specified — \"Comparing Follow-Up Schedules in Patients With Newly Diagnosed Stage IB or Stage II Melanoma\"",
+              "url": "https://clinicaltrials.gov/study/NCT01018004"
+            },
+            {
+              "nct_id": "NCT01593579",
+              "excerpt": "Not Specified — \"Autonomic Phenotype Before and After Akt Inhibition\"",
+              "url": "https://clinicaltrials.gov/study/NCT01593579"
+            }
+          ]
+        },
+        {
+          "category": "Phase 1",
+          "trial_count": 1336,
+          "citations": [
+            {
+              "nct_id": "NCT01625351",
+              "excerpt": "Phase 1 — \"A Study of CD45RA+ Depleted Haploidentical Stem Cell Transplantation in Children With Relapsed or Refractory Solid Tumors and Lymphomas\"",
+              "url": "https://clinicaltrials.gov/study/NCT01625351"
+            },
+            {
+              "nct_id": "NCT00720031",
+              "excerpt": "Phase 1 — \"Treatment of Metastatic Melanoma With Autologous Melan-A/MART-1 Specific CTL Clones\"",
+              "url": "https://clinicaltrials.gov/study/NCT00720031"
+            },
+            {
+              "nct_id": "NCT05903937",
+              "excerpt": "Phase 1 — \"Locoregional Administration of TIL and Lymphodepletion in Patients With Melanoma and Liver Metastases\"",
+              "url": "https://clinicaltrials.gov/study/NCT05903937"
+            }
+          ]
+        },
+        {
+          "category": "Phase 2",
+          "trial_count": 1523,
+          "citations": [
+            {
+              "nct_id": "NCT00509288",
+              "excerpt": "Phase 2 — \"Phase II Study of Metastatic Melanoma With Lymphodepleting Conditioning and Infusion of Anti-MART-1 F5 TCR-Gene-Engineered Lymphocytes\"",
+              "url": "https://clinicaltrials.gov/study/NCT00509288"
+            },
+            {
+              "nct_id": "NCT00720031",
+              "excerpt": "Phase 2 — \"Treatment of Metastatic Melanoma With Autologous Melan-A/MART-1 Specific CTL Clones\"",
+              "url": "https://clinicaltrials.gov/study/NCT00720031"
+            },
+            {
+              "nct_id": "NCT00450372",
+              "excerpt": "Phase 2 — \"Pegylated Arginine Deiminase in Treating Patients With Metastatic Melanoma That Cannot Be Removed by Surgery\"",
+              "url": "https://clinicaltrials.gov/study/NCT00450372"
+            }
+          ]
+        },
+        {
+          "category": "Phase 3",
+          "trial_count": 219,
+          "citations": [
+            {
+              "nct_id": "NCT05155254",
+              "excerpt": "Phase 3 — \"IO102-IO103 in Combination With Pembrolizumab Versus Pembrolizumab Alone in Advanced Melanoma (IOB-013 / KN-D18)\"",
+              "url": "https://clinicaltrials.gov/study/NCT05155254"
+            },
+            {
+              "nct_id": "NCT06320353",
+              "excerpt": "Phase 3 — \"Study сomparing the Efficacy and Safety of RPH-075 and Keytruda® in Patients With Unresectable or Metastatic Skin Melanoma\"",
+              "url": "https://clinicaltrials.gov/study/NCT06320353"
+            },
+            {
+              "nct_id": "NCT00324155",
+              "excerpt": "Phase 3 — \"Dacarbazine and Ipilimumab vs. Dacarbazine With Placebo in Untreated Unresectable Stage III or IV Melanoma\"",
+              "url": "https://clinicaltrials.gov/study/NCT00324155"
+            }
+          ]
+        },
+        {
+          "category": "Phase 4",
+          "trial_count": 37,
+          "citations": [
+            {
+              "nct_id": "NCT07459543",
+              "excerpt": "Phase 4 — \"A Study To Assess the Safety, and Tolerability of Nivolumab + Relatlimab Fixed-Dose Combination (FDC) In Untreated, Unresectable or Metastatic Melanoma Participants In India\"",
+              "url": "https://clinicaltrials.gov/study/NCT07459543"
+            },
+            {
+              "nct_id": "NCT04261179",
+              "excerpt": "Phase 4 — \"Study Comparing Lymphoseek® vs. Albumin Nanocolloid in Head and Neck, Melanoma and Breast Cancer\"",
+              "url": "https://clinicaltrials.gov/study/NCT04261179"
+            },
+            {
+              "nct_id": "NCT01856023",
+              "excerpt": "Phase 4 — \"HD IL-2 + Ipilimumab in Patients With Metastatic Melanoma\"",
+              "url": "https://clinicaltrials.gov/study/NCT01856023"
+            }
+          ]
+        }
+      ]
+    },
+    "meta": {
+      "source": "clinicaltrials.gov",
+      "apiVersion": "v2",
+      "filters": {
+        "condition": "melanoma"
+      },
+      "totalMatchingTrials": 3716,
+      "analyzedTrials": 3716,
+      "truncated": false,
+      "groupBy": "phase",
+      "units": "trial appearances (a trial may span multiple categories)",
+      "sort": "phase order",
+      "confidence": 0.9,
+      "status": "ok",
+      "interpreter": "llm",
+      "apiRequests": [
+        "https://clinicaltrials.gov/api/v2/studies?query.cond=melanoma&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true",
+        "https://clinicaltrials.gov/api/v2/studies?query.cond=melanoma&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lp0VoC5tarumpOQJJxuZfSt3PUSkA",
+        "https://clinicaltrials.gov/api/v2/studies?query.cond=melanoma&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lp0VoC5tarumpOQJJxtZPSj1PcekA",
+        "https://clinicaltrials.gov/api/v2/studies?query.cond=melanoma&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lp0VoC5tarumpOQJJxsZ_Cn2vUTkA"
+      ]
+    },
+    "references": [
+      {
+        "nct_id": "NCT00470379",
+        "title": "Vaccine Therapy and Resiquimod in Treating Patients With Stage II, Stage III, or Stage IV Melanoma That Has Been Completely Removed by Surgery",
+        "officialTitle": "Transcutaneous (Topical) Peptide Immunization With NY-ESO-1b (SLLMWITQC) Peptide Using Resiquimod as an Immune Adjuvant: A Pilot Study",
+        "sponsor": "Mayo Clinic",
+        "investigator": null,
+        "startDate": "2006-04",
+        "url": "https://clinicaltrials.gov/study/NCT00470379"
+      },
+      {
+        "nct_id": "NCT06216938",
+        "title": "RP1 in Primary Melanoma to Reduce the Risk of Sentinel Lymph Node Metastasis",
+        "officialTitle": "Phase I Pilot Study of RP1 in Primary Melanoma to Reduce the Risk of Sentinel Lymph Node Metastasis",
+        "sponsor": "Yana Najjar",
+        "investigator": "Yana Najjar",
+        "startDate": "2024-03-07",
+        "url": "https://clinicaltrials.gov/study/NCT06216938"
+      },
+      {
+        "nct_id": "NCT04891718",
+        "title": "CIVO Intratumoural Microdosing of Anti-Cancer Therapies in Australia",
+        "officialTitle": "A Phase 0 Master Protocol Using the CIVO® Platform to Evaluate Intratumoural Microdoses of Anti-Cancer Therapies in Patients With Solid Tumours",
+        "sponsor": "Presage Biosciences",
+        "investigator": null,
+        "startDate": "2021-09-15",
+        "url": "https://clinicaltrials.gov/study/NCT04891718"
+      },
+      {
+        "nct_id": "NCT03512457",
+        "title": "Skin Self-Examination Education During Mammography",
+        "officialTitle": "Effect of Skin Self-examination Education Delivered During the Mammography Experience.",
+        "sponsor": "Northwestern University",
+        "investigator": "June Robinson",
+        "startDate": "2018-05-30",
+        "url": "https://clinicaltrials.gov/study/NCT03512457"
+      },
+      {
+        "nct_id": "NCT03246412",
+        "title": "Nevus Doctor Clinical Decision Support for GPs",
+        "officialTitle": "Nevus or Melanoma? Nevus Doctor - Computer Aided Clinical Decision Support in Primary Health Care",
+        "sponsor": "University Hospital of North Norway",
+        "investigator": null,
+        "startDate": "2018-01-17",
+        "url": "https://clinicaltrials.gov/study/NCT03246412"
+      },
+      {
+        "nct_id": "NCT04941430",
+        "title": "7T MRI Scan for the Early Detection of Melanoma Brain Metastases",
+        "officialTitle": "Pilot Study of 7T MRI for Early Diagnosis of Melanoma Brain Metastases",
+        "sponsor": "University of Southern California",
+        "investigator": null,
+        "startDate": "2021-06-25",
+        "url": "https://clinicaltrials.gov/study/NCT04941430"
+      },
+      {
+        "nct_id": "NCT04485442",
+        "title": "Patient Reported Outcome Measures After Treatment of Skin Cancers on the Face",
+        "officialTitle": "Patient Reported Outcome Measures After Treatment of Skin Cancers on the Face - a Pilot Study",
+        "sponsor": "University Hospital, Basel, Switzerland",
+        "investigator": null,
+        "startDate": "2020-11-09",
+        "url": "https://clinicaltrials.gov/study/NCT04485442"
+      },
+      {
+        "nct_id": "NCT01018004",
+        "title": "Comparing Follow-Up Schedules in Patients With Newly Diagnosed Stage IB or Stage II Melanoma",
+        "officialTitle": "Prospective Randomized Trial for the Evaluation of a Theoretical Follow-Up Schedule in Cutaneous Melanoma Patients, the MELFO-Study.",
+        "sponsor": "University Medical Center Groningen",
+        "investigator": null,
+        "startDate": "2006-03",
+        "url": "https://clinicaltrials.gov/study/NCT01018004"
+      },
+      {
+        "nct_id": "NCT01593579",
+        "title": "Autonomic Phenotype Before and After Akt Inhibition",
+        "officialTitle": "Autonomic Phenotype Before and After Akt Inhibition: Akt Therapy for Melanoma Sub-study",
+        "sponsor": "Vanderbilt University",
+        "investigator": "Satish R. Raj",
+        "startDate": "2012-05",
+        "url": "https://clinicaltrials.gov/study/NCT01593579"
+      },
+      {
+        "nct_id": "NCT01625351",
+        "title": "A Study of CD45RA+ Depleted Haploidentical Stem Cell Transplantation in Children With Relapsed or Refractory Solid Tumors and Lymphomas",
+        "officialTitle": "A Phase I Study of CD45RA+ Depleted Haploidentical Stem Cell Transplantation in Children With Relapsed or Refractory Solid Tumors and Lymphomas",
+        "sponsor": "St. Jude Children's Research Hospital",
+        "investigator": null,
+        "startDate": "2012-08-20",
+        "url": "https://clinicaltrials.gov/study/NCT01625351"
+      },
+      {
+        "nct_id": "NCT00720031",
+        "title": "Treatment of Metastatic Melanoma With Autologous Melan-A/MART-1 Specific CTL Clones",
+        "officialTitle": "Treatment of Metastatic Melanoma With Autologous Melan-A/MART-1 Specific CTL Clones",
+        "sponsor": "Nantes University Hospital",
+        "investigator": null,
+        "startDate": "2000-11",
+        "url": "https://clinicaltrials.gov/study/NCT00720031"
+      },
+      {
+        "nct_id": "NCT05903937",
+        "title": "Locoregional Administration of TIL and Lymphodepletion in Patients With Melanoma and Liver Metastases",
+        "officialTitle": "Hepatic Arterial Infusion of Autologous Tumor Infiltrating Lymphocytes Preconditioned With Percutaneous Hepatic Perfusion With Melphalan in Patients With Melanoma and Liver Metastases",
+        "sponsor": "Vastra Gotaland Region",
+        "investigator": null,
+        "startDate": "2023-12-31",
+        "url": "https://clinicaltrials.gov/study/NCT05903937"
+      },
+      {
+        "nct_id": "NCT00509288",
+        "title": "Phase II Study of Metastatic Melanoma With Lymphodepleting Conditioning and Infusion of Anti-MART-1 F5 TCR-Gene-Engineered Lymphocytes",
+        "officialTitle": "Phase II Study of Metastatic Melanoma Using Lymphodepleting Conditioning Followed by Infusion of Anti-MART-1 F5 TCR-Gene Engineered Lymphocytes",
+        "sponsor": "National Cancer Institute (NCI)",
+        "investigator": null,
+        "startDate": "2007-06",
+        "url": "https://clinicaltrials.gov/study/NCT00509288"
+      },
+      {
+        "nct_id": "NCT00450372",
+        "title": "Pegylated Arginine Deiminase in Treating Patients With Metastatic Melanoma That Cannot Be Removed by Surgery",
+        "officialTitle": "Clinical Protocol for Phase II Testing of ADI-PEG 20 in Patients With Metastatic Melanoma",
+        "sponsor": "University of Miami",
+        "investigator": null,
+        "startDate": "2004-06",
+        "url": "https://clinicaltrials.gov/study/NCT00450372"
+      },
+      {
+        "nct_id": "NCT05155254",
+        "title": "IO102-IO103 in Combination With Pembrolizumab Versus Pembrolizumab Alone in Advanced Melanoma (IOB-013 / KN-D18)",
+        "officialTitle": "An Open-label, Randomized, Phase 3 Clinical Trial of IO102-IO103 in Combination With Pembrolizumab Versus Pembrolizumab Alone in Patients With Previously Untreated, Unresectable, or Metastatic (Advanced) Melanoma (IO102-IO103-013 / MK3475-D18)",
+        "sponsor": "IO Biotech",
+        "investigator": null,
+        "startDate": "2022-05-17",
+        "url": "https://clinicaltrials.gov/study/NCT05155254"
+      },
+      {
+        "nct_id": "NCT06320353",
+        "title": "Study сomparing the Efficacy and Safety of RPH-075 and Keytruda® in Patients With Unresectable or Metastatic Skin Melanoma",
+        "officialTitle": "International, Multicenter, Double-blind, Randomized, Comparative Study of Efficacy and Safety of RPH-075 and Keytruda® in Patients With Unresectable or Metastatic Skin Melanoma",
+        "sponsor": "R-Pharm",
+        "investigator": null,
+        "startDate": "2023-09-27",
+        "url": "https://clinicaltrials.gov/study/NCT06320353"
+      },
+      {
+        "nct_id": "NCT00324155",
+        "title": "Dacarbazine and Ipilimumab vs. Dacarbazine With Placebo in Untreated Unresectable Stage III or IV Melanoma",
+        "officialTitle": "A Multi-center, Randomized, Double-Blind, Two-Arm, Phase III Study in Patients With Untreated Stage III (Unresectable) or IV Melanoma Receiving Dacarbazine Plus 10 mg/kg Ipilimumab (MDX-010) vs. Dacarbazine With Placebo",
+        "sponsor": "Bristol-Myers Squibb",
+        "investigator": null,
+        "startDate": "2006-08",
+        "url": "https://clinicaltrials.gov/study/NCT00324155"
+      },
+      {
+        "nct_id": "NCT07459543",
+        "title": "A Study To Assess the Safety, and Tolerability of Nivolumab + Relatlimab Fixed-Dose Combination (FDC) In Untreated, Unresectable or Metastatic Melanoma Participants In India",
+        "officialTitle": "A Phase 4, Single Arm, Open Label Study to Evaluate Safety, Tolerability, and Efficacy of Nivolumab + Relatlimab Fixed-Dose Combination (FDC) in Participants With Previously Untreated, Unresectable or Metastatic Melanoma in India.",
+        "sponsor": "Bristol-Myers Squibb",
+        "investigator": null,
+        "startDate": "2026-11-15",
+        "url": "https://clinicaltrials.gov/study/NCT07459543"
+      },
+      {
+        "nct_id": "NCT04261179",
+        "title": "Study Comparing Lymphoseek® vs. Albumin Nanocolloid in Head and Neck, Melanoma and Breast Cancer",
+        "officialTitle": "An Exploratory Prospective, Open-label, Unicentric Study With Cross-over Design, Comparing Lymphoseek® vs. Albumin Nanocolloid for Image- Guided Sentinel Lymph Node Mapping in Head and Neck, Melanoma and Breast Cancer.",
+        "sponsor": "Anna Cruceta",
+        "investigator": "Anna Cruceta",
+        "startDate": "2020-03",
+        "url": "https://clinicaltrials.gov/study/NCT04261179"
+      },
+      {
+        "nct_id": "NCT01856023",
+        "title": "HD IL-2 + Ipilimumab in Patients With Metastatic Melanoma",
+        "officialTitle": "Open-Label, Randomized, Multi-Center Study Comparing the Sequence of High Dose Aldesleukin (Interleukin-2) and Ipilimumab (Yervoy) in Patients With Metastatic Melanoma",
+        "sponsor": "Clinigen, Inc.",
+        "investigator": null,
+        "startDate": "2013-05",
+        "url": "https://clinicaltrials.gov/study/NCT01856023"
+      }
+    ],
+    "trace": {
+      "queryPlan": {
+        "status": "ok",
+        "visualizationType": "bar_chart",
+        "filters": {
+          "condition": "melanoma"
+        },
+        "groupBy": "phase",
+        "title": "Distribution of Melanoma Trials Across Phases",
+        "confidence": 0.9
+      },
+      "interpreter": "llm",
+      "apiRequests": [
+        "https://clinicaltrials.gov/api/v2/studies?query.cond=melanoma&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true",
+        "https://clinicaltrials.gov/api/v2/studies?query.cond=melanoma&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lp0VoC5tarumpOQJJxuZfSt3PUSkA",
+        "https://clinicaltrials.gov/api/v2/studies?query.cond=melanoma&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lp0VoC5tarumpOQJJxtZPSj1PcekA",
+        "https://clinicaltrials.gov/api/v2/studies?query.cond=melanoma&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lp0VoC5tarumpOQJJxsZ_Cn2vUTkA"
+      ],
+      "apiTotalCount": 3716,
+      "apiResponseSample": [
+        {
+          "protocolSection": {
+            "identificationModule": {
+              "nctId": "NCT04485442",
+              "briefTitle": "Patient Reported Outcome Measures After Treatment of Skin Cancers on the Face",
+              "officialTitle": "Patient Reported Outcome Measures After Treatment of Skin Cancers on the Face - a Pilot Study"
+            },
+            "statusModule": {
+              "overallStatus": "UNKNOWN",
+              "startDateStruct": {
+                "date": "2020-11-09"
+              }
+            },
+            "sponsorCollaboratorsModule": {
+              "responsibleParty": {},
+              "leadSponsor": {
+                "name": "University Hospital, Basel, Switzerland",
+                "class": "OTHER"
+              }
+            },
+            "conditionsModule": {
+              "conditions": [
+                "Skin Cancer"
+              ]
+            },
+            "designModule": {
+              "studyType": "OBSERVATIONAL",
+              "enrollmentInfo": {
+                "count": 100
+              }
+            },
+            "armsInterventionsModule": {
+              "interventions": [
+                {
+                  "type": "OTHER",
+                  "name": "data collection by questionnaires",
+                  "description": "psychological well-being in patients evaluated by Patient Reported Outcomes (PRO)"
+                },
+                {
+                  "type": "OTHER",
+                  "name": "data collection (photos of the patients' tumors)",
+                  "description": "photos of the patients' tumors will be taken at baseline and at follow-up after the surgery"
+                }
+              ]
+            },
+            "contactsLocationsModule": {
+              "locations": [
+                {
+                  "facility": "Department of Plastic, Reconstructive and Aesthetic Surgery and Department of Dermatology , University Hospital Basel",
+                  "city": "Basel",
+                  "zip": "4031",
+                  "country": "Switzerland",
+                  "geoPoint": {
+                    "lat": 47.55839,
+                    "lon": 7.57327
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "protocolSection": {
+            "identificationModule": {
+              "nctId": "NCT05155254",
+              "briefTitle": "IO102-IO103 in Combination With Pembrolizumab Versus Pembrolizumab Alone in Advanced Melanoma (IOB-013 / KN-D18)",
+              "officialTitle": "An Open-label, Randomized, Phase 3 Clinical Trial of IO102-IO103 in Combination With Pembrolizumab Versus Pembrolizumab Alone in Patients With Previously Untreated, Unresectable, or Metastatic (Advanced) Melanoma (IO102-IO103-013 / MK3475-D18)"
+            },
+            "statusModule": {
+              "overallStatus": "ACTIVE_NOT_RECRUITING",
+              "startDateStruct": {
+                "date": "2022-05-17"
+              }
+            },
+            "sponsorCollaboratorsModule": {
+              "responsibleParty": {},
+              "leadSponsor": {
+                "name": "IO Biotech",
+                "class": "INDUSTRY"
+              }
+            },
+            "conditionsModule": {
+              "conditions": [
+                "Metastatic Melanoma",
+                "Unresectable Melanoma"
+              ]
+            },
+            "designModule": {
+              "studyType": "INTERVENTIONAL",
+              "phases": [
+                "PHASE3"
+              ],
+              "enrollmentInfo": {
+                "count": 407
+              }
+            },
+            "armsInterventionsModule": {
+              "interventions": [
+                {
+                  "type": "DRUG",
+                  "name": "IO102-IO103",
+                  "description": "IO102-IO103 comprises IDO peptide antigen (IO102) and PD-L1 peptide antigen (IO103) emulsified with adjuvant (Montanide ISA 51 VG) administered subcutaneously",
+                  "armGroupLabels": [
+                    "IO102-IO103 + pembrolizumab"
+                  ]
+                },
+                {
+                  "type": "DRUG",
+                  "name": "Pembrolizumab",
+                  "description": "Pembrolizumab administered intravenously",
+                  "armGroupLabels": [
+                    "IO102-IO103 + pembrolizumab",
+                    "pembrolizumab"
+                  ]
+                }
+              ]
+            },
+            "contactsLocationsModule": {
+              "locations": [
+                {
+                  "facility": "Mid Florida Hematology and Oncology Center",
+                  "city": "Orange City",
+                  "state": "Florida",
+                  "zip": "32763",
+                  "country": "United States",
+                  "geoPoint": {
+                    "lat": 28.94888,
+                    "lon": -81.29867
+                  }
+                },
+                {
+                  "facility": "Orlando Health Cancer Institute",
+                  "city": "Orlando",
+                  "state": "Florida",
+                  "zip": "32806",
+                  "country": "United States",
+                  "geoPoint": {
+                    "lat": 28.53834,
+                    "lon": -81.37924
+                  }
+                },
+                {
+                  "facility": "Roswell Park Cancer Institute",
+                  "city": "Buffalo",
+                  "state": "New York",
+                  "zip": "14221",
+                  "country": "United States",
+                  "geoPoint": {
+                    "lat": 42.88645,
+                    "lon": -78.87837
+                  }
+                },
+                {
+                  "facility": "VCU Massey Cancer Center",
+                  "city": "Richmond",
+                  "state": "Virginia",
+                  "zip": "23219",
+                  "country": "United States",
+                  "geoPoint": {
+                    "lat": 37.55376,
+                    "lon": -77.46026
+                  }
+                },
+                {
+                  "facility": "Border Medical Oncology Research Unit",
+                  "city": "Albury",
+                  "state": "New South Wales",
+                  "zip": "2640",
+                  "country": "Australia",
+                  "geoPoint": {
+                    "lat": -36.07482,
+                    "lon": 146.92401
+                  }
+                },
+                {
+                  "facility": "Westmead Hospital",
+                  "city": "Westmead",
+                  "state": "New South Wales",
+                  "zip": "2145",
+                  "country": "Australia",
+                  "geoPoint": {
+                    "lat": -33.80383,
+                    "lon": 150.98768
+                  }
+                },
+                {
+                  "facility": "Southern Medical Day Care Centre",
+                  "city": "Wollongong",
+                  "state": "New South Wales",
+                  "zip": "2500",
+                  "country": "Australia",
+                  "geoPoint": {
+                    "lat": -34.424,
+                    "lon": 150.89345
+                  }
+                },
+                {
+                  "facility": "Cairns Hospital",
+                  "city": "Cairns",
+                  "state": "Queensland",
+                  "zip": "4870",
+                  "country": "Australia",
+                  "geoPoint": {
+                    "lat": -16.92366,
+                    "lon": 145.76613
+                  }
+                },
+                {
+                  "facility": "Flinders Medical Centre",
+                  "city": "Bedford Park",
+                  "state": "South Australia",
+                  "zip": "5042",
+                  "country": "Australia",
+                  "geoPoint": {
+                    "lat": -35.02204,
+                    "lon": 138.56815
+                  }
+                },
+                {
+                  "facility": "The Queen Elizabeth Hospital",
+                  "city": "Woodville South",
+                  "state": "South Australia",
+                  "zip": "5011",
+                  "country": "Australia",
+                  "geoPoint": {
+                    "lat": -34.88186,
+                    "lon": 138.53477
+                  }
+                },
+                {
+                  "facility": "Sunshine Coast University Hospital",
+                  "city": "Birtinya",
+                  "zip": "4575",
+                  "country": "Australia",
+                  "geoPoint": {
+                    "lat": -26.74322,
+                    "lon": 153.11913
+                  }
+                },
+                {
+                  "facility": "Peter MacCallum Cancer Centre PMCC - East Melbourne",
+                  "city": "Melbourne",
+                  "zip": "3052",
+                  "country": "Australia",
+                  "geoPoint": {
+                    "lat": -37.814,
+                    "lon": 144.96332
+                  }
+                },
+                {
+                  "facility": "Universitair Ziekenhuis Gent UZ Gent",
+                  "city": "Ghent",
+                  "state": "Oost-Vlaanderen",
+                  "zip": "9000",
+                  "country": "Belgium",
+                  "geoPoint": {
+                    "lat": 51.05,
+                    "lon": 3.71667
+                  }
+                },
+                {
+                  "facility": "AZ Nikolaas",
+                  "city": "Sint-Niklaas",
+                  "zip": "9100",
+                  "country": "Belgium",
+                  "geoPoint": {
+                    "lat": 51.16509,
+                    "lon": 4.1437
+                  }
+                },
+                {
+                  "facility": "FNHK Klinika onkologie a radioterapie",
+                  "city": "Hradec Králové",
+                  "zip": "500 05",
+                  "country": "Czechia",
+                  "geoPoint": {
+                    "lat": 50.20923,
+                    "lon": 15.83277
+                  }
+                },
+                {
+                  "facility": "Fakultni Nemocnice Olomouc",
+                  "city": "Olomouc",
+                  "zip": "779 00",
+                  "country": "Czechia",
+                  "geoPoint": {
+                    "lat": 49.59552,
+                    "lon": 17.25175
+                  }
+                },
+                {
+                  "facility": "FN Ostrava",
+                  "city": "Ostrava",
+                  "zip": "708 52",
+                  "country": "Czechia",
+                  "geoPoint": {
+                    "lat": 49.83465,
+                    "lon": 18.28204
+                  }
+                },
+                {
+                  "facility": "FNKV Department of Dermatology",
+                  "city": "Prague",
+                  "zip": "10034",
+                  "country": "Czechia",
+                  "geoPoint": {
+                    "lat": 50.08804,
+                    "lon": 14.42076
+                  }
+                },
+                {
+                  "facility": "Aalborg University Hospital",
+                  "city": "Aalborg",
+                  "zip": "9000",
+                  "country": "Denmark",
+                  "geoPoint": {
+                    "lat": 57.048,
+                    "lon": 9.9187
+                  }
+                },
+                {
+                  "facility": "Aarhus University Hospital",
+                  "city": "Aarhus",
+                  "zip": "8200",
+                  "country": "Denmark",
+                  "geoPoint": {
+                    "lat": 56.15674,
+                    "lon": 10.21076
+                  }
+                },
+                {
+                  "facility": "Herlev og Gentofte Hospital",
+                  "city": "Herlev",
+                  "zip": "2730",
+                  "country": "Denmark",
+                  "geoPoint": {
+                    "lat": 55.72366,
+                    "lon": 12.43998
+                  }
+                },
+                {
+                  "facility": "Odense University Hospital",
+                  "city": "Odense",
+                  "zip": "5000",
+                  "country": "Denmark",
+                  "geoPoint": {
+                    "lat": 55.39594,
+                    "lon": 10.38831
+                  }
+                },
+                {
+                  "facility": "Centre Hospitalier Universitaire de Besançon Jean Minjoz",
+                  "city": "Besançon",
+                  "zip": "25000",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 47.24878,
+                    "lon": 6.01815
+                  }
+                },
+                {
+                  "facility": "Centre Hospitalier Universitaire de Bordeaux Hospital Saint Andre",
+                  "city": "Bordeaux",
+                  "zip": "33075",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 44.84124,
+                    "lon": -0.58046
+                  }
+                },
+                {
+                  "facility": "Hopital Ambroise",
+                  "city": "Boulogne-Billancourt",
+                  "zip": "92100",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 48.83545,
+                    "lon": 2.24128
+                  }
+                },
+                {
+                  "facility": "Centre Georges Francois Leclerc",
+                  "city": "Dijon",
+                  "zip": "21079",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 47.31344,
+                    "lon": 5.01391
+                  }
+                },
+                {
+                  "facility": "Chu Grenoble - Hopital Albert Michallon",
+                  "city": "La Tronche",
+                  "zip": "38700",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 45.20507,
+                    "lon": 5.74629
+                  }
+                },
+                {
+                  "facility": "Centre Hospitalier Universitaire de Lille",
+                  "city": "Lille",
+                  "zip": "59000",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 50.63391,
+                    "lon": 3.05512
+                  }
+                },
+                {
+                  "facility": "Hôpital de La Timone",
+                  "city": "Marseille",
+                  "zip": "13385",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 43.29695,
+                    "lon": 5.38107
+                  }
+                },
+                {
+                  "facility": "CHU de Nice Hpital de lArchet 2",
+                  "city": "Nice",
+                  "zip": "6200",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 43.70313,
+                    "lon": 7.26608
+                  }
+                },
+                {
+                  "facility": "Centre Hospitalier Lyon Sud",
+                  "city": "Pierre-Bénite",
+                  "zip": "69495",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 45.70359,
+                    "lon": 4.82424
+                  }
+                },
+                {
+                  "facility": "Centre Eugene Marquis",
+                  "city": "Rennes",
+                  "zip": "35042",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 48.11109,
+                    "lon": -1.67431
+                  }
+                },
+                {
+                  "facility": "Institut de Cancérologie de L'Ouest",
+                  "city": "Saint-Herblain",
+                  "zip": "44805",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 47.21154,
+                    "lon": -1.651
+                  }
+                },
+                {
+                  "facility": "Centre Hospitalier de Valence (CHV)",
+                  "city": "Valence",
+                  "zip": "26 953",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 44.9256,
+                    "lon": 4.90956
+                  }
+                },
+                {
+                  "facility": "Gustave Roussy",
+                  "city": "Villejuif",
+                  "zip": "94805",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 48.7939,
+                    "lon": 2.35992
+                  }
+                },
+                {
+                  "facility": "Universitatsklinikum Augsburg Medizincampus Sued",
+                  "city": "Augsburg",
+                  "zip": "86179",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 48.37154,
+                    "lon": 10.89851
+                  }
+                },
+                {
+                  "facility": "Charite Universitaetsmedizin Berlin",
+                  "city": "Berlin",
+                  "zip": "13353",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 52.52437,
+                    "lon": 13.41053
+                  }
+                },
+                {
+                  "facility": "St. Josef Hospital - Ruhr-Universitt Bochum",
+                  "city": "Bochum",
+                  "zip": "44791",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 51.48165,
+                    "lon": 7.21648
+                  }
+                },
+                {
+                  "facility": "University Hospital Erlangen",
+                  "city": "Erlangen",
+                  "zip": "90054",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 49.59099,
+                    "lon": 11.00783
+                  }
+                },
+                {
+                  "facility": "Universitaetsklinikum Essen",
+                  "city": "Essen",
+                  "zip": "45147",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 51.45657,
+                    "lon": 7.01228
+                  }
+                },
+                {
+                  "facility": "University Hospital Frankfurt Theodor-Stern-Kai",
+                  "city": "Frankfurt",
+                  "zip": "60590",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 49.68333,
+                    "lon": 10.53333
+                  }
+                },
+                {
+                  "facility": "Universitatsklinik fur Dermatologie und Venerologie der MLU Halle-Wittenberg",
+                  "city": "Halle",
+                  "zip": "6120",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 51.48158,
+                    "lon": 11.97947
+                  }
+                },
+                {
+                  "facility": "Elbe Klinikum Buxtehude",
+                  "city": "Hamburg",
+                  "zip": "22045",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 53.55073,
+                    "lon": 9.99302
+                  }
+                },
+                {
+                  "facility": "Nationales Centrum fr Tumorerkrankungen NCT",
+                  "city": "Heidelberg",
+                  "zip": "69120",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 49.40768,
+                    "lon": 8.69079
+                  }
+                },
+                {
+                  "facility": "SLK-Kliniken Heilbronn GmbH",
+                  "city": "Heilbronn",
+                  "zip": "74078",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 49.13995,
+                    "lon": 9.22054
+                  }
+                },
+                {
+                  "facility": "Universitaetsklinikum Schleswig-Holstein",
+                  "city": "Kiel",
+                  "zip": "24105",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 54.32133,
+                    "lon": 10.13489
+                  }
+                },
+                {
+                  "facility": "Department of Dermatology University of Mainz",
+                  "city": "Mainz",
+                  "zip": "55131",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 49.98185,
+                    "lon": 8.28008
+                  }
+                },
+                {
+                  "facility": "Universitatsmedizin Mannheim Dermatologie",
+                  "city": "Mannheim",
+                  "zip": "68167",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 49.4891,
+                    "lon": 8.46694
+                  }
+                },
+                {
+                  "facility": "Mühlenkreiskliniken AöR, University Hospital Ruhr University Bochum Campus Minden",
+                  "city": "Minden",
+                  "zip": "32429",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 52.28953,
+                    "lon": 8.91455
+                  }
+                },
+                {
+                  "facility": "LMU Muenchen",
+                  "city": "München",
+                  "zip": "80337",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 51.60698,
+                    "lon": 13.31243
+                  }
+                },
+                {
+                  "facility": "Universitaetsklinikum Muenster",
+                  "city": "Münster",
+                  "zip": "48149",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 51.96236,
+                    "lon": 7.62571
+                  }
+                },
+                {
+                  "facility": "Hospital Tubingen",
+                  "city": "Tübingen",
+                  "zip": "72076",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 48.52266,
+                    "lon": 9.05222
+                  }
+                },
+                {
+                  "facility": "Universittsklinikum Wuerzburg",
+                  "city": "Würzburg",
+                  "zip": "97080",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 49.79391,
+                    "lon": 9.95121
+                  }
+                },
+                {
+                  "facility": "Orszagos Onkologiai Intezet",
+                  "city": "Budapest",
+                  "zip": "1122",
+                  "country": "Hungary",
+                  "geoPoint": {
+                    "lat": 47.49835,
+                    "lon": 19.04045
+                  }
+                },
+                {
+                  "facility": "Bor, -Nemikortani es Onkodermatologiai Klinika",
+                  "city": "Pécs",
+                  "zip": "7632",
+                  "country": "Hungary",
+                  "geoPoint": {
+                    "lat": 46.07617,
+                    "lon": 18.22814
+                  }
+                },
+                {
+                  "facility": "Hetenyi G Korhaz, Onkologiai Kozpont",
+                  "city": "Szolnok",
+                  "zip": "5000",
+                  "country": "Hungary",
+                  "geoPoint": {
+                    "lat": 47.18066,
+                    "lon": 20.19835
+                  }
+                },
+                {
+                  "facility": "Emek Medical Center",
+                  "city": "Afula",
+                  "country": "Israel",
+                  "geoPoint": {
+                    "lat": 32.60907,
+                    "lon": 35.2892
+                  }
+                },
+                {
+                  "facility": "Ben-Gurion University of the Negev - Soroka University Medical Center - Soroka Clinical Research Center",
+                  "city": "Beersheba",
+                  "zip": "84101",
+                  "country": "Israel",
+                  "geoPoint": {
+                    "lat": 31.25181,
+                    "lon": 34.7913
+                  }
+                },
+                {
+                  "facility": "Hadassah University Hospital",
+                  "city": "Jerusalem",
+                  "zip": "91120",
+                  "country": "Israel",
+                  "geoPoint": {
+                    "lat": 31.76904,
+                    "lon": 35.21633
+                  }
+                },
+                {
+                  "facility": "Rabin Medical Center",
+                  "city": "Petah Tikva",
+                  "zip": "4941492",
+                  "country": "Israel",
+                  "geoPoint": {
+                    "lat": 32.08707,
+                    "lon": 34.88747
+                  }
+                },
+                {
+                  "facility": "Tel Aviv Sourasky Medical Center",
+                  "city": "Tel Aviv",
+                  "country": "Israel",
+                  "geoPoint": {
+                    "lat": 32.08088,
+                    "lon": 34.78057
+                  }
+                },
+                {
+                  "facility": "The Chaim Sheba Medical Center - The Ella Lemelbaum Institute for Immuno-Oncology",
+                  "city": "Tel Litwinsky",
+                  "zip": "5262100",
+                  "country": "Israel",
+                  "geoPoint": {
+                    "lat": 32.05096,
+                    "lon": 34.84588
+                  }
+                },
+                {
+                  "facility": "Clinica Oncologica, AOU Riuniti ancona",
+                  "city": "Ancona",
+                  "zip": "60126",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 43.60717,
+                    "lon": 13.5103
+                  }
+                },
+                {
+                  "facility": "Centro di Riferimento Oncologico",
+                  "city": "Aviano",
+                  "zip": "33081",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 46.07056,
+                    "lon": 12.59472
+                  }
+                },
+                {
+                  "facility": "Istituto Tumori Giovanni Paolo II IRCCS Ospedale Oncologico Bari",
+                  "city": "Bari",
+                  "zip": "70124",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 41.12066,
+                    "lon": 16.86982
+                  }
+                },
+                {
+                  "facility": "IRCCS Ospedale San Raffaele",
+                  "city": "Candiolo",
+                  "zip": "10060",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 44.95858,
+                    "lon": 7.59812
+                  }
+                },
+                {
+                  "facility": "IRCCS Ospedale Policlinico San Martino",
+                  "city": "Genova",
+                  "zip": "16132",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 45.21604,
+                    "lon": 11.87211
+                  }
+                },
+                {
+                  "facility": "Istituto Romagnolo per lo Studio dei Tumori \" DINO AMADORI\"",
+                  "city": "Meldola",
+                  "zip": "47014",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 44.12775,
+                    "lon": 12.0626
+                  }
+                },
+                {
+                  "facility": "Fondazione IRCCS Istituto Nazionale dei Tumori",
+                  "city": "Milan",
+                  "zip": "20133",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 42.78235,
+                    "lon": 12.59836
+                  }
+                },
+                {
+                  "facility": "Istituto Nazionale Tumori IRCCS Fondazione Pascale",
+                  "city": "Naples",
+                  "zip": "80131",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 40.85216,
+                    "lon": 14.26811
+                  }
+                },
+                {
+                  "facility": "Veneto Oncology Institute",
+                  "city": "Padova",
+                  "zip": "35128",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 44.38225,
+                    "lon": 11.14261
+                  }
+                },
+                {
+                  "facility": "Ospedale S. Maria della Misericordia",
+                  "city": "Perugia",
+                  "zip": "6156",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 43.1122,
+                    "lon": 12.38878
+                  }
+                },
+                {
+                  "facility": "IRCCS Istituti Fisioterapici Ospitalieri",
+                  "city": "Roma",
+                  "zip": "144",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 44.99364,
+                    "lon": 11.10642
+                  }
+                },
+                {
+                  "facility": "Idi-Irccs",
+                  "city": "Rome",
+                  "zip": "00167",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 41.89193,
+                    "lon": 12.51133
+                  }
+                },
+                {
+                  "facility": "Azienda Ospedaliera Universitaria Senese Policlinico Le Scotte",
+                  "city": "Siena",
+                  "zip": "53100",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 43.31822,
+                    "lon": 11.33064
+                  }
+                },
+                {
+                  "facility": "The Netherlands Cancer Institute",
+                  "city": "Amsterdam",
+                  "zip": "1066",
+                  "country": "Netherlands",
+                  "geoPoint": {
+                    "lat": 52.37403,
+                    "lon": 4.88969
+                  }
+                },
+                {
+                  "facility": "AMC Amsterdam, locatie VUMC",
+                  "city": "Amsterdam",
+                  "zip": "1081",
+                  "country": "Netherlands",
+                  "geoPoint": {
+                    "lat": 52.37403,
+                    "lon": 4.88969
+                  }
+                },
+                {
+                  "facility": "LUMC",
+                  "city": "Leiden",
+                  "zip": "2300 RC",
+                  "country": "Netherlands",
+                  "geoPoint": {
+                    "lat": 52.15833,
+                    "lon": 4.49306
+                  }
+                },
+                {
+                  "facility": "UMC Maastricht",
+                  "city": "Maastricht",
+                  "zip": "6229HX",
+                  "country": "Netherlands",
+                  "geoPoint": {
+                    "lat": 50.84833,
+                    "lon": 5.68889
+                  }
+                },
+                {
+                  "facility": "Erasmus MC",
+                  "city": "Rotterdam",
+                  "zip": "1054 ZG",
+                  "country": "Netherlands",
+                  "geoPoint": {
+                    "lat": 51.9225,
+                    "lon": 4.47917
+                  }
+                },
+                {
+                  "facility": "University Medical Center Utrecht",
+                  "city": "Utrecht",
+                  "zip": "3584",
+                  "country": "Netherlands",
+                  "geoPoint": {
+                    "lat": 52.09083,
+                    "lon": 5.12222
+                  }
+                },
+                {
+                  "facility": "Maria Sklodowska-Curie National Research Institute of Oncology",
+                  "city": "Warsaw",
+                  "state": "Masovian Voivodeship",
+                  "zip": "02-781",
+                  "country": "Poland",
+                  "geoPoint": {
+                    "lat": 52.22977,
+                    "lon": 21.01178
+                  }
+                },
+                {
+                  "facility": "Szpital Kliniczny im. Heliodora Święcickiego UM w Poznaniu",
+                  "city": "Poznan",
+                  "zip": "60-780",
+                  "country": "Poland",
+                  "geoPoint": {
+                    "lat": 52.40692,
+                    "lon": 16.92993
+                  }
+                },
+                {
+                  "facility": "Cape Town Oncology Trials (Pty) Ltd.",
+                  "city": "Cape Town",
+                  "zip": "7570",
+                  "country": "South Africa",
+                  "geoPoint": {
+                    "lat": -33.92584,
+                    "lon": 18.42322
+                  }
+                },
+                {
+                  "facility": "Mary Potter Oncology Centre Groenkloof",
+                  "city": "Pretoria",
+                  "zip": "0181",
+                  "country": "South Africa",
+                  "geoPoint": {
+                    "lat": -25.74486,
+                    "lon": 28.18783
+                  }
+                },
+                {
+                  "facility": "Hospital Universitario Virgen Macarena",
+                  "city": "Seville",
+                  "state": "Andalusia",
+                  "zip": "41009",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 37.38283,
+                    "lon": -5.97317
+                  }
+                },
+                {
+                  "facility": "CH Universitario de A Coruña (CHUAC)",
+                  "city": "A Coruña",
+                  "zip": "15006",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 43.37135,
+                    "lon": -8.396
+                  }
+                },
+                {
+                  "facility": "Hospital Clinic i Provincial",
+                  "city": "Barcelona",
+                  "zip": "08036",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 41.38879,
+                    "lon": 2.15899
+                  }
+                },
+                {
+                  "facility": "Instituto Oncologico Dr. Rosell IOR - Hospital Universitari Quiron Dexeus",
+                  "city": "Barcelona",
+                  "zip": "8028",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 41.38879,
+                    "lon": 2.15899
+                  }
+                },
+                {
+                  "facility": "Hospital Universitari Germans Trias i Pujol HUGTP, ICO-Badalona",
+                  "city": "Barcelona",
+                  "zip": "8916",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 41.38879,
+                    "lon": 2.15899
+                  }
+                },
+                {
+                  "facility": "Hospital Vall d'hebron",
+                  "city": "Barcelona",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 41.38879,
+                    "lon": 2.15899
+                  }
+                },
+                {
+                  "facility": "Hospital General Universitario Gregorio MaraÃ±on",
+                  "city": "Madrid",
+                  "zip": "28007",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 40.4165,
+                    "lon": -3.70256
+                  }
+                },
+                {
+                  "facility": "Clinica Universidad de Navarra",
+                  "city": "Madrid",
+                  "zip": "28027",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 40.4165,
+                    "lon": -3.70256
+                  }
+                },
+                {
+                  "facility": "Hospital Universitario Ramon y Cajal",
+                  "city": "Madrid",
+                  "zip": "28034",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 40.4165,
+                    "lon": -3.70256
+                  }
+                },
+                {
+                  "facility": "Hospital Universitario HM Sanchinarro",
+                  "city": "Madrid",
+                  "zip": "28050",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 40.4165,
+                    "lon": -3.70256
+                  }
+                },
+                {
+                  "facility": "Hospital Regional Universitario de Malaga",
+                  "city": "Málaga",
+                  "zip": "29010",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 36.72016,
+                    "lon": -4.42034
+                  }
+                },
+                {
+                  "facility": "Hospital Universitario Central de Asturias (HUCA)",
+                  "city": "Oviedo",
+                  "zip": "33011",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 43.36029,
+                    "lon": -5.84476
+                  }
+                },
+                {
+                  "facility": "Clinica Universidad de Navarra",
+                  "city": "Pamplona",
+                  "zip": "31008",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 42.81687,
+                    "lon": -1.64323
+                  }
+                },
+                {
+                  "facility": "Hospital General Universitario de Valencia",
+                  "city": "Valencia",
+                  "zip": "46014",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 39.47391,
+                    "lon": -0.37966
+                  }
+                },
+                {
+                  "facility": "Hospital Universitari i Politecnic La Fe",
+                  "city": "Valencia",
+                  "zip": "46026",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 39.47391,
+                    "lon": -0.37966
+                  }
+                },
+                {
+                  "facility": "Miguel Servet University Hospital",
+                  "city": "Zaragoza",
+                  "zip": "50009",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 41.65606,
+                    "lon": -0.87734
+                  }
+                },
+                {
+                  "facility": "Adana City Education and Research Hospital",
+                  "city": "Adana",
+                  "zip": "1060",
+                  "country": "Turkey (Türkiye)",
+                  "geoPoint": {
+                    "lat": 36.98615,
+                    "lon": 35.32531
+                  }
+                },
+                {
+                  "facility": "Gulhane School of Medicine",
+                  "city": "Ankara",
+                  "zip": "6010",
+                  "country": "Turkey (Türkiye)",
+                  "geoPoint": {
+                    "lat": 39.91987,
+                    "lon": 32.85427
+                  }
+                },
+                {
+                  "facility": "Memorial Ankara Hospital",
+                  "city": "Ankara",
+                  "zip": "6520",
+                  "country": "Turkey (Türkiye)",
+                  "geoPoint": {
+                    "lat": 39.91987,
+                    "lon": 32.85427
+                  }
+                },
+                {
+                  "facility": "Akdeniz University Medical Faculty",
+                  "city": "Antalya",
+                  "zip": "7059",
+                  "country": "Turkey (Türkiye)",
+                  "geoPoint": {
+                    "lat": 36.90812,
+                    "lon": 30.69556
+                  }
+                },
+                {
+                  "facility": "Ege university Faculty of Medicine, T. Aktas Oncology Hospital, Bornova",
+                  "city": "Bornova",
+                  "zip": "35100",
+                  "country": "Turkey (Türkiye)",
+                  "geoPoint": {
+                    "lat": 38.47921,
+                    "lon": 27.2399
+                  }
+                },
+                {
+                  "facility": "Istanbul University-Cerrahpasa, Cerrahpasa Medical Faculty",
+                  "city": "Istanbul",
+                  "zip": "34098",
+                  "country": "Turkey (Türkiye)",
+                  "geoPoint": {
+                    "lat": 41.01384,
+                    "lon": 28.94966
+                  }
+                },
+                {
+                  "facility": "Goztepe Prof. Dr. Suleyman Yalcin Sehir Hastanesi",
+                  "city": "Istanbul",
+                  "zip": "34722",
+                  "country": "Turkey (Türkiye)",
+                  "geoPoint": {
+                    "lat": 41.01384,
+                    "lon": 28.94966
+                  }
+                },
+                {
+                  "facility": "Guy's Hospital",
+                  "city": "London",
+                  "zip": "SE1 9RT",
+                  "country": "United Kingdom",
+                  "geoPoint": {
+                    "lat": 51.50853,
+                    "lon": -0.12574
+                  }
+                },
+                {
+                  "facility": "Christie Hospital NHS Trust",
+                  "city": "Manchester",
+                  "zip": "M20 4BX",
+                  "country": "United Kingdom",
+                  "geoPoint": {
+                    "lat": 53.48095,
+                    "lon": -2.23743
+                  }
+                },
+                {
+                  "facility": "Christie Hospital NHS Trust",
+                  "city": "Manchester",
+                  "zip": "M20 4XB",
+                  "country": "United Kingdom",
+                  "geoPoint": {
+                    "lat": 53.48095,
+                    "lon": -2.23743
+                  }
+                },
+                {
+                  "facility": "Oxford University Hospitals NHS Foundation Trust",
+                  "city": "Oxford",
+                  "zip": "OX3 7LE",
+                  "country": "United Kingdom",
+                  "geoPoint": {
+                    "lat": 51.75222,
+                    "lon": -1.25596
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "protocolSection": {
+            "identificationModule": {
+              "nctId": "NCT00509288",
+              "briefTitle": "Phase II Study of Metastatic Melanoma With Lymphodepleting Conditioning and Infusion of Anti-MART-1 F5 TCR-Gene-Engineered Lymphocytes",
+              "officialTitle": "Phase II Study of Metastatic Melanoma Using Lymphodepleting Conditioning Followed by Infusion of Anti-MART-1 F5 TCR-Gene Engineered Lymphocytes"
+            },
+            "statusModule": {
+              "overallStatus": "COMPLETED",
+              "startDateStruct": {
+                "date": "2007-06"
+              }
+            },
+            "sponsorCollaboratorsModule": {
+              "responsibleParty": {},
+              "leadSponsor": {
+                "name": "National Cancer Institute (NCI)",
+                "class": "NIH"
+              }
+            },
+            "conditionsModule": {
+              "conditions": [
+                "Melanoma",
+                "Skin Cancer"
+              ]
+            },
+            "designModule": {
+              "studyType": "INTERVENTIONAL",
+              "phases": [
+                "PHASE2"
+              ],
+              "enrollmentInfo": {
+                "count": 24
+              }
+            },
+            "armsInterventionsModule": {
+              "interventions": [
+                {
+                  "type": "BIOLOGICAL",
+                  "name": "autologous anti-MART-1 F5 T-cell receptor",
+                  "description": "Autologous anti-MART-1 F5 T-cell receptor gene-engineered tumor infiltrating lymphocytes.\n\nA minimum of approximately 5 X 10\\^8 cells will be given up to 3x10\\^11 anti-MART-1 F5 TCR engineered TIL or PBL.",
+                  "armGroupLabels": [
+                    "anti-MART-1 F5 TCR PBL + HD IL-2"
+                  ]
+                },
+                {
+                  "type": "DRUG",
+                  "name": "Cyclophosphamide",
+                  "description": "Day -7 to -5: Cyclophosphamide 60 mg/kg/day X 2 days intravenous (IV) in 250 ml D5W with mesna 15 mg/kg/day X 2 days over 1 hr",
+                  "armGroupLabels": [
+                    "anti-MART-1 F5 TCR PBL + HD IL-2",
+                    "anti-MART-1 F5 TCR TIL + HD IL-2"
+                  ],
+                  "otherNames": [
+                    "Cytoxan"
+                  ]
+                },
+                {
+                  "type": "DRUG",
+                  "name": "Fludarabine",
+                  "description": "Day -5 to 1: Fludarabine 25 mg/m\\^2/day intravenous piggy back (IVPB) daily over 30 minutes for 5 days",
+                  "armGroupLabels": [
+                    "anti-MART-1 F5 TCR PBL + HD IL-2",
+                    "anti-MART-1 F5 TCR TIL + HD IL-2"
+                  ],
+                  "otherNames": [
+                    "Fludara"
+                  ]
+                },
+                {
+                  "type": "BIOLOGICAL",
+                  "name": "Aldesleukin",
+                  "description": "Day 0: Cells will be infused intravenously (i.v.). Patients will receive up to 3x10e\\^11 (with a minimum of 5x10e\\^8 cells) anti-MART-1 F5 TCR engineered TIL or PBL Aldesleukin (based on total body weight) 720,000 IU/kg intravenous (IV) over 15 minute every eight hours beginning within 24 hours of cell infusion",
+                  "armGroupLabels": [
+                    "anti-MART-1 F5 TCR PBL + HD IL-2",
+                    "anti-MART-1 F5 TCR TIL + HD IL-2"
+                  ],
+                  "otherNames": [
+                    "IL-2"
+                  ]
+                },
+                {
+                  "type": "BIOLOGICAL",
+                  "name": "autologous anti-MART-1 F5 T-cell receptor gene-engineered tumor infiltrating lymphocytes",
+                  "armGroupLabels": [
+                    "anti-MART-1 F5 TCR TIL + HD IL-2"
+                  ]
+                }
+              ]
+            },
+            "contactsLocationsModule": {
+              "locations": [
+                {
+                  "facility": "National Institutes of Health Clinical Center, 9000 Rockville Pike",
+                  "city": "Bethesda",
+                  "state": "Maryland",
+                  "zip": "20892",
+                  "country": "United States",
+                  "geoPoint": {
+                    "lat": 38.98067,
+                    "lon": -77.10026
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+# promptfoo evaluation for the ct-viz-agent INTERPRET prompt.
+#
+# What this evaluates: the LLM step that turns a natural-language clinical-trial
+# question into a structured QueryPlan (src/agent/interpret.ts). The custom
+# provider calls the REAL interpretQuery, so this tests the production system
+# prompt + JSON schema, not a copy.
+#
+# Run:   npm run eval          (from ct-viz-agent/)
+# View:  npm run eval:view
+#
+# Requires OPENAI_API_KEY in ../.env (already loaded by the provider).
+$schema: https://promptfoo.dev/config-schema.json
+
+description: ct-viz-agent — interpret prompt (NL question → QueryPlan)
+
+# The provider builds the real RequestInput from each test's vars, so the prompt
+# template is just a passthrough of the question (kept for promptfoo bookkeeping).
+prompts:
+  - "{{query}}"
+
+providers:
+  - id: file://./provider.cjs
+    label: interpret
+
+defaultTest:
+  # Grader used by any `llm-rubric` assertions below (uses OPENAI_API_KEY).
+  options:
+    provider: openai:gpt-4o-mini
+  assert:
+    # Every plan must be valid JSON (the provider already returns the Zod-validated
+    # plan, so this is a cheap structural guard).
+    - type: is-json
+
+tests: file://./dataset/tests.yaml

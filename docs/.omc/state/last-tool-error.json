@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"cd ~/Desktop/ct-viz-agent\\nPORT=3007 MAX_STUDIES=50 JUDGE_SAMPLE_RATE=0 yarn start > \\\"$CLAUDE_JOB_DIR/tmp/clar.log\\\" 2>&1 &\\nAPP=$!\\ni=0; until curl -sf http://localhost:3007/health >/dev...",
+  "error": "Exit code 1\napp ready after 2s\n\nQ: 모호: Show me some trials\n  status      = needs_clarification\n  visualization= null\n  notes       = Question is too broad to query (it would match the entire registry). Please specify at least one of: condition, drug, sponsor, country, or a year range.\n\nQ: 모호: Tell me about cancer\n  status      = needs_clarification\n  visualization= null\n  notes       = Question is too broad to query (it would match the entire registry). Please specify at least one of: condition,...",
+  "timestamp": "2026-06-20T06:24:45.208Z",
+  "retry_count": 1
+}

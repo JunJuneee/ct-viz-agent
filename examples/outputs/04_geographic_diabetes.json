@@ -1,0 +1,1199 @@
+{
+  "request": {
+    "query": "Which countries have the most recruiting trials for diabetes?",
+    "condition": "diabetes",
+    "status": [
+      "RECRUITING"
+    ]
+  },
+  "response": {
+    "visualization": {
+      "type": "bar_chart",
+      "title": "Top Countries by Number of Recruiting Diabetes Trials",
+      "encoding": {
+        "x": {
+          "field": "category",
+          "type": "ordinal",
+          "label": "Country"
+        },
+        "y": {
+          "field": "trial_count",
+          "type": "quantitative",
+          "label": "Trial Count"
+        }
+      },
+      "data": [
+        {
+          "category": "United States",
+          "trial_count": 754,
+          "citations": [
+            {
+              "nct_id": "NCT06275412",
+              "excerpt": "Location country: United States — \"Family Intervention for Black Teens With Type 1 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT06275412"
+            },
+            {
+              "nct_id": "NCT05572502",
+              "excerpt": "Location country: United States — \"Diabetes Reversal Online Program and Study (DROP Study)\"",
+              "url": "https://clinicaltrials.gov/study/NCT05572502"
+            },
+            {
+              "nct_id": "NCT07187531",
+              "excerpt": "Location country: United States — \"SAFety and Efficacy of Human Anti-thymocyte ImmunoGlobUlin SAB-142 ARresting Progression of Type 1 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT07187531"
+            }
+          ]
+        },
+        {
+          "category": "China",
+          "trial_count": 210,
+          "citations": [
+            {
+              "nct_id": "NCT05307731",
+              "excerpt": "Location country: China — \"Fingolimod for Type 2 Diabetes Mellitus\"",
+              "url": "https://clinicaltrials.gov/study/NCT05307731"
+            },
+            {
+              "nct_id": "NCT07656805",
+              "excerpt": "Location country: China — \"Anti-inflammatory Dietary Intervention in Patients With Type 2 Diabetes: A Randomized Controlled Trial\"",
+              "url": "https://clinicaltrials.gov/study/NCT07656805"
+            },
+            {
+              "nct_id": "NCT07002372",
+              "excerpt": "Location country: China — \"Effect of Video Viewing on Intravitreal Injection Experience\"",
+              "url": "https://clinicaltrials.gov/study/NCT07002372"
+            }
+          ]
+        },
+        {
+          "category": "Canada",
+          "trial_count": 127,
+          "citations": [
+            {
+              "nct_id": "NCT07655076",
+              "excerpt": "Location country: Canada — \"Simultaneous Measurement and Responsive Treatment - Part 2\"",
+              "url": "https://clinicaltrials.gov/study/NCT07655076"
+            },
+            {
+              "nct_id": "NCT05377268",
+              "excerpt": "Location country: Canada — \"The Use of Ultrasound Detection of Lipohypertrophy to Improve Glycemic Control\"",
+              "url": "https://clinicaltrials.gov/study/NCT05377268"
+            },
+            {
+              "nct_id": "NCT04786262",
+              "excerpt": "Location country: Canada — \"A Safety, Tolerability, and Efficacy Study of VX-880 in Participants With Type 1 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT04786262"
+            }
+          ]
+        },
+        {
+          "category": "France",
+          "trial_count": 101,
+          "citations": [
+            {
+              "nct_id": "NCT06600555",
+              "excerpt": "Location country: France — \"Evaluation of the Metabolic Surgery Technique for Glycemic Improvement in Type 2 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT06600555"
+            },
+            {
+              "nct_id": "NCT07187531",
+              "excerpt": "Location country: France — \"SAFety and Efficacy of Human Anti-thymocyte ImmunoGlobUlin SAB-142 ARresting Progression of Type 1 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT07187531"
+            },
+            {
+              "nct_id": "NCT04786262",
+              "excerpt": "Location country: France — \"A Safety, Tolerability, and Efficacy Study of VX-880 in Participants With Type 1 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT04786262"
+            }
+          ]
+        },
+        {
+          "category": "United Kingdom",
+          "trial_count": 93,
+          "citations": [
+            {
+              "nct_id": "NCT07187531",
+              "excerpt": "Location country: United Kingdom — \"SAFety and Efficacy of Human Anti-thymocyte ImmunoGlobUlin SAB-142 ARresting Progression of Type 1 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT07187531"
+            },
+            {
+              "nct_id": "NCT07364045",
+              "excerpt": "Location country: United Kingdom — \"Pancreas Lipotoxicity in T2D: Edinburgh Diabetes Remission Study (EDRS)\"",
+              "url": "https://clinicaltrials.gov/study/NCT07364045"
+            },
+            {
+              "nct_id": "NCT07251257",
+              "excerpt": "Location country: United Kingdom — \"The Seafarers' Continuous Glucose Monitoring Systems Study\"",
+              "url": "https://clinicaltrials.gov/study/NCT07251257"
+            }
+          ]
+        },
+        {
+          "category": "Italy",
+          "trial_count": 76,
+          "citations": [
+            {
+              "nct_id": "NCT07187531",
+              "excerpt": "Location country: Italy — \"SAFety and Efficacy of Human Anti-thymocyte ImmunoGlobUlin SAB-142 ARresting Progression of Type 1 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT07187531"
+            },
+            {
+              "nct_id": "NCT04786262",
+              "excerpt": "Location country: Italy — \"A Safety, Tolerability, and Efficacy Study of VX-880 in Participants With Type 1 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT04786262"
+            },
+            {
+              "nct_id": "NCT06111586",
+              "excerpt": "Location country: Italy — \"FrexalimAB in Preservation of Endogenous insULIN Secretion Compared to Placebo in adUlts and Adolescents on Top of inSulin Therapy (FABULINUS)\"",
+              "url": "https://clinicaltrials.gov/study/NCT06111586"
+            }
+          ]
+        },
+        {
+          "category": "Germany",
+          "trial_count": 74,
+          "citations": [
+            {
+              "nct_id": "NCT07634770",
+              "excerpt": "Location country: Germany — \"Bioavailability, Biopotency and Food Effect Study of SCD0503 Compared to Subcutaneous Regular Human Insulin\"",
+              "url": "https://clinicaltrials.gov/study/NCT07634770"
+            },
+            {
+              "nct_id": "NCT07187531",
+              "excerpt": "Location country: Germany — \"SAFety and Efficacy of Human Anti-thymocyte ImmunoGlobUlin SAB-142 ARresting Progression of Type 1 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT07187531"
+            },
+            {
+              "nct_id": "NCT07212075",
+              "excerpt": "Location country: Germany — \"Precision Subclassification of Mental Health in Diabetes: Digital Twins for Precision Mental Health to Track Subgroups\"",
+              "url": "https://clinicaltrials.gov/study/NCT07212075"
+            }
+          ]
+        },
+        {
+          "category": "Denmark",
+          "trial_count": 67,
+          "citations": [
+            {
+              "nct_id": "NCT07187531",
+              "excerpt": "Location country: Denmark — \"SAFety and Efficacy of Human Anti-thymocyte ImmunoGlobUlin SAB-142 ARresting Progression of Type 1 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT07187531"
+            },
+            {
+              "nct_id": "NCT06111586",
+              "excerpt": "Location country: Denmark — \"FrexalimAB in Preservation of Endogenous insULIN Secretion Compared to Placebo in adUlts and Adolescents on Top of inSulin Therapy (FABULINUS)\"",
+              "url": "https://clinicaltrials.gov/study/NCT06111586"
+            },
+            {
+              "nct_id": "NCT06675903",
+              "excerpt": "Location country: Denmark — \"Continuous Glucose Monitoring (CGM) After Kidney Transplantation\"",
+              "url": "https://clinicaltrials.gov/study/NCT06675903"
+            }
+          ]
+        },
+        {
+          "category": "South Korea",
+          "trial_count": 57,
+          "citations": [
+            {
+              "nct_id": "NCT06875193",
+              "excerpt": "Location country: South Korea — \"DM Treatment to Evaluate the Efficacy and Safety of Dapagliflozin or Pioglitazone in Patients with Type 2 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT06875193"
+            },
+            {
+              "nct_id": "NCT06293417",
+              "excerpt": "Location country: South Korea — \"To Assess With Ezefeno Tab. in Patients With Dyslipidemia and T2DM\"",
+              "url": "https://clinicaltrials.gov/study/NCT06293417"
+            },
+            {
+              "nct_id": "NCT07552389",
+              "excerpt": "Location country: South Korea — \"Clinical Trial to Evaluate the Efficacy and Safety of Monotherapy Group of HL1113R1 or HL1113R2 Versus HL1113 (Fixed Dose Combination) in Patients With Essential Hypertension and Type II Diabetes Mellitus\"",
+              "url": "https://clinicaltrials.gov/study/NCT07552389"
+            }
+          ]
+        },
+        {
+          "category": "Spain",
+          "trial_count": 56,
+          "citations": [
+            {
+              "nct_id": "NCT07187531",
+              "excerpt": "Location country: Spain — \"SAFety and Efficacy of Human Anti-thymocyte ImmunoGlobUlin SAB-142 ARresting Progression of Type 1 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT07187531"
+            },
+            {
+              "nct_id": "NCT06234787",
+              "excerpt": "Location country: Spain — \"Continuous Subcutaneous Glucose Monitoring in Critical Patients\"",
+              "url": "https://clinicaltrials.gov/study/NCT06234787"
+            },
+            {
+              "nct_id": "NCT07124923",
+              "excerpt": "Location country: Spain — \"Continuous Care Intervention in Primary Care to Improve Type 2 Diabetes Control in Terres de l'Ebre, Catalonia\"",
+              "url": "https://clinicaltrials.gov/study/NCT07124923"
+            }
+          ]
+        },
+        {
+          "category": "Turkey (Türkiye)",
+          "trial_count": 52,
+          "citations": [
+            {
+              "nct_id": "NCT07338773",
+              "excerpt": "Location country: Turkey (Türkiye) — \"Intraosseous vs. Intravenous Vancomycin Prophylaxis for Diabetic Foot Amputations: A Randomized Trial\"",
+              "url": "https://clinicaltrials.gov/study/NCT07338773"
+            },
+            {
+              "nct_id": "NCT03087253",
+              "excerpt": "Location country: Turkey (Türkiye) — \"The LD Lync Study - Natural History Study of Lipodystrophy Syndromes\"",
+              "url": "https://clinicaltrials.gov/study/NCT03087253"
+            },
+            {
+              "nct_id": "NCT07414914",
+              "excerpt": "Location country: Turkey (Türkiye) — \"Self-Myofascial Release Plus Exercise Versus Exercise Alone in Type 2 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT07414914"
+            }
+          ]
+        },
+        {
+          "category": "Sweden",
+          "trial_count": 51,
+          "citations": [
+            {
+              "nct_id": "NCT06563401",
+              "excerpt": "Location country: Sweden — \"Mortality and Cardiovascular Diseases in Adult-onset Type 1 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT06563401"
+            },
+            {
+              "nct_id": "NCT06111586",
+              "excerpt": "Location country: Sweden — \"FrexalimAB in Preservation of Endogenous insULIN Secretion Compared to Placebo in adUlts and Adolescents on Top of inSulin Therapy (FABULINUS)\"",
+              "url": "https://clinicaltrials.gov/study/NCT06111586"
+            },
+            {
+              "nct_id": "NCT06701968",
+              "excerpt": "Location country: Sweden — \"Effects of a Healthy Nordic Diet on Atherosclerosis in Patients with Coronary Heart Disease\"",
+              "url": "https://clinicaltrials.gov/study/NCT06701968"
+            }
+          ]
+        },
+        {
+          "category": "Australia",
+          "trial_count": 49,
+          "citations": [
+            {
+              "nct_id": "NCT07187531",
+              "excerpt": "Location country: Australia — \"SAFety and Efficacy of Human Anti-thymocyte ImmunoGlobUlin SAB-142 ARresting Progression of Type 1 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT07187531"
+            },
+            {
+              "nct_id": "NCT01793168",
+              "excerpt": "Location country: Australia — \"Rare Disease Patient Registry & Natural History Study - Coordination of Rare Diseases at Sanford\"",
+              "url": "https://clinicaltrials.gov/study/NCT01793168"
+            },
+            {
+              "nct_id": "NCT06937203",
+              "excerpt": "Location country: Australia — \"A First-In-Human Study of ARO-ALK7 in Adults With Obesity With and Without Type 2 Diabetes Mellitus\"",
+              "url": "https://clinicaltrials.gov/study/NCT06937203"
+            }
+          ]
+        },
+        {
+          "category": "Taiwan",
+          "trial_count": 38,
+          "citations": [
+            {
+              "nct_id": "NCT06111833",
+              "excerpt": "Location country: Taiwan — \"Optimized Diagnosis and Precision Medicine of MODY\"",
+              "url": "https://clinicaltrials.gov/study/NCT06111833"
+            },
+            {
+              "nct_id": "NCT05099770",
+              "excerpt": "Location country: Taiwan — \"Proact: A Study of REACT in Subjects With Type 2 Diabetes Mellitus and Chronic Kidney Disease\"",
+              "url": "https://clinicaltrials.gov/study/NCT05099770"
+            },
+            {
+              "nct_id": "NCT07398495",
+              "excerpt": "Location country: Taiwan — \"Multimodal Training Effects in Middle-Aged and Older Adults With Diabetic Sarcopenia\"",
+              "url": "https://clinicaltrials.gov/study/NCT07398495"
+            }
+          ]
+        },
+        {
+          "category": "Egypt",
+          "trial_count": 37,
+          "citations": [
+            {
+              "nct_id": "NCT06447467",
+              "excerpt": "Location country: Egypt — \"Short Term Outcome of Acute Heart Failure in Diabetic and Non Diabetic Patients\"",
+              "url": "https://clinicaltrials.gov/study/NCT06447467"
+            },
+            {
+              "nct_id": "NCT06583590",
+              "excerpt": "Location country: Egypt — \"Evaluation of Efficacy of Botulinum Toxin A Plus Oral Tadalafil 5 mg in Diabetic Men With Erectile Dysfunction\"",
+              "url": "https://clinicaltrials.gov/study/NCT06583590"
+            },
+            {
+              "nct_id": "NCT06329882",
+              "excerpt": "Location country: Egypt — \"Doxycycline in Type II Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT06329882"
+            }
+          ]
+        },
+        {
+          "category": "Belgium",
+          "trial_count": 35,
+          "citations": [
+            {
+              "nct_id": "NCT07187531",
+              "excerpt": "Location country: Belgium — \"SAFety and Efficacy of Human Anti-thymocyte ImmunoGlobUlin SAB-142 ARresting Progression of Type 1 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT07187531"
+            },
+            {
+              "nct_id": "NCT06567158",
+              "excerpt": "Location country: Belgium — \"The Impact of a Moderate Carbohydrate Diet in Children With Type 1 Diabetes on Hybrid Closed-loop Therapy\"",
+              "url": "https://clinicaltrials.gov/study/NCT06567158"
+            },
+            {
+              "nct_id": "NCT06111586",
+              "excerpt": "Location country: Belgium — \"FrexalimAB in Preservation of Endogenous insULIN Secretion Compared to Placebo in adUlts and Adolescents on Top of inSulin Therapy (FABULINUS)\"",
+              "url": "https://clinicaltrials.gov/study/NCT06111586"
+            }
+          ]
+        },
+        {
+          "category": "Switzerland",
+          "trial_count": 35,
+          "citations": [
+            {
+              "nct_id": "NCT04786262",
+              "excerpt": "Location country: Switzerland — \"A Safety, Tolerability, and Efficacy Study of VX-880 in Participants With Type 1 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT04786262"
+            },
+            {
+              "nct_id": "NCT05594706",
+              "excerpt": "Location country: Switzerland — \"Anhydroglucitol in Children With Type 1 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT05594706"
+            },
+            {
+              "nct_id": "NCT01179815",
+              "excerpt": "Location country: Switzerland — \"Swiss Diabetes Registry - SwissDiab Study\"",
+              "url": "https://clinicaltrials.gov/study/NCT01179815"
+            }
+          ]
+        },
+        {
+          "category": "Brazil",
+          "trial_count": 35,
+          "citations": [
+            {
+              "nct_id": "NCT03087253",
+              "excerpt": "Location country: Brazil — \"The LD Lync Study - Natural History Study of Lipodystrophy Syndromes\"",
+              "url": "https://clinicaltrials.gov/study/NCT03087253"
+            },
+            {
+              "nct_id": "NCT03549754",
+              "excerpt": "Location country: Brazil — \"iCaReMe Global Registry\"",
+              "url": "https://clinicaltrials.gov/study/NCT03549754"
+            },
+            {
+              "nct_id": "NCT06286878",
+              "excerpt": "Location country: Brazil — \"Pleiotropic Effects of Dapagliflozin in Patients With Acute Coronary Syndromes\"",
+              "url": "https://clinicaltrials.gov/study/NCT06286878"
+            }
+          ]
+        },
+        {
+          "category": "Poland",
+          "trial_count": 32,
+          "citations": [
+            {
+              "nct_id": "NCT07187531",
+              "excerpt": "Location country: Poland — \"SAFety and Efficacy of Human Anti-thymocyte ImmunoGlobUlin SAB-142 ARresting Progression of Type 1 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT07187531"
+            },
+            {
+              "nct_id": "NCT04634591",
+              "excerpt": "Location country: Poland — \"The Bialystok Bariatric Surgery Study\"",
+              "url": "https://clinicaltrials.gov/study/NCT04634591"
+            },
+            {
+              "nct_id": "NCT06111586",
+              "excerpt": "Location country: Poland — \"FrexalimAB in Preservation of Endogenous insULIN Secretion Compared to Placebo in adUlts and Adolescents on Top of inSulin Therapy (FABULINUS)\"",
+              "url": "https://clinicaltrials.gov/study/NCT06111586"
+            }
+          ]
+        },
+        {
+          "category": "Netherlands",
+          "trial_count": 31,
+          "citations": [
+            {
+              "nct_id": "NCT04786262",
+              "excerpt": "Location country: Netherlands — \"A Safety, Tolerability, and Efficacy Study of VX-880 in Participants With Type 1 Diabetes\"",
+              "url": "https://clinicaltrials.gov/study/NCT04786262"
+            },
+            {
+              "nct_id": "NCT06092476",
+              "excerpt": "Location country: Netherlands — \"Trial to Evaluate Efficacy+Safety of Revita DMR Treatment Paradigm 1 and Retreatment in Type 2 Diabetes Patients\"",
+              "url": "https://clinicaltrials.gov/study/NCT06092476"
+            },
+            {
+              "nct_id": "NCT07083882",
+              "excerpt": "Location country: Netherlands — \"Faecal Autologous Capsule Transplantation for Type 1 Diabetes Mellitus\"",
+              "url": "https://clinicaltrials.gov/study/NCT07083882"
+            }
+          ]
+        }
+      ]
+    },
+    "meta": {
+      "source": "clinicaltrials.gov",
+      "apiVersion": "v2",
+      "filters": {
+        "condition": "diabetes",
+        "status": [
+          "RECRUITING"
+        ]
+      },
+      "totalMatchingTrials": 1948,
+      "analyzedTrials": 1948,
+      "truncated": false,
+      "groupBy": "country",
+      "units": "trial appearances (a trial may span multiple categories)",
+      "sort": "trial_count descending",
+      "confidence": 0.9,
+      "status": "ok",
+      "interpreter": "llm",
+      "apiRequests": [
+        "https://clinicaltrials.gov/api/v2/studies?query.cond=diabetes&filter.overallStatus=RECRUITING&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true",
+        "https://clinicaltrials.gov/api/v2/studies?query.cond=diabetes&filter.overallStatus=RECRUITING&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lp0VoC5tarumpOQJJxtZfCi2vMbkA"
+      ],
+      "warnings": [
+        "Showing top categories; 71 smaller Country categories omitted."
+      ]
+    },
+    "references": [
+      {
+        "nct_id": "NCT06275412",
+        "title": "Family Intervention for Black Teens With Type 1 Diabetes",
+        "officialTitle": "Family mHealth Intervention to Improve Health Outcomes in Black Youth With Type 1 Diabetes",
+        "sponsor": "Wayne State University",
+        "investigator": "Deborah Ellis, Ph.D.",
+        "startDate": "2024-09-16",
+        "url": "https://clinicaltrials.gov/study/NCT06275412"
+      },
+      {
+        "nct_id": "NCT05572502",
+        "title": "Diabetes Reversal Online Program and Study (DROP Study)",
+        "officialTitle": "The Feasibility, Implementation and Efficacy of a Diabetes Reversal Online Program and Study (DROP Study) in an Office Setting",
+        "sponsor": "Physicians Committee for Responsible Medicine",
+        "investigator": "Vanita Rahman",
+        "startDate": "2023-09-21",
+        "url": "https://clinicaltrials.gov/study/NCT05572502"
+      },
+      {
+        "nct_id": "NCT07187531",
+        "title": "SAFety and Efficacy of Human Anti-thymocyte ImmunoGlobUlin SAB-142 ARresting Progression of Type 1 Diabetes",
+        "officialTitle": "A Phase 2b, Randomised, Double-Blind, Placebo-Controlled, Parallel-Arm Dose Finding Study Evaluating the Efficacy and Safety of SAB-142 for Delaying the Progression of Type 1 Diabetes (T1D) in Patients With Stage 3 New Onset of Type 1 Diabetes (NOT1D)",
+        "sponsor": "SAb Biotherapeutics, Inc.",
+        "investigator": null,
+        "startDate": "2025-11-25",
+        "url": "https://clinicaltrials.gov/study/NCT07187531"
+      },
+      {
+        "nct_id": "NCT05307731",
+        "title": "Fingolimod for Type 2 Diabetes Mellitus",
+        "officialTitle": "Fingolimod for Type 2 Diabetes Mellitus: a Pilot, Prospective, Randomized, and Open Label Single-center Study",
+        "sponsor": "General Hospital of Shenyang Military Region",
+        "investigator": "Hui-Sheng Chen",
+        "startDate": "2022-03-15",
+        "url": "https://clinicaltrials.gov/study/NCT05307731"
+      },
+      {
+        "nct_id": "NCT07656805",
+        "title": "Anti-inflammatory Dietary Intervention in Patients With Type 2 Diabetes: A Randomized Controlled Trial",
+        "officialTitle": "Evidence-based Construction and Application of an Anti-inflammatory Diet Intervention for Patients With Type 2 Diabetes Mellitus",
+        "sponsor": "Anhui Medical University",
+        "investigator": "Guo Huimin",
+        "startDate": "2026-06-03",
+        "url": "https://clinicaltrials.gov/study/NCT07656805"
+      },
+      {
+        "nct_id": "NCT07002372",
+        "title": "Effect of Video Viewing on Intravitreal Injection Experience",
+        "officialTitle": "Impact of Procedural Video Viewing on Patients Undergoing Intravitreal Anti-VEGF Injections",
+        "sponsor": "Second Affiliated Hospital, School of Medicine, Zhejiang University",
+        "investigator": null,
+        "startDate": "2025-05-05",
+        "url": "https://clinicaltrials.gov/study/NCT07002372"
+      },
+      {
+        "nct_id": "NCT07655076",
+        "title": "Simultaneous Measurement and Responsive Treatment - Part 2",
+        "officialTitle": "Simultaneous Measurement and Responsive Treatment - Part 2",
+        "sponsor": "ClinSurge Research",
+        "investigator": null,
+        "startDate": "2026-05-19",
+        "url": "https://clinicaltrials.gov/study/NCT07655076"
+      },
+      {
+        "nct_id": "NCT05377268",
+        "title": "The Use of Ultrasound Detection of Lipohypertrophy to Improve Glycemic Control",
+        "officialTitle": "The Use of Machine Learning Detection of Lipohypertrophy to Improve Glycemic Variability",
+        "sponsor": "University of British Columbia",
+        "investigator": "Kenneth Madden",
+        "startDate": "2023-03-01",
+        "url": "https://clinicaltrials.gov/study/NCT05377268"
+      },
+      {
+        "nct_id": "NCT04786262",
+        "title": "A Safety, Tolerability, and Efficacy Study of VX-880 in Participants With Type 1 Diabetes",
+        "officialTitle": "A Phase 1/2/3 Study to Evaluate the Safety, Tolerability, and Efficacy of VX-880 in Subjects Who Have Type 1 Diabetes Mellitus With Impaired Hypoglycemic Awareness and Severe Hypoglycemia",
+        "sponsor": "Vertex Pharmaceuticals Incorporated",
+        "investigator": null,
+        "startDate": "2021-03-29",
+        "url": "https://clinicaltrials.gov/study/NCT04786262"
+      },
+      {
+        "nct_id": "NCT06600555",
+        "title": "Evaluation of the Metabolic Surgery Technique for Glycemic Improvement in Type 2 Diabetes",
+        "officialTitle": "CHANGE Evaluation of the Metabolic Surgery Technique for Glycemic Improvement in Type 2 Diabetes",
+        "sponsor": "Médipôle Lyon-Villeurbanne",
+        "investigator": null,
+        "startDate": "2024-07-03",
+        "url": "https://clinicaltrials.gov/study/NCT06600555"
+      },
+      {
+        "nct_id": "NCT07364045",
+        "title": "Pancreas Lipotoxicity in T2D: Edinburgh Diabetes Remission Study (EDRS)",
+        "officialTitle": "Mechanisms Mediating Reversible Lipotoxicity of the Pancreas in Obesity-induced Type 2 Diabetes: Edinburgh Diabetes Remission Study (EDRS)",
+        "sponsor": "University of Edinburgh",
+        "investigator": null,
+        "startDate": "2026-06-15",
+        "url": "https://clinicaltrials.gov/study/NCT07364045"
+      },
+      {
+        "nct_id": "NCT07251257",
+        "title": "The Seafarers' Continuous Glucose Monitoring Systems Study",
+        "officialTitle": "The Seafarers' Continuous Glucose Monitoring Systems Study",
+        "sponsor": "University of Surrey",
+        "investigator": null,
+        "startDate": "2025-11-20",
+        "url": "https://clinicaltrials.gov/study/NCT07251257"
+      },
+      {
+        "nct_id": "NCT06111586",
+        "title": "FrexalimAB in Preservation of Endogenous insULIN Secretion Compared to Placebo in adUlts and Adolescents on Top of inSulin Therapy (FABULINUS)",
+        "officialTitle": "A 52-week Randomized, Double-blind, Placebo-controlled, Multi-center Phase 2b Study With a 52-week Blinded Extension and an Optional Open-label Extension - Assessing Safety and Efficacy of Frexalimab, a CD40L-antagonist Monoclonal Antibody, for Preservation of Pancreatic β-cell Function in Adults and Adolescents With Newly Diagnosed Type 1 Diabetes on Insulin Therapy",
+        "sponsor": "Sanofi",
+        "investigator": null,
+        "startDate": "2023-12-11",
+        "url": "https://clinicaltrials.gov/study/NCT06111586"
+      },
+      {
+        "nct_id": "NCT07634770",
+        "title": "Bioavailability, Biopotency and Food Effect Study of SCD0503 Compared to Subcutaneous Regular Human Insulin",
+        "officialTitle": "A Trial to Investigate the Relative Bioavailability, Relative Biopotency and Food Effect of SCD0503 (Oral Insulin) in Comparison to Subcutaneous Regular Human Insulin Under Euglycaemic Clamp Conditions and After Food Intake in People With Type I Diabetes",
+        "sponsor": "Sam Chun Dang Pharm. Co. Ltd.",
+        "investigator": null,
+        "startDate": "2026-05-29",
+        "url": "https://clinicaltrials.gov/study/NCT07634770"
+      },
+      {
+        "nct_id": "NCT07212075",
+        "title": "Precision Subclassification of Mental Health in Diabetes: Digital Twins for Precision Mental Health to Track Subgroups",
+        "officialTitle": "Precision Subclassification of Mental Health in Diabetes: Digital Twins for Precision Mental Health to Track Subgroups",
+        "sponsor": "Forschungsinstitut der Diabetes Akademie Mergentheim",
+        "investigator": "Norbert Hermanns",
+        "startDate": "2025-01-01",
+        "url": "https://clinicaltrials.gov/study/NCT07212075"
+      },
+      {
+        "nct_id": "NCT06675903",
+        "title": "Continuous Glucose Monitoring (CGM) After Kidney Transplantation",
+        "officialTitle": "Continuous Glucose Monitoring in Kidney Transplant Recipients with Diabetes, Pre-diabetes and Without Diabetes",
+        "sponsor": "Bo Feldt-Rasmussen",
+        "investigator": "Bo Feldt-Rasmussen",
+        "startDate": "2024-11-12",
+        "url": "https://clinicaltrials.gov/study/NCT06675903"
+      },
+      {
+        "nct_id": "NCT06875193",
+        "title": "DM Treatment to Evaluate the Efficacy and Safety of Dapagliflozin or Pioglitazone in Patients with Type 2 Diabetes",
+        "officialTitle": "Key Finding of DM Treatment with Combination, a MuLticenter, Randomized, Parallel, Gathering Information of Phase 4 Trial to Evaluate the Efficacy and Safety of Dapagliflozin or Pioglitazone Add-on to Metformin and DPP-4 Inhibitor in Patients with Type 2 Diabetes",
+        "sponsor": "Dong Wha Pharmaceutical Co. Ltd.",
+        "investigator": null,
+        "startDate": "2024-05-28",
+        "url": "https://clinicaltrials.gov/study/NCT06875193"
+      },
+      {
+        "nct_id": "NCT06293417",
+        "title": "To Assess With Ezefeno Tab. in Patients With Dyslipidemia and T2DM",
+        "officialTitle": "To Assess the Long-term Efficacy and Safety of Combined Therapy With Ezefeno Tab. in Patients With Dyslipidemia Who do Not Achieve Adequate Control of Non-HDL-C Levels Even With Moderate-intensity Monotherapy",
+        "sponsor": "Korea University Anam Hospital",
+        "investigator": "Sin Gon Kim",
+        "startDate": "2024-03-01",
+        "url": "https://clinicaltrials.gov/study/NCT06293417"
+      },
+      {
+        "nct_id": "NCT07552389",
+        "title": "Clinical Trial to Evaluate the Efficacy and Safety of Monotherapy Group of HL1113R1 or HL1113R2 Versus HL1113 (Fixed Dose Combination) in Patients With Essential Hypertension and Type II Diabetes Mellitus",
+        "officialTitle": "A Randomized, Active Controlled, Double Blind, Parallel, Multi Center, Phase 3 Study to Evaluate the Efficacy and Safety of Monotherapy Group of HL1113R1 or HL1113R2 Versus HL1113 (Fixed Dose Combination) in Patients With Essential Hypertension and Type II Diabetes Mellitus",
+        "sponsor": "Hanlim Pharm. Co., Ltd.",
+        "investigator": null,
+        "startDate": "2025-12-18",
+        "url": "https://clinicaltrials.gov/study/NCT07552389"
+      },
+      {
+        "nct_id": "NCT06234787",
+        "title": "Continuous Subcutaneous Glucose Monitoring in Critical Patients",
+        "officialTitle": "Continuous Subcutaneous Glucose Monitoring: A Descriptive Study of Its Use in Critical Patients",
+        "sponsor": "Universidad Europea de Madrid",
+        "investigator": "Samuel Gonzalez Lopez",
+        "startDate": "2023-11-30",
+        "url": "https://clinicaltrials.gov/study/NCT06234787"
+      },
+      {
+        "nct_id": "NCT07124923",
+        "title": "Continuous Care Intervention in Primary Care to Improve Type 2 Diabetes Control in Terres de l'Ebre, Catalonia",
+        "officialTitle": "Effectiveness of a Continuous Care Intervention by the Endocrinology and Nutrition Service in Primary Care to Improve the Control of Type 2 Diabetes Mellitus in Terres de l'Ebre, Catalonia",
+        "sponsor": "Institut Investigacio Sanitaria Pere Virgili",
+        "investigator": null,
+        "startDate": "2025-07-20",
+        "url": "https://clinicaltrials.gov/study/NCT07124923"
+      },
+      {
+        "nct_id": "NCT07338773",
+        "title": "Intraosseous vs. Intravenous Vancomycin Prophylaxis for Diabetic Foot Amputations: A Randomized Trial",
+        "officialTitle": "Comparison of the Effects of Intraosseous and Intravenous Vancomycin Prophylaxis on Surgical Site Infections and Clinical Outcomes After Diabetic Foot Amputation: A Randomized Controlled Trial",
+        "sponsor": "Başakşehir Çam & Sakura City Hospital",
+        "investigator": "Lezgin Mert",
+        "startDate": "2025-09-03",
+        "url": "https://clinicaltrials.gov/study/NCT07338773"
+      },
+      {
+        "nct_id": "NCT03087253",
+        "title": "The LD Lync Study - Natural History Study of Lipodystrophy Syndromes",
+        "officialTitle": "Prospective Multicenter Natural History Study of Lipodystrophy Syndromes to Determine Prevalence, Incidence and Predictors of Diabetes and Severe Hypertriglyceridemia, and Their Complications",
+        "sponsor": "University of Michigan",
+        "investigator": "Elif Oral",
+        "startDate": "2018-02-27",
+        "url": "https://clinicaltrials.gov/study/NCT03087253"
+      },
+      {
+        "nct_id": "NCT07414914",
+        "title": "Self-Myofascial Release Plus Exercise Versus Exercise Alone in Type 2 Diabetes",
+        "officialTitle": "The Effect of the Addition of Myofascial Release to Exercise Program on Foot Function, Physical Performance, and Plantar Fascia Thickness in Individuals With Type 2 Diabetes: A Randomized Controlled Trial",
+        "sponsor": "Izmir Katip Celebi University",
+        "investigator": "Sümena Hareket",
+        "startDate": "2025-11-03",
+        "url": "https://clinicaltrials.gov/study/NCT07414914"
+      },
+      {
+        "nct_id": "NCT06563401",
+        "title": "Mortality and Cardiovascular Diseases in Adult-onset Type 1 Diabetes",
+        "officialTitle": "Cardiovascular Disease, Mortality and Prognostic Factors in Adult-onset Type 1 Diabetes",
+        "sponsor": "Karolinska Institutet",
+        "investigator": "Sofia Carlsson",
+        "startDate": "2024-01-01",
+        "url": "https://clinicaltrials.gov/study/NCT06563401"
+      },
+      {
+        "nct_id": "NCT06701968",
+        "title": "Effects of a Healthy Nordic Diet on Atherosclerosis in Patients with Coronary Heart Disease",
+        "officialTitle": "A Healthy Nordic Diet to Reduce the Progression of Atherosclerosis in Individuals with Coronary Heart Disease: a Secondary Prevention Trial",
+        "sponsor": "Uppsala University",
+        "investigator": "Ulf Risérus",
+        "startDate": "2025-03-20",
+        "url": "https://clinicaltrials.gov/study/NCT06701968"
+      },
+      {
+        "nct_id": "NCT01793168",
+        "title": "Rare Disease Patient Registry & Natural History Study - Coordination of Rare Diseases at Sanford",
+        "officialTitle": "Coordination of Rare Diseases at Sanford",
+        "sponsor": "Sanford Health",
+        "investigator": null,
+        "startDate": "2010-07",
+        "url": "https://clinicaltrials.gov/study/NCT01793168"
+      },
+      {
+        "nct_id": "NCT06937203",
+        "title": "A First-In-Human Study of ARO-ALK7 in Adults With Obesity With and Without Type 2 Diabetes Mellitus",
+        "officialTitle": "A Phase 1/2A Dose-Escalating Study to Evaluate the Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of ARO-ALK7 in Adult Volunteers With Obesity With and Without Type 2 Diabetes Mellitus",
+        "sponsor": "Arrowhead Pharmaceuticals",
+        "investigator": null,
+        "startDate": "2025-05-09",
+        "url": "https://clinicaltrials.gov/study/NCT06937203"
+      },
+      {
+        "nct_id": "NCT06111833",
+        "title": "Optimized Diagnosis and Precision Medicine of MODY",
+        "officialTitle": "Optimized Diagnosis and Precision Medicine of MODY (Maturity-Onset Diabetes of the Young)",
+        "sponsor": "Taichung Veterans General Hospital",
+        "investigator": null,
+        "startDate": "2023-05-22",
+        "url": "https://clinicaltrials.gov/study/NCT06111833"
+      },
+      {
+        "nct_id": "NCT05099770",
+        "title": "Proact: A Study of REACT in Subjects With Type 2 Diabetes Mellitus and Chronic Kidney Disease",
+        "officialTitle": "A Phase 3 Randomized Controlled Study of Renal Autologous Cell Therapy (REACT) in Subjects With Type 2 Diabetes and Chronic Kidney Disease (REGEN-006)",
+        "sponsor": "Prokidney",
+        "investigator": null,
+        "startDate": "2022-01-05",
+        "url": "https://clinicaltrials.gov/study/NCT05099770"
+      },
+      {
+        "nct_id": "NCT07398495",
+        "title": "Multimodal Training Effects in Middle-Aged and Older Adults With Diabetic Sarcopenia",
+        "officialTitle": "Effects of Multimodal Training on Muscle Function and Glucose Metabolism in Middle-Aged and Older Adults With Type 2 Diabetes Mellitus and Sarcopenia",
+        "sponsor": "yueh chu wu",
+        "investigator": "yueh chu wu",
+        "startDate": "2026-02-23",
+        "url": "https://clinicaltrials.gov/study/NCT07398495"
+      },
+      {
+        "nct_id": "NCT06447467",
+        "title": "Short Term Outcome of Acute Heart Failure in Diabetic and Non Diabetic Patients",
+        "officialTitle": "Short Term Outcome of Acute Heart Failure in Diabetic and Non Diabetic Patients",
+        "sponsor": "Sohag University",
+        "investigator": "Mena Monir Thabet",
+        "startDate": "2024-06-01",
+        "url": "https://clinicaltrials.gov/study/NCT06447467"
+      },
+      {
+        "nct_id": "NCT06583590",
+        "title": "Evaluation of Efficacy of Botulinum Toxin A Plus Oral Tadalafil 5 mg in Diabetic Men With Erectile Dysfunction",
+        "officialTitle": "Evaluation of Efficacy of Botulinum Toxin A Plus Oral Tadalafil 5 mg in Diabetic Men With Erectile Dysfunction Not Responding to Approved Oral or Intracorporeal Vasoactive Treatments.",
+        "sponsor": "Aswan University Hospital",
+        "investigator": "El Hassan Mohsen Mansour Mahmoud",
+        "startDate": "2024-08-01",
+        "url": "https://clinicaltrials.gov/study/NCT06583590"
+      },
+      {
+        "nct_id": "NCT06329882",
+        "title": "Doxycycline in Type II Diabetes",
+        "officialTitle": "Doxycycline in Combination With Sitagliptin on the Glycemic and Cardiac Indices in Patients With Type 2 Diabetes Mellitus",
+        "sponsor": "Mostafa Bahaa",
+        "investigator": "Mostafa Bahaa",
+        "startDate": "2024-03-30",
+        "url": "https://clinicaltrials.gov/study/NCT06329882"
+      },
+      {
+        "nct_id": "NCT06567158",
+        "title": "The Impact of a Moderate Carbohydrate Diet in Children With Type 1 Diabetes on Hybrid Closed-loop Therapy",
+        "officialTitle": "The Impact of Carbohydrate Restriction on Glycemic Control in Children and Adolescents With Type 1 Diabetes Using a Hybrid Closed-loop Insulin Delivery System: a Randomized Cross-over Study",
+        "sponsor": "Universitaire Ziekenhuizen KU Leuven",
+        "investigator": null,
+        "startDate": "2024-05-15",
+        "url": "https://clinicaltrials.gov/study/NCT06567158"
+      },
+      {
+        "nct_id": "NCT05594706",
+        "title": "Anhydroglucitol in Children With Type 1 Diabetes",
+        "officialTitle": "Anhydroglucitol as a Measure of the Functional Beta-cell Mass in Children With Type 1 Diabetes - Pilot Study",
+        "sponsor": "University Hospital, Geneva",
+        "investigator": "Philippe Klee, MD-PhD",
+        "startDate": "2023-01-27",
+        "url": "https://clinicaltrials.gov/study/NCT05594706"
+      },
+      {
+        "nct_id": "NCT01179815",
+        "title": "Swiss Diabetes Registry - SwissDiab Study",
+        "officialTitle": "Swiss Diabetes Registry - SwissDiab Study, a Prospective Cohort Study of Patients With Diabetes in Switzerland",
+        "sponsor": "Insel Gruppe AG, University Hospital Bern",
+        "investigator": null,
+        "startDate": "2010-01",
+        "url": "https://clinicaltrials.gov/study/NCT01179815"
+      },
+      {
+        "nct_id": "NCT03549754",
+        "title": "iCaReMe Global Registry",
+        "officialTitle": "Real-world Multinational Registry to Determine Management and Quality of Care of Patients With Type 2 Diabetes, Hypertension, Heart Failure and/or Chronic Kidney Diseases",
+        "sponsor": "AstraZeneca",
+        "investigator": null,
+        "startDate": "2018-02-17",
+        "url": "https://clinicaltrials.gov/study/NCT03549754"
+      },
+      {
+        "nct_id": "NCT06286878",
+        "title": "Pleiotropic Effects of Dapagliflozin in Patients With Acute Coronary Syndromes",
+        "officialTitle": "Pleiotropic Effects of Dapagliflozin in Patients With Acute Coronary Syndromes",
+        "sponsor": "University of Sao Paulo",
+        "investigator": "Jose Carlos Nicolau",
+        "startDate": "2021-12-08",
+        "url": "https://clinicaltrials.gov/study/NCT06286878"
+      },
+      {
+        "nct_id": "NCT04634591",
+        "title": "The Bialystok Bariatric Surgery Study",
+        "officialTitle": "The Bialystok Bariatric Surgery Study",
+        "sponsor": "Medical University of Bialystok",
+        "investigator": null,
+        "startDate": "2015-09-10",
+        "url": "https://clinicaltrials.gov/study/NCT04634591"
+      },
+      {
+        "nct_id": "NCT06092476",
+        "title": "Trial to Evaluate Efficacy+Safety of Revita DMR Treatment Paradigm 1 and Retreatment in Type 2 Diabetes Patients",
+        "officialTitle": "A Randomized Double-blind Sham-controlled Trial to Evaluate Efficacy+Safety of Revita Duodenal Mucosal Resurfacing (DMR) Treatment Paradigm+Retreatment in Patients With Type 2 Diabetes Using Non-insulin Glucose Lowering Medications (REMIND)",
+        "sponsor": "Academisch Medisch Centrum - Universiteit van Amsterdam (AMC-UvA)",
+        "investigator": "Jacques J.G.H.M. Bergman",
+        "startDate": "2024-08-09",
+        "url": "https://clinicaltrials.gov/study/NCT06092476"
+      },
+      {
+        "nct_id": "NCT07083882",
+        "title": "Faecal Autologous Capsule Transplantation for Type 1 Diabetes Mellitus",
+        "officialTitle": "Faecal Autologous Capsule Transplantation for Type 1 Diabetes Mellitus",
+        "sponsor": "Academisch Medisch Centrum - Universiteit van Amsterdam (AMC-UvA)",
+        "investigator": "Nordin Hanssen",
+        "startDate": "2025-09",
+        "url": "https://clinicaltrials.gov/study/NCT07083882"
+      }
+    ],
+    "trace": {
+      "queryPlan": {
+        "status": "ok",
+        "visualizationType": "bar_chart",
+        "filters": {
+          "condition": "diabetes",
+          "status": [
+            "RECRUITING"
+          ]
+        },
+        "groupBy": "country",
+        "title": "Top Countries by Number of Recruiting Diabetes Trials",
+        "confidence": 0.9
+      },
+      "interpreter": "llm",
+      "apiRequests": [
+        "https://clinicaltrials.gov/api/v2/studies?query.cond=diabetes&filter.overallStatus=RECRUITING&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true",
+        "https://clinicaltrials.gov/api/v2/studies?query.cond=diabetes&filter.overallStatus=RECRUITING&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lp0VoC5tarumpOQJJxtZfCi2vMbkA"
+      ],
+      "apiTotalCount": 1948,
+      "apiResponseSample": [
+        {
+          "protocolSection": {
+            "identificationModule": {
+              "nctId": "NCT05363761",
+              "briefTitle": "Arterial Ablation for the Treatment of Type 2 Diabetes Mellitus and Its Comorbidities",
+              "officialTitle": "Neurotronic Ablation of Arteries for the Treatment of Type 2 Diabetes Mellitus and Its Comorbidities (NECTAR III Trial)"
+            },
+            "statusModule": {
+              "overallStatus": "RECRUITING",
+              "startDateStruct": {
+                "date": "2022-04-19"
+              }
+            },
+            "sponsorCollaboratorsModule": {
+              "responsibleParty": {},
+              "leadSponsor": {
+                "name": "Neurotronic, Inc.",
+                "class": "INDUSTRY"
+              }
+            },
+            "conditionsModule": {
+              "conditions": [
+                "Diabetes Mellitus, Type 2",
+                "Hypertension"
+              ]
+            },
+            "designModule": {
+              "studyType": "INTERVENTIONAL",
+              "phases": [
+                "PHASE1"
+              ],
+              "enrollmentInfo": {
+                "count": 50
+              }
+            },
+            "armsInterventionsModule": {
+              "interventions": [
+                {
+                  "type": "COMBINATION_PRODUCT",
+                  "name": "Neurotronic Infusion Catheter",
+                  "description": "Denervation of renal and common hepatic arteries by ethanol ablation with the Neurotronic Infusion Catheter",
+                  "armGroupLabels": [
+                    "Ablation Treatment"
+                  ]
+                }
+              ]
+            },
+            "contactsLocationsModule": {
+              "locations": [
+                {
+                  "facility": "Hospital Paitilla Clinicas y Hospitales",
+                  "status": "RECRUITING",
+                  "city": "Panama City",
+                  "zip": "0816-03075",
+                  "country": "Panama",
+                  "contacts": [
+                    {
+                      "name": "Guadalupe Perez, MD",
+                      "role": "CONTACT"
+                    }
+                  ],
+                  "geoPoint": {
+                    "lat": 8.9936,
+                    "lon": -79.51973
+                  }
+                },
+                {
+                  "facility": "Hospital Punta Pacifica",
+                  "status": "RECRUITING",
+                  "city": "Panama City",
+                  "country": "Panama",
+                  "contacts": [
+                    {
+                      "name": "Guadalupe Pérez",
+                      "role": "CONTACT"
+                    }
+                  ],
+                  "geoPoint": {
+                    "lat": 8.9936,
+                    "lon": -79.51973
+                  }
+                },
+                {
+                  "facility": "Sanatorio Adventista de Asunción",
+                  "status": "RECRUITING",
+                  "city": "Asunción",
+                  "country": "Paraguay",
+                  "contacts": [
+                    {
+                      "name": "Rubén G Servían Campos, MD",
+                      "role": "CONTACT"
+                    },
+                    {
+                      "name": "Oscar L Paredes Gonzalez, MD, PhD",
+                      "role": "CONTACT"
+                    }
+                  ],
+                  "geoPoint": {
+                    "lat": -25.28646,
+                    "lon": -57.647
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "protocolSection": {
+            "identificationModule": {
+              "nctId": "NCT07634770",
+              "briefTitle": "Bioavailability, Biopotency and Food Effect Study of SCD0503 Compared to Subcutaneous Regular Human Insulin",
+              "officialTitle": "A Trial to Investigate the Relative Bioavailability, Relative Biopotency and Food Effect of SCD0503 (Oral Insulin) in Comparison to Subcutaneous Regular Human Insulin Under Euglycaemic Clamp Conditions and After Food Intake in People With Type I Diabetes"
+            },
+            "statusModule": {
+              "overallStatus": "RECRUITING",
+              "startDateStruct": {
+                "date": "2026-05-29"
+              }
+            },
+            "sponsorCollaboratorsModule": {
+              "responsibleParty": {},
+              "leadSponsor": {
+                "name": "Sam Chun Dang Pharm. Co. Ltd.",
+                "class": "INDUSTRY"
+              }
+            },
+            "conditionsModule": {
+              "conditions": [
+                "Diabetes Mellitus, Type 1"
+              ]
+            },
+            "designModule": {
+              "studyType": "INTERVENTIONAL",
+              "phases": [
+                "PHASE1"
+              ],
+              "enrollmentInfo": {
+                "count": 16
+              }
+            },
+            "armsInterventionsModule": {
+              "interventions": [
+                {
+                  "type": "BIOLOGICAL",
+                  "name": "oral insulin",
+                  "description": "test product",
+                  "armGroupLabels": [
+                    "Sequence 1: SCD0503 low dose-SCD0503 medium dose-Actrapid-SCD0503 high dose-SCD0503 medium -Actrapid",
+                    "Sequence 2: SCD0503 low dose-SCD0503 medium dose-Actrapid-SCD0503 high dose-Actrapid-SCD0503 medium",
+                    "Sequence 3: SCD0503 medium dose-SCD0503 high dose-SCD0503 low dose-Actrapid-SCD0503 medium-Actrapid",
+                    "Sequence 4: SCD0503 medium dose-SCD0503 high dose-SCD0503 low dose-Actrapid-Actrapid-SCD0503 medium",
+                    "Sequence 5: SCD0503 high dose-Actrapid-SCD0503 medium dose-SCD0503 low dose-SCD0503 medium-Actrapid",
+                    "Sequence 6: SCD0503 high dose-Actrapid-SCD0503 medium dose-SCD0503 low dose-Actrapid-SCD0503 medium",
+                    "Sequence 7: Actrapid-SCD0503 low dose-SCD0503 high dose-SCD0503 medium dose-SCD0503 medium-Actrapid",
+                    "Sequence 8: Actrapid-SCD0503 low dose-SCD0503 high dose-SCD0503 medium dose-Actrapid-SCD0503 medium"
+                  ],
+                  "otherNames": [
+                    "SCD0503 low dose",
+                    "SCD0503 medium dose",
+                    "SCD0503 high dose"
+                  ]
+                },
+                {
+                  "type": "OTHER",
+                  "name": "Placebo A",
+                  "description": "placebo for test product",
+                  "armGroupLabels": [
+                    "Sequence 1: SCD0503 low dose-SCD0503 medium dose-Actrapid-SCD0503 high dose-SCD0503 medium -Actrapid",
+                    "Sequence 2: SCD0503 low dose-SCD0503 medium dose-Actrapid-SCD0503 high dose-Actrapid-SCD0503 medium",
+                    "Sequence 3: SCD0503 medium dose-SCD0503 high dose-SCD0503 low dose-Actrapid-SCD0503 medium-Actrapid",
+                    "Sequence 4: SCD0503 medium dose-SCD0503 high dose-SCD0503 low dose-Actrapid-Actrapid-SCD0503 medium",
+                    "Sequence 5: SCD0503 high dose-Actrapid-SCD0503 medium dose-SCD0503 low dose-SCD0503 medium-Actrapid",
+                    "Sequence 6: SCD0503 high dose-Actrapid-SCD0503 medium dose-SCD0503 low dose-Actrapid-SCD0503 medium",
+                    "Sequence 7: Actrapid-SCD0503 low dose-SCD0503 high dose-SCD0503 medium dose-SCD0503 medium-Actrapid",
+                    "Sequence 8: Actrapid-SCD0503 low dose-SCD0503 high dose-SCD0503 medium dose-Actrapid-SCD0503 medium"
+                  ],
+                  "otherNames": [
+                    "Placebo A low dose",
+                    "Placebo A medium dose",
+                    "Plaebo A high dose"
+                  ]
+                },
+                {
+                  "type": "BIOLOGICAL",
+                  "name": "subcutaneous insulin",
+                  "description": "reference product/comparator",
+                  "armGroupLabels": [
+                    "Sequence 1: SCD0503 low dose-SCD0503 medium dose-Actrapid-SCD0503 high dose-SCD0503 medium -Actrapid",
+                    "Sequence 2: SCD0503 low dose-SCD0503 medium dose-Actrapid-SCD0503 high dose-Actrapid-SCD0503 medium",
+                    "Sequence 3: SCD0503 medium dose-SCD0503 high dose-SCD0503 low dose-Actrapid-SCD0503 medium-Actrapid",
+                    "Sequence 4: SCD0503 medium dose-SCD0503 high dose-SCD0503 low dose-Actrapid-Actrapid-SCD0503 medium",
+                    "Sequence 5: SCD0503 high dose-Actrapid-SCD0503 medium dose-SCD0503 low dose-SCD0503 medium-Actrapid",
+                    "Sequence 6: SCD0503 high dose-Actrapid-SCD0503 medium dose-SCD0503 low dose-Actrapid-SCD0503 medium",
+                    "Sequence 7: Actrapid-SCD0503 low dose-SCD0503 high dose-SCD0503 medium dose-SCD0503 medium-Actrapid",
+                    "Sequence 8: Actrapid-SCD0503 low dose-SCD0503 high dose-SCD0503 medium dose-Actrapid-SCD0503 medium"
+                  ],
+                  "otherNames": [
+                    "Actrapid"
+                  ]
+                },
+                {
+                  "type": "OTHER",
+                  "name": "Placebo B",
+                  "description": "placebo for reference product",
+                  "armGroupLabels": [
+                    "Sequence 1: SCD0503 low dose-SCD0503 medium dose-Actrapid-SCD0503 high dose-SCD0503 medium -Actrapid",
+                    "Sequence 2: SCD0503 low dose-SCD0503 medium dose-Actrapid-SCD0503 high dose-Actrapid-SCD0503 medium",
+                    "Sequence 3: SCD0503 medium dose-SCD0503 high dose-SCD0503 low dose-Actrapid-SCD0503 medium-Actrapid",
+                    "Sequence 4: SCD0503 medium dose-SCD0503 high dose-SCD0503 low dose-Actrapid-Actrapid-SCD0503 medium",
+                    "Sequence 5: SCD0503 high dose-Actrapid-SCD0503 medium dose-SCD0503 low dose-SCD0503 medium-Actrapid",
+                    "Sequence 6: SCD0503 high dose-Actrapid-SCD0503 medium dose-SCD0503 low dose-Actrapid-SCD0503 medium",
+                    "Sequence 7: Actrapid-SCD0503 low dose-SCD0503 high dose-SCD0503 medium dose-SCD0503 medium-Actrapid",
+                    "Sequence 8: Actrapid-SCD0503 low dose-SCD0503 high dose-SCD0503 medium dose-Actrapid-SCD0503 medium"
+                  ]
+                }
+              ]
+            },
+            "contactsLocationsModule": {
+              "locations": [
+                {
+                  "facility": "Profil Institut für Stoffwechselforschung GmbH",
+                  "status": "RECRUITING",
+                  "city": "Neuss",
+                  "state": "North Rhine-Westphalia",
+                  "zip": "41460",
+                  "country": "Germany",
+                  "contacts": [
+                    {
+                      "name": "Investigator",
+                      "role": "CONTACT",
+                      "phone": "+49213140180",
+                      "email": "clinicaltrialservices@profil.com"
+                    }
+                  ],
+                  "geoPoint": {
+                    "lat": 51.19807,
+                    "lon": 6.68504
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "protocolSection": {
+            "identificationModule": {
+              "nctId": "NCT04058639",
+              "briefTitle": "Diabetic Foot Ulcers: Shorter Treatment Period Using Custom Felt Relief?",
+              "officialTitle": "Diabetic Foot Ulcers: Shorter Treatment Period Using Custom Felt Relief?"
+            },
+            "statusModule": {
+              "overallStatus": "RECRUITING",
+              "startDateStruct": {
+                "date": "2019-10-01"
+              }
+            },
+            "sponsorCollaboratorsModule": {
+              "responsibleParty": {},
+              "leadSponsor": {
+                "name": "Helse Møre og Romsdal HF",
+                "class": "OTHER_GOV"
+              }
+            },
+            "conditionsModule": {
+              "conditions": [
+                "Diabetic Foot Ulcer"
+              ]
+            },
+            "designModule": {
+              "studyType": "INTERVENTIONAL",
+              "phases": [
+                "NA"
+              ],
+              "enrollmentInfo": {
+                "count": 74
+              }
+            },
+            "armsInterventionsModule": {
+              "interventions": [
+                {
+                  "type": "PROCEDURE",
+                  "name": "\"custom felt relief\"",
+                  "description": "Felt is adjusted to the wound by cutting it in different ways and layers once every week",
+                  "armGroupLabels": [
+                    "felt relief"
+                  ]
+                },
+                {
+                  "type": "PROCEDURE",
+                  "name": "standard relief treatment",
+                  "description": "Felt in the shape of a letter U is put around the wound once every week.",
+                  "armGroupLabels": [
+                    "treatment as usual"
+                  ]
+                }
+              ]
+            },
+            "contactsLocationsModule": {
+              "locations": [
+                {
+                  "facility": "Klinikk for Kirurgi Molde, Helse Møre og Romsdal HF",
+                  "status": "RECRUITING",
+                  "city": "Molde",
+                  "country": "Norway",
+                  "contacts": [
+                    {
+                      "name": "Ida Gule",
+                      "role": "CONTACT",
+                      "phone": "+47 71121926",
+                      "email": "Ida.Gule@helse-mr.no"
+                    }
+                  ],
+                  "geoPoint": {
+                    "lat": 62.73752,
+                    "lon": 7.15912
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "request": {
+    "query": "Show me some trials."
+  },
+  "response": {
+    "visualization": null,
+    "meta": {
+      "source": "clinicaltrials.gov",
+      "apiVersion": "v2",
+      "filters": {},
+      "totalMatchingTrials": 0,
+      "analyzedTrials": 0,
+      "truncated": false,
+      "units": "n/a",
+      "sort": "n/a",
+      "notes": "Question is too broad to query (it would match the entire registry). Please specify at least one of: condition, drug, sponsor, country, or a year range.",
+      "confidence": 0.4,
+      "status": "needs_clarification",
+      "interpreter": "fallback-rules",
+      "apiRequests": [],
+      "warnings": [
+        "LLM interpretation failed ([\n  {\n    \"expected\": \"'intervention' | 'condition' | 'sponsor'\",\n    \"received\": \"undefined\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"comparison\",\n      \"dimension\"\n    ],\n    \"message\": \"Required\"\n  },\n  {\n    \"code\": \"invalid_type\",\n    \"expected\": \"array\",\n    \"received\": \"undefined\",\n    \"path\": [\n      \"comparison\",\n      \"values\"\n    ],\n    \"message\": \"Required\"\n  },\n  {\n    \"expected\": \"'sponsor' | 'drug' | 'condition'\",\n    \"received\": \"undefined\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"network\",\n      \"source\"\n    ],\n    \"message\": \"Required\"\n  },\n  {\n    \"expected\": \"'sponsor' | 'drug' | 'condition'\",\n    \"received\": \"undefined\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"network\",\n      \"target\"\n    ],\n    \"message\": \"Required\"\n  },\n  {\n    \"code\": \"too_small\",\n    \"minimum\": 0,\n    \"type\": \"number\",\n    \"inclusive\": false,\n    \"exact\": false,\n    \"message\": \"Number must be greater than 0\",\n    \"path\": [\n      \"topN\"\n    ]\n  }\n]); used deterministic fallback parser."
+      ]
+    },
+    "references": [],
+    "trace": {
+      "queryPlan": {
+        "status": "needs_clarification",
+        "visualizationType": "bar_chart",
+        "filters": {},
+        "title": "Clinical Trials Visualization",
+        "notes": "Question is too broad to query (it would match the entire registry). Please specify at least one of: condition, drug, sponsor, country, or a year range.",
+        "confidence": 0.4
+      },
+      "interpreter": "fallback-rules",
+      "apiRequests": [],
+      "apiTotalCount": 0,
+      "apiResponseSample": []
+    }
+  }
+}

@@ -1,0 +1,20 @@
+# Local OpenTelemetry trace viewer (Jaeger all-in-one). Optional — only needed
+# if you want to SEE the OTLP-exported spans in a UI. Without it, run the app
+# with OTEL_ENABLED=true and no endpoint to print spans to the console instead.
+#
+#   npm run otel:up      # start  -> UI: http://localhost:16686
+#   npm run otel:down    # stop
+#
+# Then point the app at it:
+#   OTEL_ENABLED=true
+#   OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4318
+services:
+  jaeger:
+    image: jaegertracing/all-in-one:1.60
+    restart: unless-stopped
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+    ports:
+      - "16686:16686" # Jaeger UI
+      - "4318:4318"   # OTLP/HTTP receiver (what the app exports to)
+      - "4317:4317"   # OTLP/gRPC receiver

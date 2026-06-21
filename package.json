@@ -1,0 +1,47 @@
+{
+  "name": "ct-viz-agent",
+  "version": "1.0.0",
+  "description": "Backend agent that converts natural-language clinical-trial questions into structured visualization specifications backed by ClinicalTrials.gov API data.",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "serve": "node dist/src/index.js",
+    "examples": "tsx examples/run-examples.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "eval": "promptfoo eval -c eval/promptfooconfig.yaml",
+    "eval:view": "promptfoo view -y",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "langfuse:up": "docker compose -f docker-compose.langfuse.yml up -d",
+    "langfuse:down": "docker compose -f docker-compose.langfuse.yml down",
+    "langfuse:logs": "docker compose -f docker-compose.langfuse.yml logs -f langfuse-web",
+    "otel:up": "docker compose -f docker-compose.otel.yml up -d",
+    "otel:down": "docker compose -f docker-compose.otel.yml down"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "^1.9.1",
+    "@opentelemetry/auto-instrumentations-node": "^0.77.0",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.219.0",
+    "@opentelemetry/sdk-node": "^0.219.0",
+    "@opentelemetry/sdk-trace-base": "^2.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "langfuse": "^3.30.0",
+    "openai": "^4.67.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.0",
+    "promptfoo": "^0.121.17",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.1.8"
+  }
+}

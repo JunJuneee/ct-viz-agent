@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ClinicalTrials.gov Visualization Agent — Architecture</title>
+<style>
+  :root{
+    --bg:#0b1220; --bg2:#0f172a; --card:#1e293b; --line:#334155;
+    --text:#e2e8f0; --muted:#94a3b8; --accent:#38bdf8; --pink:#f472b6;
+    --green:#a3e635; --amber:#fbbf24; --code:#0b1220;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;
+    line-height:1.7;font-size:15px}
+  header{padding:36px 28px 28px;border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,#0f172a,#0b1220)}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  h1{font-size:26px;margin:0 0 6px}
+  h2{font-size:20px;margin:40px 0 14px;padding-top:10px;border-top:1px solid var(--line)}
+  h3{font-size:16px;margin:22px 0 8px;color:var(--accent)}
+  .sub{color:var(--muted);font-size:14px}
+  p{margin:8px 0}
+  code{background:var(--code);padding:2px 6px;border-radius:5px;font-size:13px;color:#cbd5e1;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .tag{display:inline-block;font-size:12px;padding:2px 9px;border-radius:999px;
+    border:1px solid var(--line);color:var(--muted);margin-right:6px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:14px 0}
+  .grid{display:grid;gap:12px}
+  .g2{grid-template-columns:1fr 1fr}
+  .g3{grid-template-columns:1fr 1fr 1fr}
+  @media(max-width:720px){.g2,.g3{grid-template-columns:1fr}}
+  .muted{color:var(--muted)}
+  .accent{color:var(--accent)} .pink{color:var(--pink)} .green{color:var(--green)} .amber{color:var(--amber)}
+  ul{margin:8px 0;padding-left:20px} li{margin:4px 0}
+
+  /* pipeline diagram */
+  .pipe{display:flex;flex-direction:column;gap:0;margin:18px 0}
+  .step{display:flex;align-items:stretch;gap:14px}
+  .num{flex:0 0 38px;display:flex;align-items:center;justify-content:center;
+    background:var(--bg2);border:1px solid var(--line);border-radius:10px;font-weight:700;color:var(--accent)}
+  .body{flex:1;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px}
+  .body b{font-size:15px}
+  .body .desc{color:var(--muted);font-size:13px;margin-top:3px}
+  .arrow{height:18px;display:flex;align-items:center;padding-left:18px;color:var(--muted)}
+  .arrow::before{content:"▼";font-size:11px}
+  .llm{border-left:3px solid var(--pink)}
+  .det{border-left:3px solid var(--accent)}
+  .legend{display:flex;gap:18px;font-size:13px;color:var(--muted);margin:10px 0 0}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:middle}
+
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--muted);font-weight:600;background:var(--bg2)}
+  td code{font-size:12px}
+
+  pre{background:var(--code);border:1px solid var(--line);border-radius:10px;padding:14px;
+    overflow:auto;font-size:12.5px;line-height:1.55}
+  pre code{background:none;padding:0}
+  .k{color:var(--accent)} .s{color:var(--green)} .n{color:var(--amber)} .c{color:#64748b}
+
+  .callout{background:linear-gradient(180deg,#172033,#141d2e);border:1px solid var(--accent);
+    border-radius:12px;padding:16px 20px;margin:16px 0}
+  .callout b{color:var(--accent)}
+  footer{color:var(--muted);font-size:13px;padding:30px 0 50px;text-align:center}
+  .tree{font-family:ui-monospace,Menlo,monospace;font-size:13px;line-height:1.7;white-space:pre;color:#cbd5e1}
+  .tree .d{color:var(--accent)} .tree .cm{color:#64748b}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>ClinicalTrials.gov Query → Visualization Agent</h1>
+    <div class="sub">Architecture &amp; design · natural-language question → structured visualization spec</div>
+    <div style="margin-top:12px">
+      <span class="tag">TypeScript + Express</span>
+      <span class="tag">OpenAI (structured output) + validation</span>
+      <span class="tag">ClinicalTrials.gov API v2</span>
+      <span class="tag">SSE streaming</span>
+      <span class="tag">Deep citations</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <h2>1. One-line summary</h2>
+  <div class="card">
+    A user asks about clinical trials in <b>natural language</b> →
+    the LLM decides <b>only "how to query and visualize" (a QueryPlan)</b> →
+    deterministic code fetches data from the <b>real ClinicalTrials.gov API</b> →
+    and returns a <b>structured visualization spec (with source citations)</b> a
+    frontend can render without guessing. The agent first decides whether a chart is
+    even possible; if not, it returns no chart with an explanation instead.
+  </div>
+
+  <h2>2. End-to-end pipeline</h2>
+  <p class="muted">The core idea is a clean split between the <b class="pink">interpretation (LLM)</b> step and the <b class="accent">data &amp; computation (deterministic code)</b> steps.</p>
+
+  <div class="pipe">
+    <div class="step"><div class="num">IN</div><div class="body"><b>Natural-language query</b><div class="desc"><code>{ "query": "How are melanoma trials distributed across phases?", "condition": "melanoma" }</code> &nbsp;— via <code>POST /query</code> or <code>GET /query/stream</code> (SSE)</div></div></div>
+    <div class="arrow"></div>
+
+    <div class="step"><div class="num">1</div><div class="body llm"><b class="pink">interpret</b> — understand the query<div class="desc">OpenAI structured output (JSON Schema) produces a <code>QueryPlan</code>; with no key, a deterministic keyword parser is used instead. → decides which filters / grouping / chart type / <code>status</code> to use (never produces data).</div></div></div>
+    <div class="arrow"></div>
+
+    <div class="step"><div class="num">2</div><div class="body det"><b class="accent">finalizePlan</b> — validate &amp; gate<div class="desc">Zod validation + caller-supplied fields override inference + per-viz-type constraints + ranking (sort/topN) normalization. Decides <code>status</code>: if <code>unsupported</code>/<code>needs_clarification</code> (incl. a zero-filter guard) → return early with no chart.</div></div></div>
+    <div class="arrow"></div>
+
+    <div class="step"><div class="num">3</div><div class="body det"><b class="accent">buildQueryParams</b> — build API params<div class="desc"><code>QueryPlan.filters</code> → v2 query (<code>query.cond/intr/spons/locn</code>, Essie <code>filter.advanced</code> for phase/date/studyType, <code>filter.overallStatus</code>)</div></div></div>
+    <div class="arrow"></div>
+
+    <div class="step"><div class="num">4</div><div class="body det"><b class="accent">fetchStudies</b> — fetch real data<div class="desc">Paginates <b>ALL</b> matches by default (no truncation → exact counts; optional <code>MAX_STUDIES</code> cap) + retry/backoff + <code>totalCount</code>. Per-page progress drives the SSE <code>fetch_progress</code> event.</div></div></div>
+    <div class="arrow"></div>
+
+    <div class="step"><div class="num">5</div><div class="body det"><b class="accent">normalize</b> — flatten records<div class="desc">Complex raw JSON → analysis-friendly <code>NormalizedStudy</code> (nctId, phases, startYear, sponsor, conditions, interventions, countries, enrollment, officialTitle, investigator…)</div></div></div>
+    <div class="arrow"></div>
+
+    <div class="step"><div class="num">6</div><div class="body det"><b class="accent">aggregate</b> — compute + attach evidence<div class="desc">Runs one of count / time-series / histogram / scatter / network. <b>Every data point carries deep citations (NCT id + exact excerpt + link).</b></div></div></div>
+    <div class="arrow"></div>
+
+    <div class="step"><div class="num">7</div><div class="body det"><b class="accent">assemble</b> — build response<div class="desc"><code>VisualizationSpec</code> (type·title·encoding·data) + <code>ResponseMeta</code> + <code>references[]</code> (source cards) + <code>trace</code> (plan + raw API I/O)</div></div></div>
+    <div class="arrow"></div>
+
+    <div class="step"><div class="num">OUT</div><div class="body"><b>AgentResponse (JSON)</b><div class="desc">A structured response a frontend can render without guessing</div></div></div>
+  </div>
+
+  <div class="legend">
+    <span><span class="dot" style="background:var(--pink)"></span>LLM-involved step (only one)</span>
+    <span><span class="dot" style="background:var(--accent)"></span>Deterministic code (real data &amp; numbers)</span>
+  </div>
+
+  <h2>3. Key design decision: <span class="accent">the LLM never produces data</span></h2>
+  <div class="callout">
+    <b>The model only ever emits a <code>QueryPlan</code> (how to query and visualize).</b><br>
+    <b>Every number in the response is computed from real ClinicalTrials.gov records</b>, so
+    the model cannot fabricate trial counts, NCT ids, or results. This is the central
+    anti-hallucination guard, directly addressing the rubric's
+    "avoid hallucination-prone steps / include validation".
+  </div>
+
+  <h2>4. Directory layout (separation of concerns)</h2>
+  <div class="card">
+<div class="tree"><span class="d">src/</span>
+├─ <span class="d">agent/</span>
+│   ├─ interpret.ts        <span class="cm"># LLM call (structured output) + fallback selection</span>
+│   ├─ interpretation.ts   <span class="cm"># QueryPlan Zod + JSON schema (the model's contract)</span>
+│   ├─ fallback.ts         <span class="cm"># deterministic keyword parser (no key)</span>
+│   ├─ planner.ts          <span class="cm"># validation, caller-override, status gate, ranking</span>
+│   ├─ queryBuilder.ts     <span class="cm"># QueryPlan → CT.gov v2 query params</span>
+│   └─ judge.ts            <span class="cm"># optional sampled LLM-as-judge (online eval)</span>
+├─ <span class="d">clinicaltrials/</span>
+│   ├─ client.ts           <span class="cm"># HTTP: full pagination, retry, totalCount, progress</span>
+│   ├─ normalize.ts        <span class="cm"># raw record → NormalizedStudy</span>
+│   └─ fields.ts           <span class="cm"># requested field paths (verified against live API)</span>
+├─ <span class="d">aggregate/</span>
+│   ├─ dimensions.ts       <span class="cm"># grouping keys + excerpt builders</span>
+│   ├─ aggregators.ts      <span class="cm"># count / time-series / histogram / scatter (+ranking)</span>
+│   ├─ network.ts          <span class="cm"># relationship graph (bipartite / co-occurrence)</span>
+│   └─ citations.ts        <span class="cm"># deep-citation attachment</span>
+├─ <span class="d">schemas/</span>request.ts    <span class="cm"># input Zod schema (.strict)</span>
+├─ <span class="d">lib/</span>langfuse.ts       <span class="cm"># optional tracing + deterministic eval scores</span>
+├─ otel.ts                 <span class="cm"># optional OpenTelemetry spans</span>
+├─ types.ts                <span class="cm"># domain types + controlled vocabularies (enums)</span>
+├─ pipeline.ts             <span class="cm"># orchestration (status gate, comparison, references, SSE events)</span>
+├─ server.ts               <span class="cm"># Express app: /query, /query/stream (SSE), /health</span>
+└─ index.ts                <span class="cm"># bootstrap</span>
+<span class="d">demo/</span>index.html          <span class="cm"># zero-build frontend (Chart.js + vis-network, SSE)</span>
+<span class="d">examples/</span>               <span class="cm"># 9 real JSON outputs + runner</span>
+openapi.yaml              <span class="cm"># OpenAPI 3.1 contract for all endpoints</span></div>
+  </div>
+
+  <h2>5. Supported visualizations &amp; query mapping</h2>
+  <p class="muted">A single coherent approach (plan → filter → aggregate) covers many query types with no one-off handling.</p>
+  <table>
+    <tr><th>Query type</th><th>Example</th><th>Visualization type</th></tr>
+    <tr><td>Time trend</td><td>"how have trials for X changed each year"</td><td><code>time_series</code></td></tr>
+    <tr><td>Distribution (categorical)</td><td>"distribution across phases?"</td><td><code>bar_chart</code></td></tr>
+    <tr><td>Distribution (numeric)</td><td>"distribution of enrollment sizes?"</td><td><code>histogram</code></td></tr>
+    <tr><td>Comparison</td><td>"compare phases for Drug A vs Drug B"</td><td><code>grouped_bar_chart</code> <span class="muted">(one API query per entity)</span></td></tr>
+    <tr><td>Geographic</td><td>"which countries have the most recruiting trials"</td><td><code>bar_chart</code> (by country)</td></tr>
+    <tr><td>Ranking</td><td>"top 10 / fewest …"</td><td><code>bar_chart</code> <span class="muted">(sort + topN)</span></td></tr>
+    <tr><td>Relationship / network</td><td>"sponsor↔drug network", "drug co-occurrence"</td><td><code>network_graph</code> <span class="muted">(bipartite / co-occurrence)</span></td></tr>
+    <tr><td>Correlation</td><td>"enrollment vs start year"</td><td><code>scatter_plot</code></td></tr>
+  </table>
+  <p class="muted">Group-by dimensions: <code>phase, year, country, sponsor, sponsor_class, intervention_type, condition, status, study_type</code></p>
+
+  <h2>6. Anti-hallucination &amp; safety guards</h2>
+  <div class="grid g2">
+    <div class="card"><b class="accent">① LLM can't produce data</b><div class="muted">Emits only a QueryPlan → cannot fabricate numbers or NCT ids</div></div>
+    <div class="card"><b class="accent">② Structured output + schema validation</b><div class="muted">JSON Schema enforced, then re-validated with Zod; enum controlled vocabularies</div></div>
+    <div class="card"><b class="accent">③ Constraint layer (planner)</b><div class="muted">Repairs/downgrades invalid plans, records reasons in <code>warnings</code></div></div>
+    <div class="card"><b class="accent">④ "Is a chart even possible?" gate</b><div class="muted"><code>status</code> = unsupported / needs_clarification → <code>visualization: null</code> + explanation; zero-filter queries are guarded</div></div>
+    <div class="card"><b class="accent">⑤ Exact counts, honest limits</b><div class="muted">Full fetch by default (<code>truncated=false</code>); top-N category cap &amp; excluded-record counts are always reported</div></div>
+    <div class="card"><b class="accent">⑥ Full traceability</b><div class="muted"><code>meta.apiRequests</code> + <code>trace</code> (plan + raw API sample); every datum cited</div></div>
+  </div>
+
+  <h2>7. Input / output schema</h2>
+  <p class="muted">Formal contract for all endpoints: <code>openapi.yaml</code> (OpenAPI 3.1). Human-readable summary below.</p>
+  <div class="grid g2">
+    <div>
+      <h3>Request (POST /query)</h3>
+<pre><code>{
+  <span class="k">"query"</span>: <span class="s">"..."</span>,        <span class="c">// required</span>
+  <span class="k">"drug_name"</span>: <span class="s">"..."</span>,    <span class="c">// the rest optional</span>
+  <span class="k">"condition"</span>: <span class="s">"..."</span>,
+  <span class="k">"sponsor"</span>: <span class="s">"..."</span>,
+  <span class="k">"country"</span>: <span class="s">"..."</span>,
+  <span class="k">"trial_phase"</span>: <span class="s">"PHASE3"</span>,
+  <span class="k">"status"</span>: [<span class="s">"RECRUITING"</span>],
+  <span class="k">"study_type"</span>: <span class="s">"INTERVENTIONAL"</span>,
+  <span class="k">"start_year"</span>: <span class="n">2015</span>,
+  <span class="k">"end_year"</span>: <span class="n">2025</span>,
+  <span class="k">"visualization_type"</span>: <span class="s">"bar_chart"</span>
+}</code></pre>
+      <p class="muted" style="font-size:13px">Zod <code>.strict()</code> rejects unknown fields; invalid requests get <code>400</code> + per-field reasons. Structured fields override LLM inference.</p>
+    </div>
+    <div>
+      <h3>Response</h3>
+<pre><code>{
+  <span class="c">// null when status != "ok"</span>
+  <span class="k">"visualization"</span>: {
+    <span class="k">"type"</span>: <span class="s">"bar_chart"</span>,
+    <span class="k">"title"</span>: <span class="s">"..."</span>,
+    <span class="k">"encoding"</span>: { <span class="k">"x"</span>:{<span class="k">"field"</span>:<span class="s">"category"</span>},
+                  <span class="k">"y"</span>:{<span class="k">"field"</span>:<span class="s">"trial_count"</span>} },
+    <span class="k">"data"</span>: [{ <span class="k">"category"</span>:<span class="s">"Phase 3"</span>, <span class="k">"trial_count"</span>:<span class="n">41</span>,
+              <span class="k">"citations"</span>:[{<span class="k">"nct_id"</span>:<span class="s">"NCT..."</span>,…}] }]
+  },
+  <span class="k">"meta"</span>: { <span class="k">"status"</span>:<span class="s">"ok"</span>, <span class="k">"totalMatchingTrials"</span>:<span class="n">3716</span>,
+            <span class="k">"analyzedTrials"</span>:<span class="n">3716</span>, <span class="k">"truncated"</span>:<span class="k">false</span>,
+            <span class="k">"interpreter"</span>:<span class="s">"llm"</span>, <span class="k">"confidence"</span>:<span class="n">0.9</span>,
+            <span class="k">"apiRequests"</span>:[<span class="s">"https://..."</span>], <span class="k">"warnings"</span>:[…] },
+  <span class="k">"references"</span>: [{ <span class="k">"nct_id"</span>, <span class="k">"title"</span>, <span class="k">"officialTitle"</span>,
+                  <span class="k">"sponsor"</span>, <span class="k">"investigator"</span>, <span class="k">"startDate"</span>, <span class="k">"url"</span> }],
+  <span class="k">"trace"</span>: { <span class="k">"queryPlan"</span>, <span class="k">"apiRequests"</span>, <span class="k">"apiTotalCount"</span>,
+             <span class="k">"apiResponseSample"</span> }
+}</code></pre>
+    </div>
+  </div>
+
+  <h3>Per-type data shape</h3>
+  <table>
+    <tr><th>type</th><th>data shape</th><th>encoding channels</th></tr>
+    <tr><td><code>bar_chart</code></td><td><code>{category, trial_count, citations}</code></td><td>x=category, y=trial_count</td></tr>
+    <tr><td><code>grouped_bar_chart</code></td><td><code>{group, series, trial_count, citations}</code></td><td>x=group, y=trial_count, series</td></tr>
+    <tr><td><code>time_series</code></td><td><code>{year, trial_count, citations}</code> (gap-filled)</td><td>x=year, y=trial_count</td></tr>
+    <tr><td><code>histogram</code></td><td><code>{bucket, bucket_start, bucket_end, trial_count, citations}</code></td><td>x=bucket, y=trial_count</td></tr>
+    <tr><td><code>scatter_plot</code></td><td><code>{x, y, nct_id, label, citations}</code></td><td>x, y</td></tr>
+    <tr><td><code>network_graph</code></td><td><code>nodes:{id,label,group,weight}</code> · <code>edges:{source,target,weight,citations}</code></td><td>nodes, edges</td></tr>
+  </table>
+
+  <h2>8. When no chart is produced (the <code>status</code> gate)</h2>
+  <div class="card">
+    The agent first decides whether the question is answerable from trial-registry data:
+    <ul>
+      <li><b class="green">ok</b> → produce a chart.</li>
+      <li><b class="amber">needs_clarification</b> — on-topic but too vague (e.g. "show me trials", or a zero-filter query that would scan the whole registry) → <code>visualization: null</code>, <code>meta.notes</code> asks for specifics. The demo shows an interactive "narrow your search" form.</li>
+      <li><b class="pink">unsupported</b> — out of scope (e.g. patient counts, drug prices, medical advice) → <code>visualization: null</code>, <code>meta.notes</code> explains why.</li>
+    </ul>
+    This prevents forcing a misleading chart, and the zero-filter guard also blocks runaway full-registry fetches.
+  </div>
+
+  <h2>9. Comparison (grouped bar): multi-query strategy</h2>
+  <div class="card">
+    For "Drug A vs Drug B", mixing both entities into one query would make the counts
+    inseparable. Instead, <b>a separate API query runs per compared entity</b>; each result
+    is aggregated by phase and merged into one grouped-bar dataset via a <code>series</code>
+    field (<code>pipeline.ts</code> → <code>executeComparison</code>).
+  </div>
+
+  <h2>10. Streaming &amp; observability</h2>
+  <div class="card">
+    <b>SSE</b> (<code>GET /query/stream</code>) streams the run as events
+    <code>status → interpretation → fetch_progress → result → done</code>, so a client can
+    show the agent's plan and live fetch progress before the final result.
+    <b>Observability</b> is optional: when keys are present, each request is traced in
+    Langfuse (LLM token/cost/latency) with deterministic quality scores, and OpenTelemetry
+    spans can be exported — all no-ops without configuration.
+  </div>
+
+  <footer>
+    ct-viz-agent · architecture · demo UI at <code>/demo</code>, see <code>README.md</code> to run
+  </footer>
+</div>
+</body>
+</html>

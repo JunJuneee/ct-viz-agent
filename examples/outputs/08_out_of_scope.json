@@ -1,0 +1,38 @@
+{
+  "request": {
+    "query": "What is the price of pembrolizumab and is it better than chemo?"
+  },
+  "response": {
+    "visualization": null,
+    "meta": {
+      "source": "clinicaltrials.gov",
+      "apiVersion": "v2",
+      "filters": {},
+      "totalMatchingTrials": 0,
+      "analyzedTrials": 0,
+      "truncated": false,
+      "units": "n/a",
+      "sort": "n/a",
+      "notes": "The question asks for drug prices and efficacy comparisons, which cannot be answered using ClinicalTrials.gov trial registry data.",
+      "confidence": 0.5,
+      "status": "unsupported",
+      "interpreter": "llm",
+      "apiRequests": []
+    },
+    "references": [],
+    "trace": {
+      "queryPlan": {
+        "status": "unsupported",
+        "visualizationType": "bar_chart",
+        "filters": {},
+        "title": "Clinical Trials Visualization",
+        "notes": "The question asks for drug prices and efficacy comparisons, which cannot be answered using ClinicalTrials.gov trial registry data.",
+        "confidence": 0.5
+      },
+      "interpreter": "llm",
+      "apiRequests": [],
+      "apiTotalCount": 0,
+      "apiResponseSample": []
+    }
+  }
+}

@@ -1,0 +1,2289 @@
+{
+  "request": {
+    "query": "Compare phases for trials involving Pembrolizumab vs Nivolumab."
+  },
+  "response": {
+    "visualization": {
+      "type": "grouped_bar_chart",
+      "title": "Comparison of Phases for Trials Involving Pembrolizumab vs Nivolumab",
+      "encoding": {
+        "x": {
+          "field": "group",
+          "type": "ordinal",
+          "label": "Phase"
+        },
+        "y": {
+          "field": "trial_count",
+          "type": "quantitative",
+          "label": "Trial Count"
+        },
+        "series": {
+          "field": "series",
+          "type": "nominal",
+          "label": "Drug"
+        }
+      },
+      "data": [
+        {
+          "group": "Early Phase 1",
+          "series": "Pembrolizumab",
+          "trial_count": 52,
+          "citations": [
+            {
+              "nct_id": "NCT03514121",
+              "excerpt": "Early Phase 1 — \"FPA150 in Patients With Advanced Solid Tumors\"",
+              "url": "https://clinicaltrials.gov/study/NCT03514121"
+            },
+            {
+              "nct_id": "NCT04674306",
+              "excerpt": "Early Phase 1 — \"Adjuvant Therapy With an Alpha-lactalbumin Vaccine in Triple-Negative Breast Cancer\"",
+              "url": "https://clinicaltrials.gov/study/NCT04674306"
+            },
+            {
+              "nct_id": "NCT01789827",
+              "excerpt": "Early Phase 1 — \"Aldesleukin Imaging in Viewing Tumor Growth in Patients With Stage IV Melanoma Receiving Ipilimumab or Pembrolizumab Therapy\"",
+              "url": "https://clinicaltrials.gov/study/NCT01789827"
+            }
+          ]
+        },
+        {
+          "group": "Not Applicable",
+          "series": "Pembrolizumab",
+          "trial_count": 52,
+          "citations": [
+            {
+              "nct_id": "NCT06876636",
+              "excerpt": "Not Applicable — \"Zoledronic Acid Combined With EC-T for Triple-Negative Breast Cancer\"",
+              "url": "https://clinicaltrials.gov/study/NCT06876636"
+            },
+            {
+              "nct_id": "NCT07428252",
+              "excerpt": "Not Applicable — \"Gastrointestinal Microbiome and Response to Immunotherapy in Metastatic Malignant Melanoma\"",
+              "url": "https://clinicaltrials.gov/study/NCT07428252"
+            },
+            {
+              "nct_id": "NCT03035890",
+              "excerpt": "Not Applicable — \"Hypofractionated Radiation Therapy to Improve Immunotherapy Response in Non-Small Cell Lung Cancer\"",
+              "url": "https://clinicaltrials.gov/study/NCT03035890"
+            }
+          ]
+        },
+        {
+          "group": "Not Specified",
+          "series": "Pembrolizumab",
+          "trial_count": 166,
+          "citations": [
+            {
+              "nct_id": "NCT04698681",
+              "excerpt": "Not Specified — \"NGS Screening Protocol to Detect Mutation of KEAP1 or NRF2/NFE2L2 Genes for the KEAPSAKE (CX-839-014) Trial\"",
+              "url": "https://clinicaltrials.gov/study/NCT04698681"
+            },
+            {
+              "nct_id": "NCT07633353",
+              "excerpt": "Not Specified — \"Real-World Outcomes of First-Line Treatment of Metastatic or Locally Advanced Upper Tract Urothelial Carcinoma With Enfortumab Vedotin Plus Pembrolizumab : A French Multicenter Retrospective Observational Study\"",
+              "url": "https://clinicaltrials.gov/study/NCT07633353"
+            },
+            {
+              "nct_id": "NCT06599619",
+              "excerpt": "Not Specified — \"Effects of Anti-PD1 Adjuvant Checkpoint Blockade Immunotherapy on Atypical/Dysplastic Nevi\"",
+              "url": "https://clinicaltrials.gov/study/NCT06599619"
+            }
+          ]
+        },
+        {
+          "group": "Phase 1",
+          "series": "Pembrolizumab",
+          "trial_count": 1026,
+          "citations": [
+            {
+              "nct_id": "NCT06484153",
+              "excerpt": "Phase 1 — \"Fruquintinib and Pirfenidone in Combination With Anti-PD-1 Antibody in Advanced or Metastatic pMMR/MSS Colorectal Carcinoma\"",
+              "url": "https://clinicaltrials.gov/study/NCT06484153"
+            },
+            {
+              "nct_id": "NCT05576077",
+              "excerpt": "Phase 1 — \"A Study of TBio-4101 (TIL) and Pembrolizumab in Patients With Advanced Solid Tumors\"",
+              "url": "https://clinicaltrials.gov/study/NCT05576077"
+            },
+            {
+              "nct_id": "NCT03371979",
+              "excerpt": "Phase 1 — \"Pegzilarginase and Pembrolizumab for Extensive Disease Small Cell Lung Cancer\"",
+              "url": "https://clinicaltrials.gov/study/NCT03371979"
+            }
+          ]
+        },
+        {
+          "group": "Phase 2",
+          "series": "Pembrolizumab",
+          "trial_count": 1726,
+          "citations": [
+            {
+              "nct_id": "NCT03428802",
+              "excerpt": "Phase 2 — \"Pembrolizumab in Treating Participants With Metastatic, Recurrent or Locally Advanced Cancer and Genomic Instability\"",
+              "url": "https://clinicaltrials.gov/study/NCT03428802"
+            },
+            {
+              "nct_id": "NCT03193931",
+              "excerpt": "Phase 2 — \"Study Comparing Pembrolizumab With Methotrexate in Elderly, Frail or Cisplatin-ineligible Patients With Head and Neck Cancers\"",
+              "url": "https://clinicaltrials.gov/study/NCT03193931"
+            },
+            {
+              "nct_id": "NCT06484153",
+              "excerpt": "Phase 2 — \"Fruquintinib and Pirfenidone in Combination With Anti-PD-1 Antibody in Advanced or Metastatic pMMR/MSS Colorectal Carcinoma\"",
+              "url": "https://clinicaltrials.gov/study/NCT06484153"
+            }
+          ]
+        },
+        {
+          "group": "Phase 3",
+          "series": "Pembrolizumab",
+          "trial_count": 351,
+          "citations": [
+            {
+              "nct_id": "NCT05155254",
+              "excerpt": "Phase 3 — \"IO102-IO103 in Combination With Pembrolizumab Versus Pembrolizumab Alone in Advanced Melanoma (IOB-013 / KN-D18)\"",
+              "url": "https://clinicaltrials.gov/study/NCT05155254"
+            },
+            {
+              "nct_id": "NCT05687266",
+              "excerpt": "Phase 3 — \"Phase III, Open-label, First-line Study of Dato-DXd in Combination With Durvalumab and Carboplatin for Advanced NSCLC Without Actionable Genomic Alterations\"",
+              "url": "https://clinicaltrials.gov/study/NCT05687266"
+            },
+            {
+              "nct_id": "NCT06320353",
+              "excerpt": "Phase 3 — \"Study сomparing the Efficacy and Safety of RPH-075 and Keytruda® in Patients With Unresectable or Metastatic Skin Melanoma\"",
+              "url": "https://clinicaltrials.gov/study/NCT06320353"
+            }
+          ]
+        },
+        {
+          "group": "Phase 4",
+          "series": "Pembrolizumab",
+          "trial_count": 17,
+          "citations": [
+            {
+              "nct_id": "NCT06824792",
+              "excerpt": "Phase 4 — \"Optimal Standard Treatment Selection for Solid Tumor Patients by Biologically-informed Multi-agent System\"",
+              "url": "https://clinicaltrials.gov/study/NCT06824792"
+            },
+            {
+              "nct_id": "NCT03715205",
+              "excerpt": "Phase 4 — \"Study to Evaluate the Safety of Pembrolizumab in Participants With Unresectable or Metastatic Melanoma or Non-small Cell Lung Cancer in India (MK-3475-593/KEYNOTE-593)\"",
+              "url": "https://clinicaltrials.gov/study/NCT03715205"
+            },
+            {
+              "nct_id": "NCT03134456",
+              "excerpt": "Phase 4 — \"Pembrolizumab for Metastatic NSCLC Patients Expressing PD-L1 Who Have Their Own PDX\"",
+              "url": "https://clinicaltrials.gov/study/NCT03134456"
+            }
+          ]
+        },
+        {
+          "group": "Early Phase 1",
+          "series": "Nivolumab",
+          "trial_count": 33,
+          "citations": [
+            {
+              "nct_id": "NCT07210632",
+              "excerpt": "Early Phase 1 — \"Window Trial of Fluorescently Labeled Nivolumab-IRDye800 (Nivo800) in High Grade Glioma (HGG)\"",
+              "url": "https://clinicaltrials.gov/study/NCT07210632"
+            },
+            {
+              "nct_id": "NCT04891718",
+              "excerpt": "Early Phase 1 — \"CIVO Intratumoural Microdosing of Anti-Cancer Therapies in Australia\"",
+              "url": "https://clinicaltrials.gov/study/NCT04891718"
+            },
+            {
+              "nct_id": "NCT03519308",
+              "excerpt": "Early Phase 1 — \"A Pilot Study of Perioperative Nivolumab and Paricalcitol to Target the Microenvironment in Resectable Pancreatic Cancer\"",
+              "url": "https://clinicaltrials.gov/study/NCT03519308"
+            }
+          ]
+        },
+        {
+          "group": "Not Applicable",
+          "series": "Nivolumab",
+          "trial_count": 49,
+          "citations": [
+            {
+              "nct_id": "NCT07428252",
+              "excerpt": "Not Applicable — \"Gastrointestinal Microbiome and Response to Immunotherapy in Metastatic Malignant Melanoma\"",
+              "url": "https://clinicaltrials.gov/study/NCT07428252"
+            },
+            {
+              "nct_id": "NCT05652673",
+              "excerpt": "Not Applicable — \"Safe Stop Ipilimumab-nivolumab (IPI-NIVO) Trial\"",
+              "url": "https://clinicaltrials.gov/study/NCT05652673"
+            },
+            {
+              "nct_id": "NCT03035890",
+              "excerpt": "Not Applicable — \"Hypofractionated Radiation Therapy to Improve Immunotherapy Response in Non-Small Cell Lung Cancer\"",
+              "url": "https://clinicaltrials.gov/study/NCT03035890"
+            }
+          ]
+        },
+        {
+          "group": "Not Specified",
+          "series": "Nivolumab",
+          "trial_count": 207,
+          "citations": [
+            {
+              "nct_id": "NCT06599619",
+              "excerpt": "Not Specified — \"Effects of Anti-PD1 Adjuvant Checkpoint Blockade Immunotherapy on Atypical/Dysplastic Nevi\"",
+              "url": "https://clinicaltrials.gov/study/NCT06599619"
+            },
+            {
+              "nct_id": "NCT03132493",
+              "excerpt": "Not Specified — \"Nivolumab in the Real World: Analysis of the Expanded Use in Spanish Patient\"",
+              "url": "https://clinicaltrials.gov/study/NCT03132493"
+            },
+            {
+              "nct_id": "NCT04659343",
+              "excerpt": "Not Specified — \"TDM for Optimized Outcome in Patients With mRCC.\"",
+              "url": "https://clinicaltrials.gov/study/NCT04659343"
+            }
+          ]
+        },
+        {
+          "group": "Phase 1",
+          "series": "Nivolumab",
+          "trial_count": 706,
+          "citations": [
+            {
+              "nct_id": "NCT04267146",
+              "excerpt": "Phase 1 — \"Nivolumab in Combination With Temozolomide and Radiotherapy in Children and Adolescents With Newly Diagnosed High-grade Glioma\"",
+              "url": "https://clinicaltrials.gov/study/NCT04267146"
+            },
+            {
+              "nct_id": "NCT03508570",
+              "excerpt": "Phase 1 — \"Nivolumab With or Without Ipilimumab in Treating Patients With Recurrent or High Grade Gynecologic Cancer With Metastatic Peritoneal Carcinomatosis\"",
+              "url": "https://clinicaltrials.gov/study/NCT03508570"
+            },
+            {
+              "nct_id": "NCT02754141",
+              "excerpt": "Phase 1 — \"An Investigational Immuno-therapy Study of Experimental Medication BMS-986179 Given Alone and in Combination With Nivolumab\"",
+              "url": "https://clinicaltrials.gov/study/NCT02754141"
+            }
+          ]
+        },
+        {
+          "group": "Phase 2",
+          "series": "Nivolumab",
+          "trial_count": 1153,
+          "citations": [
+            {
+              "nct_id": "NCT04267146",
+              "excerpt": "Phase 2 — \"Nivolumab in Combination With Temozolomide and Radiotherapy in Children and Adolescents With Newly Diagnosed High-grade Glioma\"",
+              "url": "https://clinicaltrials.gov/study/NCT04267146"
+            },
+            {
+              "nct_id": "NCT03799445",
+              "excerpt": "Phase 2 — \"Ipilimumab, Nivolumab, and Radiation Therapy in Treating Patients With HPV Positive Advanced Oropharyngeal Squamous Cell Carcinoma\"",
+              "url": "https://clinicaltrials.gov/study/NCT03799445"
+            },
+            {
+              "nct_id": "NCT02754141",
+              "excerpt": "Phase 2 — \"An Investigational Immuno-therapy Study of Experimental Medication BMS-986179 Given Alone and in Combination With Nivolumab\"",
+              "url": "https://clinicaltrials.gov/study/NCT02754141"
+            }
+          ]
+        },
+        {
+          "group": "Phase 3",
+          "series": "Nivolumab",
+          "trial_count": 183,
+          "citations": [
+            {
+              "nct_id": "NCT05568095",
+              "excerpt": "Phase 3 — \"A Clinical Trial of a New Combination Treatment, Domvanalimab and Zimberelimab, Plus Chemotherapy, for People With an Upper Gastrointestinal Tract Cancer That Cannot be Removed With Surgery That Has Spread to Other Parts of the Body\"",
+              "url": "https://clinicaltrials.gov/study/NCT05568095"
+            },
+            {
+              "nct_id": "NCT06097728",
+              "excerpt": "Phase 3 — \"MEDI5752 in Combination With Carboplatin Plus Pemetrexed in Unresectable Pleural Mesothelioma\"",
+              "url": "https://clinicaltrials.gov/study/NCT06097728"
+            },
+            {
+              "nct_id": "NCT04564157",
+              "excerpt": "Phase 3 — \"New Adjuvant Trial of Chemotherapy vs Chemo-immunotherapy\"",
+              "url": "https://clinicaltrials.gov/study/NCT04564157"
+            }
+          ]
+        },
+        {
+          "group": "Phase 4",
+          "series": "Nivolumab",
+          "trial_count": 18,
+          "citations": [
+            {
+              "nct_id": "NCT06934057",
+              "excerpt": "Phase 4 — \"Cabozantinib and Nivolumab Among Older Patients With Renal Cell Carcinoma\"",
+              "url": "https://clinicaltrials.gov/study/NCT06934057"
+            },
+            {
+              "nct_id": "NCT07459543",
+              "excerpt": "Phase 4 — \"A Study To Assess the Safety, and Tolerability of Nivolumab + Relatlimab Fixed-Dose Combination (FDC) In Untreated, Unresectable or Metastatic Melanoma Participants In India\"",
+              "url": "https://clinicaltrials.gov/study/NCT07459543"
+            },
+            {
+              "nct_id": "NCT04707547",
+              "excerpt": "Phase 4 — \"Immune Profile and Prognosis of Malignant Liver Tumors With Radiofrequency Ablation (RFA) Therapy\"",
+              "url": "https://clinicaltrials.gov/study/NCT04707547"
+            }
+          ]
+        }
+      ]
+    },
+    "meta": {
+      "source": "clinicaltrials.gov",
+      "apiVersion": "v2",
+      "filters": {
+        "intervention": "Pembrolizumab"
+      },
+      "totalMatchingTrials": 4885,
+      "analyzedTrials": 4885,
+      "truncated": false,
+      "groupBy": "phase",
+      "units": "trial appearances (a trial may span multiple categories)",
+      "sort": "phase order",
+      "notes": "The comparison is based on the phases of clinical trials involving the two interventions, Pembrolizumab and Nivolumab.",
+      "confidence": 0.9,
+      "status": "ok",
+      "interpreter": "llm",
+      "apiRequests": [
+        "https://clinicaltrials.gov/api/v2/studies?query.intr=Pembrolizumab&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true",
+        "https://clinicaltrials.gov/api/v2/studies?query.intr=Pembrolizumab&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lp0VoC5tarumpOQJJxuYfCt2_QTkA",
+        "https://clinicaltrials.gov/api/v2/studies?query.intr=Pembrolizumab&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lp0VoC5tarumpOQJJxtbfCm1PwYkA",
+        "https://clinicaltrials.gov/api/v2/studies?query.intr=Nivolumab&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true",
+        "https://clinicaltrials.gov/api/v2/studies?query.intr=Nivolumab&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lp0VoC5tarumpOQJJxtZfCm2PMckA",
+        "https://clinicaltrials.gov/api/v2/studies?query.intr=Nivolumab&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lp0VoC5tarumpOQJJxrZfel3PYSkA"
+      ]
+    },
+    "references": [
+      {
+        "nct_id": "NCT03514121",
+        "title": "FPA150 in Patients With Advanced Solid Tumors",
+        "officialTitle": "A Phase 1a/1b Study of FPA150, an Anti-B7-H4 Antibody, in Patients With Advanced Solid Tumors",
+        "sponsor": "Five Prime Therapeutics, Inc.",
+        "investigator": null,
+        "startDate": "2018-03-27",
+        "url": "https://clinicaltrials.gov/study/NCT03514121"
+      },
+      {
+        "nct_id": "NCT04674306",
+        "title": "Adjuvant Therapy With an Alpha-lactalbumin Vaccine in Triple-Negative Breast Cancer",
+        "officialTitle": "Phase I Trial of Adjuvant Therapy With an Alpha-lactalbumin Vaccine in Patients With Non-Metastatic Triple-Negative Breast Cancer at High Risk of Recurrence",
+        "sponsor": "George T. Budd",
+        "investigator": "George T. Budd",
+        "startDate": "2021-10-01",
+        "url": "https://clinicaltrials.gov/study/NCT04674306"
+      },
+      {
+        "nct_id": "NCT01789827",
+        "title": "Aldesleukin Imaging in Viewing Tumor Growth in Patients With Stage IV Melanoma Receiving Ipilimumab or Pembrolizumab Therapy",
+        "officialTitle": "Interleukin-2 Imaging as a Guide to Cancer Immunotherapy (Ipilimumab or Pembrolizumab) in Advanced Melanoma: A Pilot Study",
+        "sponsor": "Mayo Clinic",
+        "investigator": null,
+        "startDate": "2014-03",
+        "url": "https://clinicaltrials.gov/study/NCT01789827"
+      },
+      {
+        "nct_id": "NCT06876636",
+        "title": "Zoledronic Acid Combined With EC-T for Triple-Negative Breast Cancer",
+        "officialTitle": "Prospective, Open-Label, Single-Arm Clinical Study of Zoledronic Acid Combined With Neoadjuvant Chemotherapy (EC-T) in Patients With Early-Stage and Locally Advanced Triple-Negative Breast Cancer",
+        "sponsor": "Xijing Hospital",
+        "investigator": null,
+        "startDate": "2025-03-10",
+        "url": "https://clinicaltrials.gov/study/NCT06876636"
+      },
+      {
+        "nct_id": "NCT07428252",
+        "title": "Gastrointestinal Microbiome and Response to Immunotherapy in Metastatic Malignant Melanoma",
+        "officialTitle": "Prognostic and Predictive Value of Gastrointestinal Microbiome in Metastatic Melanoma Treated With Immunotherapy",
+        "sponsor": "Institute of Oncology Ljubljana",
+        "investigator": null,
+        "startDate": "2022-03-01",
+        "url": "https://clinicaltrials.gov/study/NCT07428252"
+      },
+      {
+        "nct_id": "NCT03035890",
+        "title": "Hypofractionated Radiation Therapy to Improve Immunotherapy Response in Non-Small Cell Lung Cancer",
+        "officialTitle": "Use of Response-Adapted Hypofractionated Radiation Therapy to Potentiate the Systemic Immune Response to Checkpoint Inhibitors in Non-Small Cell Lung Cancer",
+        "sponsor": "West Virginia University",
+        "investigator": null,
+        "startDate": "2017-01-23",
+        "url": "https://clinicaltrials.gov/study/NCT03035890"
+      },
+      {
+        "nct_id": "NCT04698681",
+        "title": "NGS Screening Protocol to Detect Mutation of KEAP1 or NRF2/NFE2L2 Genes for the KEAPSAKE (CX-839-014) Trial",
+        "officialTitle": "Screening Protocol to Detect Mutation of KEAP1 or NRF2/NFE2L2 Genes in Patients With Stage IV, 1L Non-Small Cell Lung Cancer to Determine Eligibility for the KEAPSAKE Clinical Trial (NCT04265534)",
+        "sponsor": "Calithera Biosciences, Inc",
+        "investigator": null,
+        "startDate": "2021-01-19",
+        "url": "https://clinicaltrials.gov/study/NCT04698681"
+      },
+      {
+        "nct_id": "NCT07633353",
+        "title": "Real-World Outcomes of First-Line Treatment of Metastatic or Locally Advanced Upper Tract Urothelial Carcinoma With Enfortumab Vedotin Plus Pembrolizumab : A French Multicenter Retrospective Observational Study",
+        "officialTitle": "A French Multicenter Retrospective Observational Study Assessing the Efficacy and Safety of Enfortumab Vedotin Combined With Pembrolizumab in the First-Line Treatment of Patients With Metastatic or Locally Advanced Upper Tract Urothelial Carcinoma",
+        "sponsor": "Centre Hospitalier Universitaire de Nīmes",
+        "investigator": "Clémence Goy",
+        "startDate": "2026-07-01",
+        "url": "https://clinicaltrials.gov/study/NCT07633353"
+      },
+      {
+        "nct_id": "NCT06599619",
+        "title": "Effects of Anti-PD1 Adjuvant Checkpoint Blockade Immunotherapy on Atypical/Dysplastic Nevi",
+        "officialTitle": "A Study of the Effects of Anti-PD1 Adjuvant Checkpoint Blockade Immunotherapy on Features of Atypical/Dysplastic Nevi in Patients With Stage IIB-IIIC Melanoma",
+        "sponsor": "John Kirkwood",
+        "investigator": "John Kirkwood",
+        "startDate": "2025-02-20",
+        "url": "https://clinicaltrials.gov/study/NCT06599619"
+      },
+      {
+        "nct_id": "NCT06484153",
+        "title": "Fruquintinib and Pirfenidone in Combination With Anti-PD-1 Antibody in Advanced or Metastatic pMMR/MSS Colorectal Carcinoma",
+        "officialTitle": "A Randomized Phase 1b/2 Clinical Trial Evaluating Fruquintinib and Pirfenidone in Combination With Anti-PD-1 Antibody in Patients With Standard Treatment Failure of Advanced or Metastatic pMMR/MSS Colorectal Carcinoma",
+        "sponsor": "Union Hospital, Tongji Medical College, Huazhong University of Science and Technology",
+        "investigator": "Tao Zhang",
+        "startDate": "2024-07-22",
+        "url": "https://clinicaltrials.gov/study/NCT06484153"
+      },
+      {
+        "nct_id": "NCT05576077",
+        "title": "A Study of TBio-4101 (TIL) and Pembrolizumab in Patients With Advanced Solid Tumors",
+        "officialTitle": "A Phase 1b Study of TBio-4101 (Autologous Selected and Expanded Tumor-Infiltrating Lymphocytes [TIL]) and Pembrolizumab in Patients With Advanced Solid Tumor Malignancies (STARLING)",
+        "sponsor": "Turnstone Biologics, Corp.",
+        "investigator": null,
+        "startDate": "2023-01-17",
+        "url": "https://clinicaltrials.gov/study/NCT05576077"
+      },
+      {
+        "nct_id": "NCT03371979",
+        "title": "Pegzilarginase and Pembrolizumab for Extensive Disease Small Cell Lung Cancer",
+        "officialTitle": "A Phase 1/2 Study of Pegzilarginase (AEB1102, Co-ArgI-PEG) in Combination With Pembrolizumab in the Treatment of Patients With Extensive Disease (ED) Small Cell Lung Cancer (SCLC)",
+        "sponsor": "Aeglea Biotherapeutics",
+        "investigator": null,
+        "startDate": "2017-12-21",
+        "url": "https://clinicaltrials.gov/study/NCT03371979"
+      },
+      {
+        "nct_id": "NCT03428802",
+        "title": "Pembrolizumab in Treating Participants With Metastatic, Recurrent or Locally Advanced Cancer and Genomic Instability",
+        "officialTitle": "A Basket Trial of Pembrolizumab in Patients With Advanced Solid Tumors and Genomic Instability",
+        "sponsor": "Rutgers, The State University of New Jersey",
+        "investigator": "Eugenia Girda, MD",
+        "startDate": "2018-03-08",
+        "url": "https://clinicaltrials.gov/study/NCT03428802"
+      },
+      {
+        "nct_id": "NCT03193931",
+        "title": "Study Comparing Pembrolizumab With Methotrexate in Elderly, Frail or Cisplatin-ineligible Patients With Head and Neck Cancers",
+        "officialTitle": "A Randomized Phase II Study Comparing Pembrolizumab With Methotrexate in Elderly, Frail or Cisplatin-ineligible Patients With Head and Neck Cancers",
+        "sponsor": "AIO-Studien-gGmbH",
+        "investigator": null,
+        "startDate": "2018-02-02",
+        "url": "https://clinicaltrials.gov/study/NCT03193931"
+      },
+      {
+        "nct_id": "NCT05155254",
+        "title": "IO102-IO103 in Combination With Pembrolizumab Versus Pembrolizumab Alone in Advanced Melanoma (IOB-013 / KN-D18)",
+        "officialTitle": "An Open-label, Randomized, Phase 3 Clinical Trial of IO102-IO103 in Combination With Pembrolizumab Versus Pembrolizumab Alone in Patients With Previously Untreated, Unresectable, or Metastatic (Advanced) Melanoma (IO102-IO103-013 / MK3475-D18)",
+        "sponsor": "IO Biotech",
+        "investigator": null,
+        "startDate": "2022-05-17",
+        "url": "https://clinicaltrials.gov/study/NCT05155254"
+      },
+      {
+        "nct_id": "NCT05687266",
+        "title": "Phase III, Open-label, First-line Study of Dato-DXd in Combination With Durvalumab and Carboplatin for Advanced NSCLC Without Actionable Genomic Alterations",
+        "officialTitle": "A Phase III, Randomised, Open-label, Multicentre, Global Study of Datopotamab Deruxtecan (Dato-DXd) in Combination With Durvalumab and Carboplatin Versus Pembrolizumab in Combination With Platinum-based Chemotherapy for the First-line Treatment of Patients With Locally Advanced or Metastatic NSCLC Without Actionable Genomic Alterations (D926NC00001; AVANZAR)",
+        "sponsor": "AstraZeneca",
+        "investigator": null,
+        "startDate": "2022-12-29",
+        "url": "https://clinicaltrials.gov/study/NCT05687266"
+      },
+      {
+        "nct_id": "NCT06320353",
+        "title": "Study сomparing the Efficacy and Safety of RPH-075 and Keytruda® in Patients With Unresectable or Metastatic Skin Melanoma",
+        "officialTitle": "International, Multicenter, Double-blind, Randomized, Comparative Study of Efficacy and Safety of RPH-075 and Keytruda® in Patients With Unresectable or Metastatic Skin Melanoma",
+        "sponsor": "R-Pharm",
+        "investigator": null,
+        "startDate": "2023-09-27",
+        "url": "https://clinicaltrials.gov/study/NCT06320353"
+      },
+      {
+        "nct_id": "NCT06824792",
+        "title": "Optimal Standard Treatment Selection for Solid Tumor Patients by Biologically-informed Multi-agent System",
+        "officialTitle": "Real-world Study to Investigate Optimal Standard Treatment Selection for Solid Tumor Patients by Guided by Biologically-informed Multi-agent System",
+        "sponsor": "NING LI",
+        "investigator": "NING LI",
+        "startDate": "2025-03-01",
+        "url": "https://clinicaltrials.gov/study/NCT06824792"
+      },
+      {
+        "nct_id": "NCT03715205",
+        "title": "Study to Evaluate the Safety of Pembrolizumab in Participants With Unresectable or Metastatic Melanoma or Non-small Cell Lung Cancer in India (MK-3475-593/KEYNOTE-593)",
+        "officialTitle": "A Prospective, Open-label, Phase 4 Study to Evaluate the Safety of Pembrolizumab (KEYTRUDA®) in Subjects With Unresectable or Metastatic Melanoma or PD-L1 Positive Non-small Cell Lung Cancer (NSCLC) in India (Keynote-593)",
+        "sponsor": "Merck Sharp & Dohme LLC",
+        "investigator": null,
+        "startDate": "2019-01-31",
+        "url": "https://clinicaltrials.gov/study/NCT03715205"
+      },
+      {
+        "nct_id": "NCT03134456",
+        "title": "Pembrolizumab for Metastatic NSCLC Patients Expressing PD-L1 Who Have Their Own PDX",
+        "officialTitle": "Pembrolizumab for Metastatic Non-small Cell Lung Cancer (NSCLC) Patients Expressing PD-L1 Who Have Their Own Patient-derived Xenograft (PDX): Comparative Study of Clinical Response and In-vivo Antitumor Response Using Their Humanized CD34 PDX (Hu-CD34 PDX)",
+        "sponsor": "Samsung Medical Center",
+        "investigator": "Se-Hoon Lee",
+        "startDate": "2018-05-14",
+        "url": "https://clinicaltrials.gov/study/NCT03134456"
+      },
+      {
+        "nct_id": "NCT07210632",
+        "title": "Window Trial of Fluorescently Labeled Nivolumab-IRDye800 (Nivo800) in High Grade Glioma (HGG)",
+        "officialTitle": "Window Trial of Fluorescently Labeled Nivolumab-IRDye800 (Nivo800) in High Grade Glioma (HGG)",
+        "sponsor": "Eben Rosenthal",
+        "investigator": "Eben Rosenthal",
+        "startDate": "2026-03-27",
+        "url": "https://clinicaltrials.gov/study/NCT07210632"
+      },
+      {
+        "nct_id": "NCT04891718",
+        "title": "CIVO Intratumoural Microdosing of Anti-Cancer Therapies in Australia",
+        "officialTitle": "A Phase 0 Master Protocol Using the CIVO® Platform to Evaluate Intratumoural Microdoses of Anti-Cancer Therapies in Patients With Solid Tumours",
+        "sponsor": "Presage Biosciences",
+        "investigator": null,
+        "startDate": "2021-09-15",
+        "url": "https://clinicaltrials.gov/study/NCT04891718"
+      },
+      {
+        "nct_id": "NCT03519308",
+        "title": "A Pilot Study of Perioperative Nivolumab and Paricalcitol to Target the Microenvironment in Resectable Pancreatic Cancer",
+        "officialTitle": "A Pilot Study of Perioperative Nivolumab and Paricalcitol to Target the Microenvironment in Resectable Pancreatic Cancer",
+        "sponsor": "Abramson Cancer Center at Penn Medicine",
+        "investigator": null,
+        "startDate": "2020-07-29",
+        "url": "https://clinicaltrials.gov/study/NCT03519308"
+      },
+      {
+        "nct_id": "NCT05652673",
+        "title": "Safe Stop Ipilimumab-nivolumab (IPI-NIVO) Trial",
+        "officialTitle": "Safe Stop IPI-NIVO Trial: Early Discontinuation of Nivolumab Upon Achieving a (confirmed) Complete or Partial Response in Patients with Irresectable Stage III or Metastatic Melanoma Treated with First-line Ipilimumab-nivolumab",
+        "sponsor": "Erasmus Medical Center",
+        "investigator": "A.A.M. van der Veldt",
+        "startDate": "2023-02-01",
+        "url": "https://clinicaltrials.gov/study/NCT05652673"
+      },
+      {
+        "nct_id": "NCT03132493",
+        "title": "Nivolumab in the Real World: Analysis of the Expanded Use in Spanish Patient",
+        "officialTitle": "A Retrospective, Multicenter and Observational Study of Nivolumab Monotherapy Treatment in Subjects With Advanced or Metastatic Squamous (Sq) or Non-Squamous (Non-Sq) Non-Small Cell Lung Cancer (NSCLC) Who Have Received at Least One Prior Systemic Regimens for the Treatment of Stage IIIb/IV NSCLC Within the Expanded Access Program (EAP) in SPAIN",
+        "sponsor": "Spanish Lung Cancer Group",
+        "investigator": null,
+        "startDate": "2017-06-01",
+        "url": "https://clinicaltrials.gov/study/NCT03132493"
+      },
+      {
+        "nct_id": "NCT04659343",
+        "title": "TDM for Optimized Outcome in Patients With mRCC.",
+        "officialTitle": "Therapeutic Drug Monitoring for Optimized Outcome in Patients With Metastatic Renal Cell Carcinoma",
+        "sponsor": "Niels Fristrup",
+        "investigator": "Niels Fristrup",
+        "startDate": "2020-11-01",
+        "url": "https://clinicaltrials.gov/study/NCT04659343"
+      },
+      {
+        "nct_id": "NCT04267146",
+        "title": "Nivolumab in Combination With Temozolomide and Radiotherapy in Children and Adolescents With Newly Diagnosed High-grade Glioma",
+        "officialTitle": "Phase I-II Study of Nivolumab in Combination With Temozolomide and Radiotherapy in Children and Adolescents With Newly Diagnosed High-grade Glioma",
+        "sponsor": "Gustave Roussy, Cancer Campus, Grand Paris",
+        "investigator": null,
+        "startDate": "2019-07-15",
+        "url": "https://clinicaltrials.gov/study/NCT04267146"
+      },
+      {
+        "nct_id": "NCT03508570",
+        "title": "Nivolumab With or Without Ipilimumab in Treating Patients With Recurrent or High Grade Gynecologic Cancer With Metastatic Peritoneal Carcinomatosis",
+        "officialTitle": "Phase Ib Clinical Investigation of Intraperitoneal Ipilimumab and Nivolumab in Patients With Peritoneal Carcinomatosis Due to Gynecologic Cancers",
+        "sponsor": "M.D. Anderson Cancer Center",
+        "investigator": null,
+        "startDate": "2018-09-21",
+        "url": "https://clinicaltrials.gov/study/NCT03508570"
+      },
+      {
+        "nct_id": "NCT02754141",
+        "title": "An Investigational Immuno-therapy Study of Experimental Medication BMS-986179 Given Alone and in Combination With Nivolumab",
+        "officialTitle": "A Phase 1/2a Study of BMS-986179 Administered Alone and in Combination With Nivolumab (BMS-936558) in Subjects With Advanced Solid Tumors",
+        "sponsor": "Bristol-Myers Squibb",
+        "investigator": null,
+        "startDate": "2016-06-21",
+        "url": "https://clinicaltrials.gov/study/NCT02754141"
+      },
+      {
+        "nct_id": "NCT03799445",
+        "title": "Ipilimumab, Nivolumab, and Radiation Therapy in Treating Patients With HPV Positive Advanced Oropharyngeal Squamous Cell Carcinoma",
+        "officialTitle": "Phase 2 Study (With Safety Lead in) of the Safety, Tolerability and Efficacy of Anti-CTLA4 (Ipilimumab) and Anti-PD-1 (Nivolumab) in Combination With Radiation Therapy to 50-66 Gy in Low-Intermediate Volume, Local-Regionally Advanced HPV-Positive Oropharyngeal Squamous Cell Carcinoma (OPSCC)",
+        "sponsor": "M.D. Anderson Cancer Center",
+        "investigator": null,
+        "startDate": "2019-07-25",
+        "url": "https://clinicaltrials.gov/study/NCT03799445"
+      },
+      {
+        "nct_id": "NCT05568095",
+        "title": "A Clinical Trial of a New Combination Treatment, Domvanalimab and Zimberelimab, Plus Chemotherapy, for People With an Upper Gastrointestinal Tract Cancer That Cannot be Removed With Surgery That Has Spread to Other Parts of the Body",
+        "officialTitle": "A Randomized, Open-Label, Multicenter Phase 3 Trial of Domvanalimab, Zimberelimab, and Chemotherapy Versus Nivolumab and Chemotherapy in Participants With Previously Untreated Locally Advanced Unresectable or Metastatic Gastric, Gastroesophageal Junction, and Esophageal Adenocarcinoma",
+        "sponsor": "Arcus Biosciences, Inc.",
+        "investigator": null,
+        "startDate": "2022-11-21",
+        "url": "https://clinicaltrials.gov/study/NCT05568095"
+      },
+      {
+        "nct_id": "NCT06097728",
+        "title": "MEDI5752 in Combination With Carboplatin Plus Pemetrexed in Unresectable Pleural Mesothelioma",
+        "officialTitle": "A Phase III, Randomized, Open-Label, Multicenter, Global Study of Volrustomig (MEDI5752) in Combination With Carboplatin Plus Pemetrexed Versus Platinum Plus Pemetrexed or Nivolumab Plus Ipilimumab in Participants With Unresectable Pleural Mesothelioma (eVOLVE-Meso)",
+        "sponsor": "AstraZeneca",
+        "investigator": null,
+        "startDate": "2023-11-09",
+        "url": "https://clinicaltrials.gov/study/NCT06097728"
+      },
+      {
+        "nct_id": "NCT04564157",
+        "title": "New Adjuvant Trial of Chemotherapy vs Chemo-immunotherapy",
+        "officialTitle": "A Phase III Clinical Trial of Adjuvant Chemotherapy vs Chemoimmunotherapy for Stage IB-IIIA Completely Resected Non-small Cell Lung Cancer (NSCLC) Patients.",
+        "sponsor": "Fundación GECP",
+        "investigator": null,
+        "startDate": "2021-01-13",
+        "url": "https://clinicaltrials.gov/study/NCT04564157"
+      },
+      {
+        "nct_id": "NCT06934057",
+        "title": "Cabozantinib and Nivolumab Among Older Patients With Renal Cell Carcinoma",
+        "officialTitle": "Cabozantinib and Nivolumab Among Older Patients With Renal-cell Carcinoma, a Prospective Cohort With Geriatric, Pharmacologic and Patient-reported-outcome Evaluation",
+        "sponsor": "Gustave Roussy, Cancer Campus, Grand Paris",
+        "investigator": null,
+        "startDate": "2025-05-16",
+        "url": "https://clinicaltrials.gov/study/NCT06934057"
+      },
+      {
+        "nct_id": "NCT07459543",
+        "title": "A Study To Assess the Safety, and Tolerability of Nivolumab + Relatlimab Fixed-Dose Combination (FDC) In Untreated, Unresectable or Metastatic Melanoma Participants In India",
+        "officialTitle": "A Phase 4, Single Arm, Open Label Study to Evaluate Safety, Tolerability, and Efficacy of Nivolumab + Relatlimab Fixed-Dose Combination (FDC) in Participants With Previously Untreated, Unresectable or Metastatic Melanoma in India.",
+        "sponsor": "Bristol-Myers Squibb",
+        "investigator": null,
+        "startDate": "2026-11-15",
+        "url": "https://clinicaltrials.gov/study/NCT07459543"
+      },
+      {
+        "nct_id": "NCT04707547",
+        "title": "Immune Profile and Prognosis of Malignant Liver Tumors With Radiofrequency Ablation (RFA) Therapy",
+        "officialTitle": "Immune Profile and Prognosis of Malignant Liver Tumors With Radiofrequency Ablation (RFA) Therapy",
+        "sponsor": "Taipei Medical University WanFang Hospital",
+        "investigator": null,
+        "startDate": "2019-10-16",
+        "url": "https://clinicaltrials.gov/study/NCT04707547"
+      }
+    ],
+    "trace": {
+      "queryPlan": {
+        "status": "ok",
+        "visualizationType": "grouped_bar_chart",
+        "filters": {
+          "intervention": "Pembrolizumab"
+        },
+        "groupBy": "phase",
+        "comparison": {
+          "dimension": "intervention",
+          "values": [
+            "Pembrolizumab",
+            "Nivolumab"
+          ]
+        },
+        "title": "Comparison of Phases for Trials Involving Pembrolizumab vs Nivolumab",
+        "notes": "The comparison is based on the phases of clinical trials involving the two interventions, Pembrolizumab and Nivolumab.",
+        "confidence": 0.9
+      },
+      "interpreter": "llm",
+      "apiRequests": [
+        "https://clinicaltrials.gov/api/v2/studies?query.intr=Pembrolizumab&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true",
+        "https://clinicaltrials.gov/api/v2/studies?query.intr=Pembrolizumab&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lp0VoC5tarumpOQJJxuYfCt2_QTkA",
+        "https://clinicaltrials.gov/api/v2/studies?query.intr=Pembrolizumab&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lp0VoC5tarumpOQJJxtbfCm1PwYkA",
+        "https://clinicaltrials.gov/api/v2/studies?query.intr=Nivolumab&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true",
+        "https://clinicaltrials.gov/api/v2/studies?query.intr=Nivolumab&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lp0VoC5tarumpOQJJxtZfCm2PMckA",
+        "https://clinicaltrials.gov/api/v2/studies?query.intr=Nivolumab&fields=protocolSection.identificationModule.nctId%2CprotocolSection.identificationModule.briefTitle%2CprotocolSection.identificationModule.officialTitle%2CprotocolSection.statusModule.overallStatus%2CprotocolSection.statusModule.startDateStruct.date%2CprotocolSection.designModule.phases%2CprotocolSection.designModule.studyType%2CprotocolSection.designModule.enrollmentInfo.count%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.name%2CprotocolSection.sponsorCollaboratorsModule.leadSponsor.class%2CprotocolSection.sponsorCollaboratorsModule.responsibleParty.investigatorFullName%2CprotocolSection.conditionsModule.conditions%2CprotocolSection.armsInterventionsModule.interventions%2CprotocolSection.contactsLocationsModule.locations&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lp0VoC5tarumpOQJJxrZfel3PYSkA"
+      ],
+      "apiTotalCount": 4885,
+      "apiResponseSample": [
+        {
+          "protocolSection": {
+            "identificationModule": {
+              "nctId": "NCT05155254",
+              "briefTitle": "IO102-IO103 in Combination With Pembrolizumab Versus Pembrolizumab Alone in Advanced Melanoma (IOB-013 / KN-D18)",
+              "officialTitle": "An Open-label, Randomized, Phase 3 Clinical Trial of IO102-IO103 in Combination With Pembrolizumab Versus Pembrolizumab Alone in Patients With Previously Untreated, Unresectable, or Metastatic (Advanced) Melanoma (IO102-IO103-013 / MK3475-D18)"
+            },
+            "statusModule": {
+              "overallStatus": "ACTIVE_NOT_RECRUITING",
+              "startDateStruct": {
+                "date": "2022-05-17"
+              }
+            },
+            "sponsorCollaboratorsModule": {
+              "responsibleParty": {},
+              "leadSponsor": {
+                "name": "IO Biotech",
+                "class": "INDUSTRY"
+              }
+            },
+            "conditionsModule": {
+              "conditions": [
+                "Metastatic Melanoma",
+                "Unresectable Melanoma"
+              ]
+            },
+            "designModule": {
+              "studyType": "INTERVENTIONAL",
+              "phases": [
+                "PHASE3"
+              ],
+              "enrollmentInfo": {
+                "count": 407
+              }
+            },
+            "armsInterventionsModule": {
+              "interventions": [
+                {
+                  "type": "DRUG",
+                  "name": "IO102-IO103",
+                  "description": "IO102-IO103 comprises IDO peptide antigen (IO102) and PD-L1 peptide antigen (IO103) emulsified with adjuvant (Montanide ISA 51 VG) administered subcutaneously",
+                  "armGroupLabels": [
+                    "IO102-IO103 + pembrolizumab"
+                  ]
+                },
+                {
+                  "type": "DRUG",
+                  "name": "Pembrolizumab",
+                  "description": "Pembrolizumab administered intravenously",
+                  "armGroupLabels": [
+                    "IO102-IO103 + pembrolizumab",
+                    "pembrolizumab"
+                  ]
+                }
+              ]
+            },
+            "contactsLocationsModule": {
+              "locations": [
+                {
+                  "facility": "Mid Florida Hematology and Oncology Center",
+                  "city": "Orange City",
+                  "state": "Florida",
+                  "zip": "32763",
+                  "country": "United States",
+                  "geoPoint": {
+                    "lat": 28.94888,
+                    "lon": -81.29867
+                  }
+                },
+                {
+                  "facility": "Orlando Health Cancer Institute",
+                  "city": "Orlando",
+                  "state": "Florida",
+                  "zip": "32806",
+                  "country": "United States",
+                  "geoPoint": {
+                    "lat": 28.53834,
+                    "lon": -81.37924
+                  }
+                },
+                {
+                  "facility": "Roswell Park Cancer Institute",
+                  "city": "Buffalo",
+                  "state": "New York",
+                  "zip": "14221",
+                  "country": "United States",
+                  "geoPoint": {
+                    "lat": 42.88645,
+                    "lon": -78.87837
+                  }
+                },
+                {
+                  "facility": "VCU Massey Cancer Center",
+                  "city": "Richmond",
+                  "state": "Virginia",
+                  "zip": "23219",
+                  "country": "United States",
+                  "geoPoint": {
+                    "lat": 37.55376,
+                    "lon": -77.46026
+                  }
+                },
+                {
+                  "facility": "Border Medical Oncology Research Unit",
+                  "city": "Albury",
+                  "state": "New South Wales",
+                  "zip": "2640",
+                  "country": "Australia",
+                  "geoPoint": {
+                    "lat": -36.07482,
+                    "lon": 146.92401
+                  }
+                },
+                {
+                  "facility": "Westmead Hospital",
+                  "city": "Westmead",
+                  "state": "New South Wales",
+                  "zip": "2145",
+                  "country": "Australia",
+                  "geoPoint": {
+                    "lat": -33.80383,
+                    "lon": 150.98768
+                  }
+                },
+                {
+                  "facility": "Southern Medical Day Care Centre",
+                  "city": "Wollongong",
+                  "state": "New South Wales",
+                  "zip": "2500",
+                  "country": "Australia",
+                  "geoPoint": {
+                    "lat": -34.424,
+                    "lon": 150.89345
+                  }
+                },
+                {
+                  "facility": "Cairns Hospital",
+                  "city": "Cairns",
+                  "state": "Queensland",
+                  "zip": "4870",
+                  "country": "Australia",
+                  "geoPoint": {
+                    "lat": -16.92366,
+                    "lon": 145.76613
+                  }
+                },
+                {
+                  "facility": "Flinders Medical Centre",
+                  "city": "Bedford Park",
+                  "state": "South Australia",
+                  "zip": "5042",
+                  "country": "Australia",
+                  "geoPoint": {
+                    "lat": -35.02204,
+                    "lon": 138.56815
+                  }
+                },
+                {
+                  "facility": "The Queen Elizabeth Hospital",
+                  "city": "Woodville South",
+                  "state": "South Australia",
+                  "zip": "5011",
+                  "country": "Australia",
+                  "geoPoint": {
+                    "lat": -34.88186,
+                    "lon": 138.53477
+                  }
+                },
+                {
+                  "facility": "Sunshine Coast University Hospital",
+                  "city": "Birtinya",
+                  "zip": "4575",
+                  "country": "Australia",
+                  "geoPoint": {
+                    "lat": -26.74322,
+                    "lon": 153.11913
+                  }
+                },
+                {
+                  "facility": "Peter MacCallum Cancer Centre PMCC - East Melbourne",
+                  "city": "Melbourne",
+                  "zip": "3052",
+                  "country": "Australia",
+                  "geoPoint": {
+                    "lat": -37.814,
+                    "lon": 144.96332
+                  }
+                },
+                {
+                  "facility": "Universitair Ziekenhuis Gent UZ Gent",
+                  "city": "Ghent",
+                  "state": "Oost-Vlaanderen",
+                  "zip": "9000",
+                  "country": "Belgium",
+                  "geoPoint": {
+                    "lat": 51.05,
+                    "lon": 3.71667
+                  }
+                },
+                {
+                  "facility": "AZ Nikolaas",
+                  "city": "Sint-Niklaas",
+                  "zip": "9100",
+                  "country": "Belgium",
+                  "geoPoint": {
+                    "lat": 51.16509,
+                    "lon": 4.1437
+                  }
+                },
+                {
+                  "facility": "FNHK Klinika onkologie a radioterapie",
+                  "city": "Hradec Králové",
+                  "zip": "500 05",
+                  "country": "Czechia",
+                  "geoPoint": {
+                    "lat": 50.20923,
+                    "lon": 15.83277
+                  }
+                },
+                {
+                  "facility": "Fakultni Nemocnice Olomouc",
+                  "city": "Olomouc",
+                  "zip": "779 00",
+                  "country": "Czechia",
+                  "geoPoint": {
+                    "lat": 49.59552,
+                    "lon": 17.25175
+                  }
+                },
+                {
+                  "facility": "FN Ostrava",
+                  "city": "Ostrava",
+                  "zip": "708 52",
+                  "country": "Czechia",
+                  "geoPoint": {
+                    "lat": 49.83465,
+                    "lon": 18.28204
+                  }
+                },
+                {
+                  "facility": "FNKV Department of Dermatology",
+                  "city": "Prague",
+                  "zip": "10034",
+                  "country": "Czechia",
+                  "geoPoint": {
+                    "lat": 50.08804,
+                    "lon": 14.42076
+                  }
+                },
+                {
+                  "facility": "Aalborg University Hospital",
+                  "city": "Aalborg",
+                  "zip": "9000",
+                  "country": "Denmark",
+                  "geoPoint": {
+                    "lat": 57.048,
+                    "lon": 9.9187
+                  }
+                },
+                {
+                  "facility": "Aarhus University Hospital",
+                  "city": "Aarhus",
+                  "zip": "8200",
+                  "country": "Denmark",
+                  "geoPoint": {
+                    "lat": 56.15674,
+                    "lon": 10.21076
+                  }
+                },
+                {
+                  "facility": "Herlev og Gentofte Hospital",
+                  "city": "Herlev",
+                  "zip": "2730",
+                  "country": "Denmark",
+                  "geoPoint": {
+                    "lat": 55.72366,
+                    "lon": 12.43998
+                  }
+                },
+                {
+                  "facility": "Odense University Hospital",
+                  "city": "Odense",
+                  "zip": "5000",
+                  "country": "Denmark",
+                  "geoPoint": {
+                    "lat": 55.39594,
+                    "lon": 10.38831
+                  }
+                },
+                {
+                  "facility": "Centre Hospitalier Universitaire de Besançon Jean Minjoz",
+                  "city": "Besançon",
+                  "zip": "25000",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 47.24878,
+                    "lon": 6.01815
+                  }
+                },
+                {
+                  "facility": "Centre Hospitalier Universitaire de Bordeaux Hospital Saint Andre",
+                  "city": "Bordeaux",
+                  "zip": "33075",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 44.84124,
+                    "lon": -0.58046
+                  }
+                },
+                {
+                  "facility": "Hopital Ambroise",
+                  "city": "Boulogne-Billancourt",
+                  "zip": "92100",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 48.83545,
+                    "lon": 2.24128
+                  }
+                },
+                {
+                  "facility": "Centre Georges Francois Leclerc",
+                  "city": "Dijon",
+                  "zip": "21079",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 47.31344,
+                    "lon": 5.01391
+                  }
+                },
+                {
+                  "facility": "Chu Grenoble - Hopital Albert Michallon",
+                  "city": "La Tronche",
+                  "zip": "38700",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 45.20507,
+                    "lon": 5.74629
+                  }
+                },
+                {
+                  "facility": "Centre Hospitalier Universitaire de Lille",
+                  "city": "Lille",
+                  "zip": "59000",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 50.63391,
+                    "lon": 3.05512
+                  }
+                },
+                {
+                  "facility": "Hôpital de La Timone",
+                  "city": "Marseille",
+                  "zip": "13385",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 43.29695,
+                    "lon": 5.38107
+                  }
+                },
+                {
+                  "facility": "CHU de Nice Hpital de lArchet 2",
+                  "city": "Nice",
+                  "zip": "6200",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 43.70313,
+                    "lon": 7.26608
+                  }
+                },
+                {
+                  "facility": "Centre Hospitalier Lyon Sud",
+                  "city": "Pierre-Bénite",
+                  "zip": "69495",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 45.70359,
+                    "lon": 4.82424
+                  }
+                },
+                {
+                  "facility": "Centre Eugene Marquis",
+                  "city": "Rennes",
+                  "zip": "35042",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 48.11109,
+                    "lon": -1.67431
+                  }
+                },
+                {
+                  "facility": "Institut de Cancérologie de L'Ouest",
+                  "city": "Saint-Herblain",
+                  "zip": "44805",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 47.21154,
+                    "lon": -1.651
+                  }
+                },
+                {
+                  "facility": "Centre Hospitalier de Valence (CHV)",
+                  "city": "Valence",
+                  "zip": "26 953",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 44.9256,
+                    "lon": 4.90956
+                  }
+                },
+                {
+                  "facility": "Gustave Roussy",
+                  "city": "Villejuif",
+                  "zip": "94805",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 48.7939,
+                    "lon": 2.35992
+                  }
+                },
+                {
+                  "facility": "Universitatsklinikum Augsburg Medizincampus Sued",
+                  "city": "Augsburg",
+                  "zip": "86179",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 48.37154,
+                    "lon": 10.89851
+                  }
+                },
+                {
+                  "facility": "Charite Universitaetsmedizin Berlin",
+                  "city": "Berlin",
+                  "zip": "13353",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 52.52437,
+                    "lon": 13.41053
+                  }
+                },
+                {
+                  "facility": "St. Josef Hospital - Ruhr-Universitt Bochum",
+                  "city": "Bochum",
+                  "zip": "44791",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 51.48165,
+                    "lon": 7.21648
+                  }
+                },
+                {
+                  "facility": "University Hospital Erlangen",
+                  "city": "Erlangen",
+                  "zip": "90054",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 49.59099,
+                    "lon": 11.00783
+                  }
+                },
+                {
+                  "facility": "Universitaetsklinikum Essen",
+                  "city": "Essen",
+                  "zip": "45147",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 51.45657,
+                    "lon": 7.01228
+                  }
+                },
+                {
+                  "facility": "University Hospital Frankfurt Theodor-Stern-Kai",
+                  "city": "Frankfurt",
+                  "zip": "60590",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 49.68333,
+                    "lon": 10.53333
+                  }
+                },
+                {
+                  "facility": "Universitatsklinik fur Dermatologie und Venerologie der MLU Halle-Wittenberg",
+                  "city": "Halle",
+                  "zip": "6120",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 51.48158,
+                    "lon": 11.97947
+                  }
+                },
+                {
+                  "facility": "Elbe Klinikum Buxtehude",
+                  "city": "Hamburg",
+                  "zip": "22045",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 53.55073,
+                    "lon": 9.99302
+                  }
+                },
+                {
+                  "facility": "Nationales Centrum fr Tumorerkrankungen NCT",
+                  "city": "Heidelberg",
+                  "zip": "69120",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 49.40768,
+                    "lon": 8.69079
+                  }
+                },
+                {
+                  "facility": "SLK-Kliniken Heilbronn GmbH",
+                  "city": "Heilbronn",
+                  "zip": "74078",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 49.13995,
+                    "lon": 9.22054
+                  }
+                },
+                {
+                  "facility": "Universitaetsklinikum Schleswig-Holstein",
+                  "city": "Kiel",
+                  "zip": "24105",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 54.32133,
+                    "lon": 10.13489
+                  }
+                },
+                {
+                  "facility": "Department of Dermatology University of Mainz",
+                  "city": "Mainz",
+                  "zip": "55131",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 49.98185,
+                    "lon": 8.28008
+                  }
+                },
+                {
+                  "facility": "Universitatsmedizin Mannheim Dermatologie",
+                  "city": "Mannheim",
+                  "zip": "68167",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 49.4891,
+                    "lon": 8.46694
+                  }
+                },
+                {
+                  "facility": "Mühlenkreiskliniken AöR, University Hospital Ruhr University Bochum Campus Minden",
+                  "city": "Minden",
+                  "zip": "32429",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 52.28953,
+                    "lon": 8.91455
+                  }
+                },
+                {
+                  "facility": "LMU Muenchen",
+                  "city": "München",
+                  "zip": "80337",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 51.60698,
+                    "lon": 13.31243
+                  }
+                },
+                {
+                  "facility": "Universitaetsklinikum Muenster",
+                  "city": "Münster",
+                  "zip": "48149",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 51.96236,
+                    "lon": 7.62571
+                  }
+                },
+                {
+                  "facility": "Hospital Tubingen",
+                  "city": "Tübingen",
+                  "zip": "72076",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 48.52266,
+                    "lon": 9.05222
+                  }
+                },
+                {
+                  "facility": "Universittsklinikum Wuerzburg",
+                  "city": "Würzburg",
+                  "zip": "97080",
+                  "country": "Germany",
+                  "geoPoint": {
+                    "lat": 49.79391,
+                    "lon": 9.95121
+                  }
+                },
+                {
+                  "facility": "Orszagos Onkologiai Intezet",
+                  "city": "Budapest",
+                  "zip": "1122",
+                  "country": "Hungary",
+                  "geoPoint": {
+                    "lat": 47.49835,
+                    "lon": 19.04045
+                  }
+                },
+                {
+                  "facility": "Bor, -Nemikortani es Onkodermatologiai Klinika",
+                  "city": "Pécs",
+                  "zip": "7632",
+                  "country": "Hungary",
+                  "geoPoint": {
+                    "lat": 46.07617,
+                    "lon": 18.22814
+                  }
+                },
+                {
+                  "facility": "Hetenyi G Korhaz, Onkologiai Kozpont",
+                  "city": "Szolnok",
+                  "zip": "5000",
+                  "country": "Hungary",
+                  "geoPoint": {
+                    "lat": 47.18066,
+                    "lon": 20.19835
+                  }
+                },
+                {
+                  "facility": "Emek Medical Center",
+                  "city": "Afula",
+                  "country": "Israel",
+                  "geoPoint": {
+                    "lat": 32.60907,
+                    "lon": 35.2892
+                  }
+                },
+                {
+                  "facility": "Ben-Gurion University of the Negev - Soroka University Medical Center - Soroka Clinical Research Center",
+                  "city": "Beersheba",
+                  "zip": "84101",
+                  "country": "Israel",
+                  "geoPoint": {
+                    "lat": 31.25181,
+                    "lon": 34.7913
+                  }
+                },
+                {
+                  "facility": "Hadassah University Hospital",
+                  "city": "Jerusalem",
+                  "zip": "91120",
+                  "country": "Israel",
+                  "geoPoint": {
+                    "lat": 31.76904,
+                    "lon": 35.21633
+                  }
+                },
+                {
+                  "facility": "Rabin Medical Center",
+                  "city": "Petah Tikva",
+                  "zip": "4941492",
+                  "country": "Israel",
+                  "geoPoint": {
+                    "lat": 32.08707,
+                    "lon": 34.88747
+                  }
+                },
+                {
+                  "facility": "Tel Aviv Sourasky Medical Center",
+                  "city": "Tel Aviv",
+                  "country": "Israel",
+                  "geoPoint": {
+                    "lat": 32.08088,
+                    "lon": 34.78057
+                  }
+                },
+                {
+                  "facility": "The Chaim Sheba Medical Center - The Ella Lemelbaum Institute for Immuno-Oncology",
+                  "city": "Tel Litwinsky",
+                  "zip": "5262100",
+                  "country": "Israel",
+                  "geoPoint": {
+                    "lat": 32.05096,
+                    "lon": 34.84588
+                  }
+                },
+                {
+                  "facility": "Clinica Oncologica, AOU Riuniti ancona",
+                  "city": "Ancona",
+                  "zip": "60126",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 43.60717,
+                    "lon": 13.5103
+                  }
+                },
+                {
+                  "facility": "Centro di Riferimento Oncologico",
+                  "city": "Aviano",
+                  "zip": "33081",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 46.07056,
+                    "lon": 12.59472
+                  }
+                },
+                {
+                  "facility": "Istituto Tumori Giovanni Paolo II IRCCS Ospedale Oncologico Bari",
+                  "city": "Bari",
+                  "zip": "70124",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 41.12066,
+                    "lon": 16.86982
+                  }
+                },
+                {
+                  "facility": "IRCCS Ospedale San Raffaele",
+                  "city": "Candiolo",
+                  "zip": "10060",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 44.95858,
+                    "lon": 7.59812
+                  }
+                },
+                {
+                  "facility": "IRCCS Ospedale Policlinico San Martino",
+                  "city": "Genova",
+                  "zip": "16132",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 45.21604,
+                    "lon": 11.87211
+                  }
+                },
+                {
+                  "facility": "Istituto Romagnolo per lo Studio dei Tumori \" DINO AMADORI\"",
+                  "city": "Meldola",
+                  "zip": "47014",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 44.12775,
+                    "lon": 12.0626
+                  }
+                },
+                {
+                  "facility": "Fondazione IRCCS Istituto Nazionale dei Tumori",
+                  "city": "Milan",
+                  "zip": "20133",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 42.78235,
+                    "lon": 12.59836
+                  }
+                },
+                {
+                  "facility": "Istituto Nazionale Tumori IRCCS Fondazione Pascale",
+                  "city": "Naples",
+                  "zip": "80131",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 40.85216,
+                    "lon": 14.26811
+                  }
+                },
+                {
+                  "facility": "Veneto Oncology Institute",
+                  "city": "Padova",
+                  "zip": "35128",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 44.38225,
+                    "lon": 11.14261
+                  }
+                },
+                {
+                  "facility": "Ospedale S. Maria della Misericordia",
+                  "city": "Perugia",
+                  "zip": "6156",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 43.1122,
+                    "lon": 12.38878
+                  }
+                },
+                {
+                  "facility": "IRCCS Istituti Fisioterapici Ospitalieri",
+                  "city": "Roma",
+                  "zip": "144",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 44.99364,
+                    "lon": 11.10642
+                  }
+                },
+                {
+                  "facility": "Idi-Irccs",
+                  "city": "Rome",
+                  "zip": "00167",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 41.89193,
+                    "lon": 12.51133
+                  }
+                },
+                {
+                  "facility": "Azienda Ospedaliera Universitaria Senese Policlinico Le Scotte",
+                  "city": "Siena",
+                  "zip": "53100",
+                  "country": "Italy",
+                  "geoPoint": {
+                    "lat": 43.31822,
+                    "lon": 11.33064
+                  }
+                },
+                {
+                  "facility": "The Netherlands Cancer Institute",
+                  "city": "Amsterdam",
+                  "zip": "1066",
+                  "country": "Netherlands",
+                  "geoPoint": {
+                    "lat": 52.37403,
+                    "lon": 4.88969
+                  }
+                },
+                {
+                  "facility": "AMC Amsterdam, locatie VUMC",
+                  "city": "Amsterdam",
+                  "zip": "1081",
+                  "country": "Netherlands",
+                  "geoPoint": {
+                    "lat": 52.37403,
+                    "lon": 4.88969
+                  }
+                },
+                {
+                  "facility": "LUMC",
+                  "city": "Leiden",
+                  "zip": "2300 RC",
+                  "country": "Netherlands",
+                  "geoPoint": {
+                    "lat": 52.15833,
+                    "lon": 4.49306
+                  }
+                },
+                {
+                  "facility": "UMC Maastricht",
+                  "city": "Maastricht",
+                  "zip": "6229HX",
+                  "country": "Netherlands",
+                  "geoPoint": {
+                    "lat": 50.84833,
+                    "lon": 5.68889
+                  }
+                },
+                {
+                  "facility": "Erasmus MC",
+                  "city": "Rotterdam",
+                  "zip": "1054 ZG",
+                  "country": "Netherlands",
+                  "geoPoint": {
+                    "lat": 51.9225,
+                    "lon": 4.47917
+                  }
+                },
+                {
+                  "facility": "University Medical Center Utrecht",
+                  "city": "Utrecht",
+                  "zip": "3584",
+                  "country": "Netherlands",
+                  "geoPoint": {
+                    "lat": 52.09083,
+                    "lon": 5.12222
+                  }
+                },
+                {
+                  "facility": "Maria Sklodowska-Curie National Research Institute of Oncology",
+                  "city": "Warsaw",
+                  "state": "Masovian Voivodeship",
+                  "zip": "02-781",
+                  "country": "Poland",
+                  "geoPoint": {
+                    "lat": 52.22977,
+                    "lon": 21.01178
+                  }
+                },
+                {
+                  "facility": "Szpital Kliniczny im. Heliodora Święcickiego UM w Poznaniu",
+                  "city": "Poznan",
+                  "zip": "60-780",
+                  "country": "Poland",
+                  "geoPoint": {
+                    "lat": 52.40692,
+                    "lon": 16.92993
+                  }
+                },
+                {
+                  "facility": "Cape Town Oncology Trials (Pty) Ltd.",
+                  "city": "Cape Town",
+                  "zip": "7570",
+                  "country": "South Africa",
+                  "geoPoint": {
+                    "lat": -33.92584,
+                    "lon": 18.42322
+                  }
+                },
+                {
+                  "facility": "Mary Potter Oncology Centre Groenkloof",
+                  "city": "Pretoria",
+                  "zip": "0181",
+                  "country": "South Africa",
+                  "geoPoint": {
+                    "lat": -25.74486,
+                    "lon": 28.18783
+                  }
+                },
+                {
+                  "facility": "Hospital Universitario Virgen Macarena",
+                  "city": "Seville",
+                  "state": "Andalusia",
+                  "zip": "41009",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 37.38283,
+                    "lon": -5.97317
+                  }
+                },
+                {
+                  "facility": "CH Universitario de A Coruña (CHUAC)",
+                  "city": "A Coruña",
+                  "zip": "15006",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 43.37135,
+                    "lon": -8.396
+                  }
+                },
+                {
+                  "facility": "Hospital Clinic i Provincial",
+                  "city": "Barcelona",
+                  "zip": "08036",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 41.38879,
+                    "lon": 2.15899
+                  }
+                },
+                {
+                  "facility": "Instituto Oncologico Dr. Rosell IOR - Hospital Universitari Quiron Dexeus",
+                  "city": "Barcelona",
+                  "zip": "8028",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 41.38879,
+                    "lon": 2.15899
+                  }
+                },
+                {
+                  "facility": "Hospital Universitari Germans Trias i Pujol HUGTP, ICO-Badalona",
+                  "city": "Barcelona",
+                  "zip": "8916",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 41.38879,
+                    "lon": 2.15899
+                  }
+                },
+                {
+                  "facility": "Hospital Vall d'hebron",
+                  "city": "Barcelona",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 41.38879,
+                    "lon": 2.15899
+                  }
+                },
+                {
+                  "facility": "Hospital General Universitario Gregorio MaraÃ±on",
+                  "city": "Madrid",
+                  "zip": "28007",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 40.4165,
+                    "lon": -3.70256
+                  }
+                },
+                {
+                  "facility": "Clinica Universidad de Navarra",
+                  "city": "Madrid",
+                  "zip": "28027",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 40.4165,
+                    "lon": -3.70256
+                  }
+                },
+                {
+                  "facility": "Hospital Universitario Ramon y Cajal",
+                  "city": "Madrid",
+                  "zip": "28034",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 40.4165,
+                    "lon": -3.70256
+                  }
+                },
+                {
+                  "facility": "Hospital Universitario HM Sanchinarro",
+                  "city": "Madrid",
+                  "zip": "28050",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 40.4165,
+                    "lon": -3.70256
+                  }
+                },
+                {
+                  "facility": "Hospital Regional Universitario de Malaga",
+                  "city": "Málaga",
+                  "zip": "29010",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 36.72016,
+                    "lon": -4.42034
+                  }
+                },
+                {
+                  "facility": "Hospital Universitario Central de Asturias (HUCA)",
+                  "city": "Oviedo",
+                  "zip": "33011",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 43.36029,
+                    "lon": -5.84476
+                  }
+                },
+                {
+                  "facility": "Clinica Universidad de Navarra",
+                  "city": "Pamplona",
+                  "zip": "31008",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 42.81687,
+                    "lon": -1.64323
+                  }
+                },
+                {
+                  "facility": "Hospital General Universitario de Valencia",
+                  "city": "Valencia",
+                  "zip": "46014",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 39.47391,
+                    "lon": -0.37966
+                  }
+                },
+                {
+                  "facility": "Hospital Universitari i Politecnic La Fe",
+                  "city": "Valencia",
+                  "zip": "46026",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 39.47391,
+                    "lon": -0.37966
+                  }
+                },
+                {
+                  "facility": "Miguel Servet University Hospital",
+                  "city": "Zaragoza",
+                  "zip": "50009",
+                  "country": "Spain",
+                  "geoPoint": {
+                    "lat": 41.65606,
+                    "lon": -0.87734
+                  }
+                },
+                {
+                  "facility": "Adana City Education and Research Hospital",
+                  "city": "Adana",
+                  "zip": "1060",
+                  "country": "Turkey (Türkiye)",
+                  "geoPoint": {
+                    "lat": 36.98615,
+                    "lon": 35.32531
+                  }
+                },
+                {
+                  "facility": "Gulhane School of Medicine",
+                  "city": "Ankara",
+                  "zip": "6010",
+                  "country": "Turkey (Türkiye)",
+                  "geoPoint": {
+                    "lat": 39.91987,
+                    "lon": 32.85427
+                  }
+                },
+                {
+                  "facility": "Memorial Ankara Hospital",
+                  "city": "Ankara",
+                  "zip": "6520",
+                  "country": "Turkey (Türkiye)",
+                  "geoPoint": {
+                    "lat": 39.91987,
+                    "lon": 32.85427
+                  }
+                },
+                {
+                  "facility": "Akdeniz University Medical Faculty",
+                  "city": "Antalya",
+                  "zip": "7059",
+                  "country": "Turkey (Türkiye)",
+                  "geoPoint": {
+                    "lat": 36.90812,
+                    "lon": 30.69556
+                  }
+                },
+                {
+                  "facility": "Ege university Faculty of Medicine, T. Aktas Oncology Hospital, Bornova",
+                  "city": "Bornova",
+                  "zip": "35100",
+                  "country": "Turkey (Türkiye)",
+                  "geoPoint": {
+                    "lat": 38.47921,
+                    "lon": 27.2399
+                  }
+                },
+                {
+                  "facility": "Istanbul University-Cerrahpasa, Cerrahpasa Medical Faculty",
+                  "city": "Istanbul",
+                  "zip": "34098",
+                  "country": "Turkey (Türkiye)",
+                  "geoPoint": {
+                    "lat": 41.01384,
+                    "lon": 28.94966
+                  }
+                },
+                {
+                  "facility": "Goztepe Prof. Dr. Suleyman Yalcin Sehir Hastanesi",
+                  "city": "Istanbul",
+                  "zip": "34722",
+                  "country": "Turkey (Türkiye)",
+                  "geoPoint": {
+                    "lat": 41.01384,
+                    "lon": 28.94966
+                  }
+                },
+                {
+                  "facility": "Guy's Hospital",
+                  "city": "London",
+                  "zip": "SE1 9RT",
+                  "country": "United Kingdom",
+                  "geoPoint": {
+                    "lat": 51.50853,
+                    "lon": -0.12574
+                  }
+                },
+                {
+                  "facility": "Christie Hospital NHS Trust",
+                  "city": "Manchester",
+                  "zip": "M20 4BX",
+                  "country": "United Kingdom",
+                  "geoPoint": {
+                    "lat": 53.48095,
+                    "lon": -2.23743
+                  }
+                },
+                {
+                  "facility": "Christie Hospital NHS Trust",
+                  "city": "Manchester",
+                  "zip": "M20 4XB",
+                  "country": "United Kingdom",
+                  "geoPoint": {
+                    "lat": 53.48095,
+                    "lon": -2.23743
+                  }
+                },
+                {
+                  "facility": "Oxford University Hospitals NHS Foundation Trust",
+                  "city": "Oxford",
+                  "zip": "OX3 7LE",
+                  "country": "United Kingdom",
+                  "geoPoint": {
+                    "lat": 51.75222,
+                    "lon": -1.25596
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "protocolSection": {
+            "identificationModule": {
+              "nctId": "NCT03428802",
+              "briefTitle": "Pembrolizumab in Treating Participants With Metastatic, Recurrent or Locally Advanced Cancer and Genomic Instability",
+              "officialTitle": "A Basket Trial of Pembrolizumab in Patients With Advanced Solid Tumors and Genomic Instability"
+            },
+            "statusModule": {
+              "overallStatus": "ACTIVE_NOT_RECRUITING",
+              "startDateStruct": {
+                "date": "2018-03-08"
+              }
+            },
+            "sponsorCollaboratorsModule": {
+              "responsibleParty": {
+                "investigatorFullName": "Eugenia Girda, MD"
+              },
+              "leadSponsor": {
+                "name": "Rutgers, The State University of New Jersey",
+                "class": "OTHER"
+              }
+            },
+            "conditionsModule": {
+              "conditions": [
+                "BRCA1 Gene Mutation",
+                "BRCA2 Gene Mutation",
+                "Locally Advanced Solid Neoplasm",
+                "Metastatic Malignant Solid Neoplasm",
+                "POLD1 Gene Mutation",
+                "POLE Gene Mutation",
+                "Recurrent Malignant Solid Neoplasm",
+                "Recurrent Ovarian Carcinoma",
+                "Stage III Breast Cancer AJCC v7",
+                "Stage III Ovarian Cancer AJCC v8",
+                "Stage IIIA Breast Cancer AJCC v7",
+                "Stage IIIA Ovarian Cancer AJCC v8",
+                "Stage IIIB Breast Cancer AJCC v7",
+                "Stage IIIB Ovarian Cancer AJCC v8",
+                "Stage IIIC Breast Cancer AJCC v7",
+                "Stage IIIC Ovarian Cancer AJCC v8",
+                "Stage IV Breast Cancer AJCC v6 and v7",
+                "Stage IV Ovarian Cancer AJCC v8",
+                "Stage IVA Ovarian Cancer AJCC v8",
+                "Stage IVB Ovarian Cancer AJCC v8"
+              ]
+            },
+            "designModule": {
+              "studyType": "INTERVENTIONAL",
+              "phases": [
+                "PHASE2"
+              ],
+              "enrollmentInfo": {
+                "count": 21
+              }
+            },
+            "armsInterventionsModule": {
+              "interventions": [
+                {
+                  "type": "OTHER",
+                  "name": "Laboratory Biomarker Analysis",
+                  "description": "Correlative studies",
+                  "armGroupLabels": [
+                    "Treatment (pembrolizumab)"
+                  ]
+                },
+                {
+                  "type": "BIOLOGICAL",
+                  "name": "Pembrolizumab",
+                  "description": "Given IV",
+                  "armGroupLabels": [
+                    "Treatment (pembrolizumab)"
+                  ],
+                  "otherNames": [
+                    "Keytruda",
+                    "Lambrolizumab",
+                    "MK-3475",
+                    "SCH 900475"
+                  ]
+                }
+              ]
+            },
+            "contactsLocationsModule": {
+              "locations": [
+                {
+                  "facility": "Rutgers Cancer Institute of New Jersey",
+                  "city": "New Brunswick",
+                  "state": "New Jersey",
+                  "zip": "08903",
+                  "country": "United States",
+                  "geoPoint": {
+                    "lat": 40.48622,
+                    "lon": -74.45182
+                  }
+                },
+                {
+                  "facility": "Laura & Isaac Perlmutter Cancer Center at NYU Langone Health",
+                  "city": "New York",
+                  "state": "New York",
+                  "zip": "10016",
+                  "country": "United States",
+                  "geoPoint": {
+                    "lat": 40.71427,
+                    "lon": -74.00597
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "protocolSection": {
+            "identificationModule": {
+              "nctId": "NCT04267146",
+              "briefTitle": "Nivolumab in Combination With Temozolomide and Radiotherapy in Children and Adolescents With Newly Diagnosed High-grade Glioma",
+              "officialTitle": "Phase I-II Study of Nivolumab in Combination With Temozolomide and Radiotherapy in Children and Adolescents With Newly Diagnosed High-grade Glioma"
+            },
+            "statusModule": {
+              "overallStatus": "COMPLETED",
+              "startDateStruct": {
+                "date": "2019-07-15"
+              }
+            },
+            "sponsorCollaboratorsModule": {
+              "responsibleParty": {},
+              "leadSponsor": {
+                "name": "Gustave Roussy, Cancer Campus, Grand Paris",
+                "class": "OTHER"
+              }
+            },
+            "conditionsModule": {
+              "conditions": [
+                "High Grade Glioma"
+              ]
+            },
+            "designModule": {
+              "studyType": "INTERVENTIONAL",
+              "phases": [
+                "PHASE1",
+                "PHASE2"
+              ],
+              "enrollmentInfo": {
+                "count": 41
+              }
+            },
+            "armsInterventionsModule": {
+              "interventions": [
+                {
+                  "type": "DRUG",
+                  "name": "Nivolumab",
+                  "description": "Solution for intravenous injection 10 mg/ml. Initial dose : 3 mg/kg Nivolumab will be given at 3 mg/kg/injection every two weeks from the first day of radiotherapy to the last day of chemotherapy.\n\nOne de-escalation dose : 1 mg/kg",
+                  "armGroupLabels": [
+                    "newly diagnosed high-grade glioma"
+                  ]
+                },
+                {
+                  "type": "DRUG",
+                  "name": "Temozolomide",
+                  "description": "Capsules: 5, 20, 100, 140, 180 and 250 mg orally. Temozolomide will be given at 75mg/m2/day from the day of start of radiotherapy to the last day of radiotherapy, then, after one month rest at 200mg/m2/day for five consecutive days for 12 cycles (28 days cycle).",
+                  "armGroupLabels": [
+                    "newly diagnosed high-grade glioma"
+                  ]
+                },
+                {
+                  "type": "RADIATION",
+                  "name": "Radiotherapy",
+                  "description": "Total dose of 54 Gray(Gy) units delivered in 30 daily fractions of 1.8 Gy over 6 weeks during the chemoradiation period.",
+                  "armGroupLabels": [
+                    "newly diagnosed high-grade glioma"
+                  ]
+                }
+              ]
+            },
+            "contactsLocationsModule": {
+              "locations": [
+                {
+                  "facility": "Gustave Roussy",
+                  "city": "Villejuif",
+                  "state": "Val De Marne",
+                  "zip": "94800",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 48.7939,
+                    "lon": 2.35992
+                  }
+                },
+                {
+                  "facility": "CHU Angers",
+                  "city": "Angers",
+                  "zip": "49100",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 47.47156,
+                    "lon": -0.55202
+                  }
+                },
+                {
+                  "facility": "Centre Oscar Lambret",
+                  "city": "Lille",
+                  "zip": "59000",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 50.63391,
+                    "lon": 3.05512
+                  }
+                },
+                {
+                  "facility": "Centre Léon Bérard",
+                  "city": "Lyon",
+                  "zip": "69008",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 45.74906,
+                    "lon": 4.84789
+                  }
+                },
+                {
+                  "facility": "Institut Curie",
+                  "city": "Paris",
+                  "zip": "75005",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 48.85341,
+                    "lon": 2.3488
+                  }
+                },
+                {
+                  "facility": "CHU Hautepierre",
+                  "city": "Strasbourg",
+                  "zip": "67200",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 48.58392,
+                    "lon": 7.74553
+                  }
+                },
+                {
+                  "facility": "Hôpital des enfants",
+                  "city": "Toulouse",
+                  "zip": "31300",
+                  "country": "France",
+                  "geoPoint": {
+                    "lat": 43.60426,
+                    "lon": 1.44367
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "protocolSection": {
+            "identificationModule": {
+              "nctId": "NCT03799445",
+              "briefTitle": "Ipilimumab, Nivolumab, and Radiation Therapy in Treating Patients With HPV Positive Advanced Oropharyngeal Squamous Cell Carcinoma",
+              "officialTitle": "Phase 2 Study (With Safety Lead in) of the Safety, Tolerability and Efficacy of Anti-CTLA4 (Ipilimumab) and Anti-PD-1 (Nivolumab) in Combination With Radiation Therapy to 50-66 Gy in Low-Intermediate Volume, Local-Regionally Advanced HPV-Positive Oropharyngeal Squamous Cell Carcinoma (OPSCC)"
+            },
+            "statusModule": {
+              "overallStatus": "TERMINATED",
+              "startDateStruct": {
+                "date": "2019-07-25"
+              }
+            },
+            "sponsorCollaboratorsModule": {
+              "responsibleParty": {},
+              "leadSponsor": {
+                "name": "M.D. Anderson Cancer Center",
+                "class": "OTHER"
+              }
+            },
+            "conditionsModule": {
+              "conditions": [
+                "Clinical Stage I HPV-Mediated (p16-Positive) Oropharyngeal Carcinoma AJCC v8",
+                "Clinical Stage II HPV-Mediated (p16-Positive) Oropharyngeal Carcinoma AJCC v8",
+                "Human Papillomavirus Positive Oropharyngeal Squamous Cell Carcinoma",
+                "Oropharyngeal Basaloid Carcinoma",
+                "Pathologic Stage I HPV-Mediated (p16-Positive) Oropharyngeal Carcinoma AJCC v8",
+                "Pathologic Stage II HPV-Mediated (p16-Positive) Oropharyngeal Carcinoma AJCC v8",
+                "Posterior Tongue Squamous Cell Carcinoma",
+                "Soft Palate Squamous Cell Carcinoma",
+                "Stage III Oropharyngeal Squamous Cell Carcinoma AJCC v7",
+                "Stage IVA Oropharyngeal Squamous Cell Carcinoma AJCC v7",
+                "Tonsillar Squamous Cell Carcinoma"
+              ]
+            },
+            "designModule": {
+              "studyType": "INTERVENTIONAL",
+              "phases": [
+                "PHASE2"
+              ],
+              "enrollmentInfo": {
+                "count": 37
+              }
+            },
+            "armsInterventionsModule": {
+              "interventions": [
+                {
+                  "type": "RADIATION",
+                  "name": "Intensity-Modulated Radiation Therapy",
+                  "description": "Undergo IMRT",
+                  "armGroupLabels": [
+                    "Treatment (nivolumab, ipilimumab, IMRT)"
+                  ],
+                  "otherNames": [
+                    "IMRT",
+                    "Intensity Modulated RT",
+                    "Intensity-Modulated Radiotherapy"
+                  ]
+                },
+                {
+                  "type": "BIOLOGICAL",
+                  "name": "Ipilimumab",
+                  "description": "Given IV",
+                  "armGroupLabels": [
+                    "Treatment (nivolumab, ipilimumab, IMRT)"
+                  ],
+                  "otherNames": [
+                    "Anti-Cytotoxic T-Lymphocyte-Associated Antigen-4 Monoclonal Antibody",
+                    "BMS-734016",
+                    "MDX-010",
+                    "MDX-CTLA4",
+                    "Yervoy"
+                  ]
+                },
+                {
+                  "type": "BIOLOGICAL",
+                  "name": "Nivolumab",
+                  "description": "Given IV",
+                  "armGroupLabels": [
+                    "Treatment (nivolumab, ipilimumab, IMRT)"
+                  ],
+                  "otherNames": [
+                    "BMS-936558",
+                    "MDX-1106",
+                    "NIVO",
+                    "ONO-4538",
+                    "Opdivo"
+                  ]
+                },
+                {
+                  "type": "OTHER",
+                  "name": "Quality-of-Life Assessment",
+                  "description": "Ancillary studies",
+                  "armGroupLabels": [
+                    "Treatment (nivolumab, ipilimumab, IMRT)"
+                  ],
+                  "otherNames": [
+                    "Quality of Life Assessment"
+                  ]
+                },
+                {
+                  "type": "OTHER",
+                  "name": "Questionnaire Administration",
+                  "description": "Ancillary studies",
+                  "armGroupLabels": [
+                    "Treatment (nivolumab, ipilimumab, IMRT)"
+                  ]
+                }
+              ]
+            },
+            "contactsLocationsModule": {
+              "locations": [
+                {
+                  "facility": "M D Anderson Cancer Center",
+                  "city": "Houston",
+                  "state": "Texas",
+                  "zip": "77030",
+                  "country": "United States",
+                  "geoPoint": {
+                    "lat": 29.76328,
+                    "lon": -95.36327
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

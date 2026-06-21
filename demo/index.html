@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClinicalTrials.gov Visualization Agent — Demo</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+  <style>
+    :root { --bg:#0f172a; --card:#1e293b; --accent:#38bdf8; --text:#e2e8f0; --muted:#94a3b8; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; background:var(--bg); color:var(--text); }
+    header { padding:20px 28px; border-bottom:1px solid #334155; }
+    h1 { font-size:18px; margin:0; }
+    .sub { color:var(--muted); font-size:13px; margin-top:4px; }
+    main { max-width:1000px; margin:0 auto; padding:24px; }
+    .row { display:flex; gap:10px; margin-bottom:16px; }
+    input[type=text]{ flex:1; padding:12px 14px; border-radius:8px; border:1px solid #334155; background:var(--card); color:var(--text); font-size:14px; }
+    button{ padding:12px 20px; border:0; border-radius:8px; background:var(--accent); color:#06283d; font-weight:600; cursor:pointer; font-size:14px; }
+    button:disabled{ opacity:.5; cursor:default; }
+    .chips{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; }
+    .chip{ font-size:12px; padding:6px 10px; background:var(--card); border:1px solid #334155; border-radius:999px; cursor:pointer; color:var(--muted); }
+    .chip:hover{ color:var(--text); border-color:var(--accent); }
+    .card{ background:var(--card); border:1px solid #334155; border-radius:12px; padding:20px; margin-bottom:18px; }
+    .title{ font-size:16px; font-weight:600; margin-bottom:4px; }
+    .meta{ font-size:12px; color:var(--muted); margin-bottom:14px; line-height:1.6; }
+    #network{ height:480px; background:#0b1220; border-radius:8px; }
+    pre{ background:#0b1220; padding:14px; border-radius:8px; overflow:auto; font-size:12px; max-height:340px; }
+    details summary{ cursor:pointer; color:var(--accent); font-size:13px; }
+    .err{ color:#fca5a5; }
+    .spin{ display:inline-block; width:12px; height:12px; border:2px solid #475569; border-top-color:var(--accent); border-radius:50%; animation:sp .7s linear infinite; vertical-align:middle; margin-right:8px; }
+    @keyframes sp{ to{ transform:rotate(360deg); } }
+    .interp{ background:linear-gradient(180deg,#172033,#141d2e); border:1px solid #2b3b52; border-radius:12px; padding:14px 18px; margin-bottom:18px; }
+    .interp .h{ font-size:13px; color:var(--accent); font-weight:600; margin-bottom:6px; }
+    .interp .kv{ font-size:13px; color:var(--text); margin:2px 0; }
+    .interp .kv b{ color:var(--muted); font-weight:600; }
+    .interp .note{ font-size:13px; color:#cbd5e1; margin-top:6px; font-style:italic; }
+    .interp .warn{ font-size:12px; color:#fcd34d; margin-top:6px; }
+    .refs-h{ font-size:14px; font-weight:600; margin:22px 0 12px; color:var(--text); cursor:pointer; }
+    .refs-h:hover{ color:var(--accent); }
+    details.refs[open] .refs-h{ margin-bottom:14px; }
+    .cf-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:14px 0; }
+    @media(max-width:720px){ .cf-grid{ grid-template-columns:1fr; } }
+    .cf-in{ padding:10px 12px; border-radius:8px; border:1px solid #334155; background:#0b1220; color:var(--text); font-size:13px; width:100%; }
+    .cf-in:focus{ outline:none; border-color:var(--accent); }
+    .cf-btn{ padding:10px 18px; border:0; border-radius:8px; background:var(--accent); color:#06283d; font-weight:600; cursor:pointer; font-size:14px; }
+    .cf-chips{ display:flex; flex-wrap:wrap; gap:8px; margin:6px 0 4px; }
+    .refgrid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    @media(max-width:720px){ .refgrid{ grid-template-columns:1fr; } }
+    .refcard{ background:#0b1220; border:1px solid #2b3b52; border-radius:14px; padding:18px 20px; }
+    .refcard .badge{ display:inline-block; font-size:12px; font-weight:600; color:#5eead4; background:rgba(45,212,191,.12); border:1px solid rgba(45,212,191,.25); padding:5px 11px; border-radius:8px; margin-bottom:12px; }
+    .refcard .rt{ font-size:15px; font-weight:700; color:#f1f5f9; line-height:1.4; margin-bottom:8px; }
+    .refcard .rot{ font-size:13px; color:#94a3b8; line-height:1.5; margin-bottom:12px; }
+    .refcard .rdiv{ border-top:1px solid #1e293b; margin:12px 0; }
+    .refcard .rrow{ font-size:13.5px; color:#cbd5e1; margin:6px 0; display:flex; align-items:center; gap:8px; }
+    .refcard .rrow .ic{ opacity:.7; }
+    .refcard a{ color:#60a5fa; text-decoration:none; }
+    .refcard a:hover{ text-decoration:underline; }
+    .refcard .meta-row{ color:#60a5fa; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ClinicalTrials.gov Query → Visualization Agent</h1>
+    <div class="sub">Type a natural-language question; the backend interprets it, queries ClinicalTrials.gov, and returns a structured visualization spec rendered below.</div>
+  </header>
+  <main>
+    <div class="row">
+      <input id="q" type="text" placeholder="e.g. How are melanoma trials distributed across phases?" />
+      <button id="go">Visualize</button>
+    </div>
+    <div class="chips" id="examples"></div>
+    <div id="status" class="meta"></div>
+    <div id="clarify"></div>
+    <div id="interp"></div>
+    <div id="output"></div>
+  </main>
+
+  <script>
+    const EXAMPLES = [
+      "How has the number of trials for Pembrolizumab changed per year since 2015?",
+      "How are melanoma trials distributed across phases?",
+      "Compare phases for trials involving Pembrolizumab vs Nivolumab.",
+      "Which countries have the most recruiting trials for diabetes?",
+      "Show a network of sponsors and drugs for melanoma trials.",
+      "What is the distribution of enrollment sizes for breast cancer trials?",
+    ];
+    const chipBox = document.getElementById("examples");
+    EXAMPLES.forEach((e) => {
+      const c = document.createElement("span");
+      c.className = "chip"; c.textContent = e;
+      c.onclick = () => { document.getElementById("q").value = e; run(); };
+      chipBox.appendChild(c);
+    });
+
+    const $ = (id) => document.getElementById(id);
+    let chart, es;
+
+    // Streams the run over Server-Sent Events: shows the agent's interpretation
+    // (plan + notes) and live fetch progress, then renders the final result.
+    function run(extra) {
+      const query = $("q").value.trim();
+      if (!query) return;
+      if (es) es.close();
+      $("go").disabled = true;
+      $("clarify").innerHTML = "";
+      $("interp").innerHTML = "";
+      $("output").innerHTML = "";
+      $("status").innerHTML = '<span class="spin"></span> Starting…';
+
+      let progress = "";
+      const setStatus = (msg) => { $("status").innerHTML = '<span class="spin"></span> ' + msg + progress; };
+
+      // Append any structured refinements (used by the clarification UI to narrow).
+      let url = "/query/stream?query=" + encodeURIComponent(query);
+      if (extra) for (const [k, v] of Object.entries(extra)) {
+        if (v) url += `&${k}=${encodeURIComponent(v)}`;
+      }
+      es = new EventSource(url);
+
+      es.addEventListener("status", (ev) => setStatus(JSON.parse(ev.data).message));
+
+      es.addEventListener("interpretation", (ev) => showInterpretation(JSON.parse(ev.data)));
+
+      es.addEventListener("fetch_progress", (ev) => {
+        const d = JSON.parse(ev.data);
+        progress = ` — ${d.fetched.toLocaleString()} / ${d.total.toLocaleString()} trials (page ${d.page})`;
+        setStatus("Fetching ALL matching trials from ClinicalTrials.gov…");
+      });
+
+      es.addEventListener("result", (ev) => render(JSON.parse(ev.data).response));
+
+      es.addEventListener("done", () => { $("status").innerHTML = ""; es.close(); $("go").disabled = false; });
+
+      es.addEventListener("error", (ev) => {
+        let msg = "stream error";
+        try { const d = JSON.parse(ev.data); msg = d.message || JSON.stringify(d); } catch (_) {}
+        $("status").innerHTML = '<span class="err">Error: ' + msg + '</span>';
+        es.close(); $("go").disabled = false;
+      });
+
+      es.onerror = () => { if (es.readyState === EventSource.CLOSED) $("go").disabled = false; };
+    }
+
+    // Persistent panel showing what the agent inferred (LLM/fallback) + notes.
+    function showInterpretation(d) {
+      const p = d.queryPlan || {};
+      const bits = [];
+      if (p.visualizationType) bits.push(p.visualizationType);
+      if (p.groupBy) bits.push("groupBy=" + p.groupBy);
+      if (p.sort) bits.push("sort=" + p.sort);
+      if (p.topN) bits.push("topN=" + p.topN);
+      const filters = p.filters && Object.keys(p.filters).length ? JSON.stringify(p.filters) : "(none)";
+      $("interp").innerHTML = `<div class="interp">
+        <div class="h">🧠 Agent interpretation — interpreter: ${d.interpreter} · confidence: ${d.confidence ?? "?"}</div>
+        <div class="kv"><b>plan:</b> ${esc(bits.join(" · "))}</div>
+        <div class="kv"><b>filters:</b> ${esc(filters)}</div>
+        ${d.notes ? `<div class="note">📝 ${esc(d.notes)}</div>` : ""}
+        ${d.warnings && d.warnings.length ? `<div class="warn">⚠ ${esc(d.warnings.join(" | "))}</div>` : ""}
+      </div>`;
+    }
+
+    function render(resp) {
+      const v = resp.visualization, m = resp.meta;
+      const out = $("output");
+
+      // No chart produced — distinguish "out of scope" from "needs narrowing".
+      if (!v) {
+        if (m.status === "needs_clarification") {
+          // Render the narrowing form ABOVE the agent-interpretation panel.
+          $("clarify").innerHTML = clarifyForm(m);
+          out.innerHTML = traceBlocks(resp.trace);
+        } else {
+          out.innerHTML = `<div class="card">
+            <div class="title">🚫 Can't visualize this question</div>
+            <div class="meta">status: <b>${m.status}</b> · interpreter: ${m.interpreter} · confidence: ${m.confidence}
+            ${m.notes ? "<br>📝 " + esc(m.notes) : ""}
+            <br><span style="color:var(--muted)">This can't be answered from ClinicalTrials.gov trial data. Try a question about clinical trials instead.</span></div>
+          </div>
+          ${traceBlocks(resp.trace)}`;
+        }
+        return;
+      }
+
+      const metaTxt = `type: ${v.type} · interpreter: ${m.interpreter} · confidence: ${m.confidence} · `
+        + `${m.analyzedTrials} of ${m.totalMatchingTrials} trials analyzed${m.truncated ? " (sampled)" : ""}`
+        + (m.units ? ` · units: ${m.units}` : "")
+        + (m.notes ? `\nnotes: ${m.notes}` : "")
+        + (m.warnings ? `\n⚠ ${m.warnings.join(" | ")}` : "");
+
+      out.innerHTML = `<div class="card">
+        <div class="title">${v.title}</div>
+        <div class="meta">${metaTxt.replace(/\n/g, "<br>")}</div>
+        ${v.type === "network_graph" ? '<div id="network"></div>' : '<canvas id="chart" height="140"></canvas>'}
+      </div>
+      ${renderReferences(resp.references)}
+      <details><summary>Raw structured response (JSON)</summary><pre>${esc(JSON.stringify(resp, null, 2))}</pre></details>
+      ${traceBlocks(resp.trace)}`;
+
+      if (v.type === "network_graph") renderNetwork(v);
+      else renderChart(v);
+    }
+
+    function renderChart(v) {
+      if (chart) chart.destroy();
+      const ctx = $("chart").getContext("2d");
+      const data = v.data || [];
+
+      if (v.type === "time_series") {
+        chart = new Chart(ctx, { type: "line", data: {
+          labels: data.map(d => d.year),
+          datasets: [{ label: "Trial Count", data: data.map(d => d.trial_count), borderColor: "#38bdf8", backgroundColor: "rgba(56,189,248,.2)", fill: true, tension: .25 }]
+        }, options: baseOpts() });
+      } else if (v.type === "scatter_plot") {
+        chart = new Chart(ctx, { type: "scatter", data: {
+          datasets: [{ label: v.title, data: data.map(d => ({ x: d.x, y: d.y })), backgroundColor: "#38bdf8" }]
+        }, options: baseOpts(v.encoding.x.label, v.encoding.y.label) });
+      } else if (v.type === "grouped_bar_chart") {
+        const groups = [...new Set(data.map(d => d.group))];
+        const seriesNames = [...new Set(data.map(d => d.series))];
+        const palette = ["#38bdf8", "#f472b6", "#a3e635", "#fbbf24"];
+        chart = new Chart(ctx, { type: "bar", data: {
+          labels: groups,
+          datasets: seriesNames.map((s, i) => ({
+            label: s,
+            backgroundColor: palette[i % palette.length],
+            data: groups.map(g => { const f = data.find(d => d.group === g && d.series === s); return f ? f.trial_count : 0; })
+          }))
+        }, options: baseOpts() });
+      } else { // bar_chart, histogram
+        const labelField = v.type === "histogram" ? "bucket" : "category";
+        chart = new Chart(ctx, { type: "bar", data: {
+          labels: data.map(d => d[labelField]),
+          datasets: [{ label: "Trial Count", data: data.map(d => d.trial_count), backgroundColor: "#38bdf8" }]
+        }, options: baseOpts() });
+      }
+    }
+
+    function baseOpts(xLabel, yLabel) {
+      return {
+        responsive: true,
+        plugins: { legend: { labels: { color: "#e2e8f0" } } },
+        scales: {
+          x: { ticks: { color: "#94a3b8" }, grid: { color: "#1e293b" }, title: { display: !!xLabel, text: xLabel, color: "#94a3b8" } },
+          y: { ticks: { color: "#94a3b8" }, grid: { color: "#1e293b" }, title: { display: !!yLabel, text: yLabel, color: "#94a3b8" } }
+        }
+      };
+    }
+
+    function renderNetwork(v) {
+      const groupColors = { sponsor: "#38bdf8", drug: "#f472b6", condition: "#a3e635" };
+      const nodes = (v.nodes || []).map(n => ({
+        id: n.id, label: n.label, group: n.group,
+        value: n.weight, color: groupColors[n.group] || "#94a3b8",
+        font: { color: "#e2e8f0" }
+      }));
+      const edges = (v.edges || []).map(e => ({ from: e.source, to: e.target, value: e.weight, color: { color: "#475569" } }));
+      new vis.Network($("network"), { nodes, edges }, {
+        nodes: { shape: "dot", scaling: { min: 6, max: 40 } },
+        edges: { smooth: false },
+        physics: { stabilization: true, barnesHut: { gravitationalConstant: -8000 } }
+      });
+    }
+
+    // Source reference cards — every trial cited by the visualization, rendered
+    // like a ClinicalTrials.gov record (badge, titles, sponsor, NCT link, PI).
+    function renderReferences(refs) {
+      if (!refs || !refs.length) return "";
+      const fmtDate = (d) => d ? d.replace(/-/g, ". ") : "";
+      const cards = refs.map((r) => `
+        <div class="refcard">
+          <div class="badge">ClinicalTrials.gov</div>
+          <div class="rt">${esc(r.title || r.nct_id)}</div>
+          ${r.officialTitle ? `<div class="rot">Official Title: ${esc(r.officialTitle)}</div>` : ""}
+          <div class="rdiv"></div>
+          ${r.sponsor ? `<div class="rrow"><span class="ic">📄</span>${esc(r.sponsor)}</div>` : ""}
+          <div class="rrow"><span class="ic">🔬</span><a href="${r.url}" target="_blank">Clinical Trials : ${esc(r.nct_id)} ↗</a></div>
+          ${(r.startDate || r.investigator) ? `<div class="rrow meta-row"><span class="ic">📅</span>${esc(fmtDate(r.startDate))}${r.investigator ? ` &nbsp;•&nbsp; <span class="ic">👤</span> ${esc(r.investigator)}` : ""}</div>` : ""}
+        </div>`).join("");
+      return `<details class="refs"><summary class="refs-h">📚 References — ${refs.length} cited trial${refs.length > 1 ? "s" : ""}</summary>
+        <div class="refgrid">${cards}</div></details>`;
+    }
+
+    // Escape HTML so JSON content renders literally inside <pre>.
+    function esc(s) {
+      return String(s).replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+    }
+
+    // Two verification blocks below the raw response:
+    //  ① the structured plan the agent inferred (LLM/fallback)
+    //  ② the ClinicalTrials.gov API request URL(s) + a raw response sample
+    function traceBlocks(trace) {
+      if (!trace) return "";
+      const plan = { interpreter: trace.interpreter, queryPlan: trace.queryPlan };
+      const api = {
+        requestUrls: trace.apiRequests,
+        totalCount: trace.apiTotalCount,
+        rawResponseSample: trace.apiResponseSample,
+      };
+      const links = (trace.apiRequests || [])
+        .map((u) => `<a href="${u}" target="_blank" style="color:var(--accent);font-size:12px;word-break:break-all">${esc(u)}</a>`)
+        .join("<br>");
+      return `
+      <details><summary>① LLM-inferred structured plan (QueryPlan)</summary>
+        <pre>${esc(JSON.stringify(plan, null, 2))}</pre></details>
+      <details><summary>② ClinicalTrials.gov API request &amp; response sample</summary>
+        <div style="margin:8px 0 4px;color:var(--muted);font-size:13px">Request URLs (click to see the real API response):</div>
+        ${links}
+        <pre>${esc(JSON.stringify(api, null, 2))}</pre></details>`;
+    }
+
+    // Interactive clarification: when the agent needs the query narrowed, offer
+    // structured fields + quick chips that re-run the SAME question with filters.
+    function clarifyForm(m) {
+      const chips = ["melanoma", "breast cancer", "diabetes", "lung cancer", "COVID-19"]
+        .map((c) => `<span class="chip" onclick="document.getElementById('cf-condition').value='${c}'">${c}</span>`)
+        .join("");
+      return `<div class="card">
+        <div class="title">🤔 Let's narrow this down</div>
+        <div class="meta">${m.notes ? "📝 " + esc(m.notes) : "The question is too broad — it would scan the entire registry. Add at least one filter below."}</div>
+        <div class="cf-chips">${chips}</div>
+        <div class="cf-grid">
+          <input id="cf-condition" class="cf-in" placeholder="Condition (e.g. melanoma)" />
+          <input id="cf-drug" class="cf-in" placeholder="Drug (e.g. Pembrolizumab)" />
+          <input id="cf-country" class="cf-in" placeholder="Country (e.g. Korea)" />
+          <input id="cf-sponsor" class="cf-in" placeholder="Sponsor (e.g. Novartis)" />
+          <input id="cf-year" class="cf-in" type="number" placeholder="Start year ≥ (e.g. 2015)" />
+        </div>
+        <button class="cf-btn" onclick="submitClarify()">Search with these filters →</button>
+      </div>`;
+    }
+
+    function submitClarify() {
+      const extra = {};
+      const g = (id) => $(id).value.trim();
+      if (g("cf-condition")) extra.condition = g("cf-condition");
+      if (g("cf-drug")) extra.drug_name = g("cf-drug");
+      if (g("cf-country")) extra.country = g("cf-country");
+      if (g("cf-sponsor")) extra.sponsor = g("cf-sponsor");
+      if (g("cf-year")) extra.start_year = g("cf-year");
+      if (!Object.keys(extra).length) {
+        $("status").innerHTML = '<span class="err">Please enter at least one filter.</span>';
+        return;
+      }
+      run(extra); // re-run the original question, now with narrowing filters
+    }
+
+    $("go").onclick = () => run();
+    $("q").addEventListener("keydown", (e) => { if (e.key === "Enter") run(); });
+  </script>
+</body>
+</html>
