@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ClinicalTrials.gov Visualization Agent — Tech Deck</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" id="theme" />
+<style>
+  :root{
+    --bg:#0b1220; --card:#1e293b; --line:#334155; --text:#e2e8f0;
+    --muted:#94a3b8; --accent:#38bdf8; --pink:#f472b6; --green:#a3e635; --amber:#fbbf24;
+  }
+  .reveal { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; color:var(--text); font-size:30px; }
+  .reveal .slides { text-align:left; }
+  .reveal section { background:var(--bg); }
+  .reveal h1 { font-size:1.7em; color:#fff; text-shadow:none; }
+  .reveal h2 { font-size:1.15em; color:#fff; text-transform:none; text-shadow:none; margin-bottom:.4em; }
+  .reveal h3 { color:var(--accent); font-size:.8em; text-transform:none; margin:.3em 0; }
+  .reveal p, .reveal li { color:var(--text); line-height:1.45; }
+  .reveal .muted { color:var(--muted); }
+  .reveal .accent{color:var(--accent)} .reveal .pink{color:var(--pink)} .reveal .green{color:var(--green)} .reveal .amber{color:var(--amber)}
+  .reveal strong { color:#fff; }
+  .reveal code { background:#0b1220; color:#cbd5e1; padding:.05em .3em; border-radius:4px; font-size:.85em; }
+  .reveal pre { width:100%; box-shadow:none; font-size:.5em; }
+  .reveal pre code { background:#0b1220; border:1px solid var(--line); border-radius:10px; padding:14px; max-height:none; }
+  .reveal .tag { display:inline-block; font-size:.5em; padding:3px 12px; border-radius:999px; border:1px solid var(--line); color:var(--muted); margin:3px; }
+  .reveal table { font-size:.62em; }
+  .reveal table th { color:var(--muted); border-bottom:1px solid var(--line); }
+  .reveal table td { border-bottom:1px solid #1e293b; }
+  .reveal .cols { display:flex; gap:24px; }
+  .reveal .cols > div { flex:1; }
+  .reveal .box { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 18px; }
+  .reveal .box.llm { border-left:4px solid var(--pink); }
+  .reveal .box.det { border-left:4px solid var(--accent); }
+  .reveal .callout { background:linear-gradient(180deg,#172033,#141d2e); border:1px solid var(--accent); border-radius:12px; padding:16px 20px; }
+  .reveal .small { font-size:.7em; }
+  .reveal .pipe div { font-size:.62em; margin:5px 0; }
+  .reveal ul { margin-left:.4em; }
+  .reveal .footer { position:fixed; bottom:10px; right:16px; font-size:12px; color:#475569; }
+  .reveal section .lead { font-size:.8em; color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+<!-- 1 TITLE -->
+<section data-auto-animate>
+  <h1>ClinicalTrials.gov<br/>Query → Visualization Agent</h1>
+  <p class="lead">An AI backend that turns a natural-language question into a
+  <strong>structured visualization spec</strong> backed by live ClinicalTrials.gov data.</p>
+  <div>
+    <span class="tag">TypeScript + Express</span>
+    <span class="tag">OpenAI structured output</span>
+    <span class="tag">CT.gov API v2</span>
+    <span class="tag">SSE</span>
+    <span class="tag">Deep citations</span>
+  </div>
+  <p class="small muted" style="margin-top:24px">Technical design deck</p>
+</section>
+
+<!-- 2 PROBLEM -->
+<section>
+  <h2>The problem</h2>
+  <ul>
+    <li>User asks in <strong>natural language</strong>: "How are melanoma trials distributed across phases?"</li>
+    <li>System must: interpret → fetch real data → pick a chart → emit a <strong>render-ready spec</strong></li>
+    <li>Output must be <strong>structured &amp; trustworthy</strong> — a frontend renders it without guessing.</li>
+  </ul>
+  <div class="callout" style="margin-top:18px">
+    Hard constraint in a clinical domain: <strong>numbers must be exact and traceable</strong>.
+    An LLM that "makes up" trial counts is unacceptable.
+  </div>
+</section>
+
+<!-- 3 CORE PRINCIPLE -->
+<section data-auto-animate>
+  <h2>Core design decision</h2>
+  <div class="callout">
+    <h3 style="margin-top:0">The LLM interprets. The code computes.</h3>
+    <p>The model emits <strong>only a <code>QueryPlan</code></strong> (which filters, grouping, chart type).
+    <strong>Every number comes from real CT.gov records</strong> — computed deterministically.</p>
+  </div>
+  <p class="small muted" style="margin-top:16px">→ The model literally <em>cannot</em> fabricate counts, NCT ids, or results. This single rule shapes the whole architecture.</p>
+</section>
+
+<!-- 4 ARCHITECTURE -->
+<section>
+  <h2>Pipeline</h2>
+  <div class="pipe box">
+    <div><span class="pink">①  interpret</span> &nbsp;LLM (JSON-schema structured output) → <code>QueryPlan</code> &nbsp;<span class="muted">(fallback: keyword parser)</span></div>
+    <div><span class="accent">②  finalizePlan</span> &nbsp;Zod validate · caller-override · per-viz constraints · <strong>status gate</strong></div>
+    <div><span class="accent">③  buildQueryParams</span> &nbsp;filters → CT.gov v2 (query.* + Essie filter.advanced)</div>
+    <div><span class="accent">④  fetchStudies</span> &nbsp;paginate <strong>ALL</strong> matches · retry/backoff · totalCount</div>
+    <div><span class="accent">⑤  normalize</span> &nbsp;raw record → flat <code>NormalizedStudy</code></div>
+    <div><span class="accent">⑥  aggregate</span> &nbsp;count / time-series / histogram / scatter / network &nbsp;+ <strong>citations</strong></div>
+    <div><span class="accent">⑦  assemble</span> &nbsp;<code>VisualizationSpec</code> + meta + <code>references[]</code> + <code>trace</code></div>
+  </div>
+  <p class="small"><span class="pink">■</span> LLM step (one only) &nbsp;&nbsp; <span class="accent">■</span> deterministic code</p>
+</section>
+
+<!-- 5 QUERYPLAN -->
+<section>
+  <h2>The <code>QueryPlan</code> contract</h2>
+  <div class="cols">
+    <div>
+      <p class="small">LLM output is constrained to a closed schema (enums), then <strong>re-validated with Zod</strong>. It describes <em>how</em> to query — never the data.</p>
+      <ul class="small">
+        <li>controlled vocabularies → no invented fields</li>
+        <li><code>status</code>, <code>visualizationType</code>, <code>filters</code>, <code>groupBy</code>, <code>sort/topN</code>, <code>comparison</code>, <code>network</code></li>
+      </ul>
+    </div>
+    <div>
+<pre><code>{
+  "status": "ok",
+  "visualizationType": "bar_chart",
+  "filters": { "condition": "melanoma" },
+  "groupBy": "phase",
+  "confidence": 0.9,
+  "notes": "..."
+}</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- 6 ANTI-HALLUCINATION -->
+<section>
+  <h2>Anti-hallucination &amp; safety guards</h2>
+  <div class="cols">
+    <div class="box small">
+      <p>① <strong>LLM can't produce data</strong> — only a plan</p>
+      <p>② <strong>Structured output + Zod</strong> re-validation</p>
+      <p>③ <strong>Constraint layer</strong> — repairs/downgrades bad plans</p>
+    </div>
+    <div class="box small">
+      <p>④ <strong>Status gate</strong> — refuses unanswerable questions</p>
+      <p>⑤ <strong>Exact counts</strong> — full fetch, honest limits</p>
+      <p>⑥ <strong>Full traceability</strong> — apiRequests + citations</p>
+    </div>
+  </div>
+  <p class="small muted" style="margin-top:14px">Validation happens at the tool-call layer (JSON schema) <em>and</em> in app code (Zod) — defense in depth.</p>
+</section>
+
+<!-- 7 STATUS GATE -->
+<section>
+  <h2>"Is a chart even possible?" — the status gate</h2>
+  <table>
+    <tr><th>status</th><th>when</th><th>response</th></tr>
+    <tr><td class="green">ok</td><td>answerable</td><td>visualization populated</td></tr>
+    <tr><td class="amber">needs_clarification</td><td>too vague / <strong>zero filters</strong></td><td>null + ask for specifics</td></tr>
+    <tr><td class="pink">unsupported</td><td>out of scope (patient counts, prices)</td><td>null + explain why</td></tr>
+  </table>
+  <p class="small muted" style="margin-top:14px">A deterministic guard downgrades a <strong>zero-filter "ok" plan</strong> → <code>needs_clarification</code>: prevents both a meaningless answer and a 600k-record runaway fetch.</p>
+</section>
+
+<!-- 8 VIZ COVERAGE -->
+<section>
+  <h2>Coverage: one approach, many query types</h2>
+  <table>
+    <tr><th>Query type</th><th>Visualization</th></tr>
+    <tr><td>Time trend ("per year")</td><td><code>time_series</code></td></tr>
+    <tr><td>Distribution (phase / status)</td><td><code>bar_chart</code></td></tr>
+    <tr><td>Numeric distribution (enrollment)</td><td><code>histogram</code></td></tr>
+    <tr><td>Comparison ("A vs B")</td><td><code>grouped_bar_chart</code> <span class="muted">(query per entity)</span></td></tr>
+    <tr><td>Ranking ("top 10 / fewest")</td><td><code>bar_chart</code> + sort/topN</td></tr>
+    <tr><td>Geographic ("which countries")</td><td><code>bar_chart</code> by country</td></tr>
+    <tr><td>Relationship</td><td><code>network_graph</code> <span class="muted">(bipartite / co-occurrence)</span></td></tr>
+    <tr><td>Correlation</td><td><code>scatter_plot</code></td></tr>
+  </table>
+  <p class="small muted">plan → filter → aggregate. Same coherent path for every type — no one-off hacks.</p>
+</section>
+
+<!-- 9 DATA LAYER -->
+<section>
+  <h2>Data layer: exact &amp; traceable</h2>
+  <div class="cols">
+    <div>
+      <h3>Full fetch by default</h3>
+      <ul class="small">
+        <li>paginate ALL matches → <strong>exact counts</strong> (<code>truncated=false</code>)</li>
+        <li>retry/backoff, 30s timeout, <code>totalCount</code></li>
+        <li>optional <code>MAX_STUDIES</code> cap (then honestly flagged)</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Deep citations + references</h3>
+      <ul class="small">
+        <li>every datum → <code>{nct_id, excerpt, url}</code></li>
+        <li><code>references[]</code> source cards (title, sponsor, PI, link)</li>
+        <li><code>trace</code>: QueryPlan + raw API sample</li>
+      </ul>
+    </div>
+  </div>
+  <p class="small muted">Every bar/edge can be traced back to the exact trial records that produced it.</p>
+</section>
+
+<!-- 10 PRIORITY MATRIX -->
+<section>
+  <h2>Resolving multi-signal queries</h2>
+  <p class="small">"Compare Drug A vs B <strong>over time</strong>" — which signal wins?</p>
+  <div class="callout small">
+    Not "one wins" — they <strong>compose</strong>. <code>time_series</code> (continuous axis) + comparison as <strong>series</strong> → a line per drug.
+  </div>
+  <p class="small" style="margin-top:12px"><strong>Precedence:</strong> network &gt; time (composes with compare) &gt; compare &gt; distribution. Ranking is a <em>modifier</em> on bar_chart, not a type.</p>
+  <p class="small muted">Network wins first (different data shape). Time absorbs comparison as series because its axis is continuous.</p>
+</section>
+
+<!-- 11 SSE -->
+<section>
+  <h2>Streaming UX (SSE)</h2>
+  <div class="cols">
+    <div>
+      <p class="small"><code>GET /query/stream</code> emits events so the client shows reasoning + progress before the result:</p>
+      <pre><code>status → interpretation
+       → fetch_progress (live)
+       → result → done</code></pre>
+    </div>
+    <div class="small">
+      <p>Demo renders:</p>
+      <ul>
+        <li>🧠 agent interpretation (plan + notes)</li>
+        <li>live "N / total trials (page k)"</li>
+        <li>chart + reference cards</li>
+        <li><code>needs_clarification</code> → inline "narrow your search" form</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 12 OBSERVABILITY -->
+<section>
+  <h2>Observability &amp; evaluation</h2>
+  <div class="cols">
+    <div class="box small">
+      <h3>Langfuse</h3>
+      <p>LLM trace per request — prompt, <strong>tokens, cost, latency</strong> auto-captured.</p>
+      <p>Deterministic quality scores (fallback rate, empty result, confidence) + sampled LLM-as-judge.</p>
+    </div>
+    <div class="box small">
+      <h3>OpenTelemetry → Jaeger</h3>
+      <p>Span tree per request: interpret → fetch (per page) → aggregate.</p>
+      <p>Shows <strong>where latency goes</strong> + external HTTP calls.</p>
+    </div>
+  </div>
+  <p class="small muted">Both optional (no-op without keys). Langfuse = LLM quality/cost · OTel = system performance.</p>
+</section>
+
+<!-- 13 QUALITY -->
+<section>
+  <h2>Engineering quality</h2>
+  <ul>
+    <li><strong>Unit tests</strong> — Vitest, 42 cases on the deterministic core (aggregators, planner guards, queryBuilder, normalize, schema)</li>
+    <li><strong>Type safety</strong> — strict TS, single source of truth in <code>types.ts</code></li>
+    <li><strong>OpenAPI 3.1</strong> spec — verified against live responses</li>
+    <li><strong>Docker</strong> — multi-stage build</li>
+    <li><strong>Prompt eval</strong> — promptfoo regression suite</li>
+  </ul>
+</section>
+
+<!-- 14 TRADEOFFS -->
+<section>
+  <h2>Tradeoffs &amp; what's next</h2>
+  <ul class="small">
+    <li><strong>Full fetch is slow for huge queries</strong> → parallelize pagination, or per-bucket <code>countTotal</code> for counts + sample records for citations</li>
+    <li><strong>Entity normalization</strong> — "Merck" vs "MSD" are distinct nodes → alias resolution</li>
+    <li><strong>No cache</strong> — short-TTL cache keyed by query params</li>
+    <li><strong>scatter rarely auto-selected</strong> → stronger prompt cues</li>
+  </ul>
+  <p class="small muted">Designed deliberately: plan/data separation, the QueryPlan contract + constraint layer, citation model, CT.gov query mapping (verified live).</p>
+</section>
+
+<!-- 15 CLOSING -->
+<section data-auto-animate>
+  <h1>Thank you</h1>
+  <div class="box small">
+    <p><strong>Repo</strong> &nbsp;github.com/JunJuneee/ct-viz-agent</p>
+    <p><strong>Run</strong> &nbsp;<code>npm install &amp;&amp; npm start</code> → <code>/demo</code></p>
+    <p><strong>Docs</strong> &nbsp;README · DESIGN_DECISIONS · openapi.yaml · architecture.html</p>
+  </div>
+  <p class="lead" style="margin-top:18px">The LLM interprets. The code computes. Every number is traceable.</p>
+</section>
+
+</div></div>
+<div class="footer">ct-viz-agent</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: "c/t",
+    transition: "slide",
+    width: 1280, height: 720, margin: 0.06,
+    plugins: [ RevealHighlight ],
+  });
+</script>
+</body>
+</html>

@@ -67,6 +67,20 @@ This module passes the parameters produced by `queryBuilder.ts` straight to the 
 |---|---|
 | `MAX_STUDIES` | Cap on records fetched per request. **`0`=unlimited (default)** → full fetch, exact counts. A positive value stops at that count (sample beyond it, `truncated=true`). |
 
+## Rationale — why these choices
+
+- **Full fetch by default (exact counts).** In a clinical context, a "sample that looks
+  like the whole population" is dangerous, so we paginate everything and report exact
+  numbers. The tradeoff is latency on huge queries — bounded by the optional `MAX_STUDIES`
+  cap, and broad/filterless queries are stopped earlier by the agent's `needs_clarification` guard.
+- **A field whitelist (`REQUESTED_FIELDS`), not the full record.** A trial record is huge;
+  requesting only the ~12 fields we use cuts payload/latency and makes the normalizer's
+  assumptions explicit.
+- **Retry/backoff + timeout.** The live API has transient 429/5xx and slow responses;
+  retrying transient failures (and failing fast on 4xx → `502`) keeps the service robust.
+
+> Full reasoning + tradeoffs for every decision: [`../../DESIGN_DECISIONS.md`](../../DESIGN_DECISIONS.md).
+
 ## Related modules
 
 - Input: the `queryBuilder` output from [`../agent`](../agent/README.md)

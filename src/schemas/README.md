@@ -44,6 +44,18 @@ of defense, blocking invalid input before it enters the pipeline.
 - Single source of truth for types — `RequestInput = z.infer<typeof RequestSchema>` guarantees runtime
   validation and the compile-time type in one place.
 
+## Rationale — why these choices
+
+- **`.strict()` rejects unknown fields.** Default Zod silently ignores extras, so a typo
+  like `drugName` would be dropped and silently mis-answered; strict mode turns that into a
+  clear `400`, making the API contract explicit.
+- **Caller fields override LLM inference.** Explicit intent is more trustworthy than a guess;
+  this is the single safe direction and lets a frontend pin filters deterministically.
+- **One schema as the source of truth (`z.infer`).** Runtime validation and the compile-time
+  type come from the same definition, so they can never drift apart.
+
+> Full reasoning + tradeoffs for every decision: [`../../DESIGN_DECISIONS.md`](../../DESIGN_DECISIONS.md).
+
 ## Related modules
 
 - Consumers: `../server.ts` (validation), [`../agent`](../agent/README.md) (`interpret`/`planner` use the fields)

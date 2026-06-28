@@ -59,7 +59,8 @@ Requirements: Node 18.19+ (uses the built-in global `fetch`; on the 20.x line us
 > reasoning/tradeoffs behind each choice (e.g. why OpenAI Agents SDK was not used)
 > are collected in [`DESIGN_DECISIONS.md`](DESIGN_DECISIONS.md). Per-module details
 > live in each folder's `README.md` (`src/`, `src/agent/`, etc.); the architecture
-> visual is in [`docs/architecture.html`](docs/architecture.html).
+> visual is in [`docs/architecture.html`](docs/architecture.html), and a presentation
+> deck (reveal.js) is in [`docs/slides.html`](docs/slides.html).
 
 ---
 

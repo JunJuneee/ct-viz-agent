@@ -66,6 +66,20 @@ Each aggregator returns `CountResult { data, skipped, truncatedCategories }`:
 - **A new grouping dimension**: add it to `GROUP_BY_DIMENSIONS` in `types.ts` and to
   `categoryKeys`/`categoryExcerpt`/`dimensionLabel` in `dimensions.ts`, and `countByDimension` handles it automatically.
 
+## Rationale — why these choices
+
+- **Aggregate from real records (not LLM-generated, not count-only queries).** Computing
+  counts in code keeps numbers exact and lets the same single pass attach **deep citations
+  and reference cards** — the bonus traceability requirement needs the actual records.
+- **Top-N category cap is display-only.** High-cardinality dimensions (sponsor, country)
+  can have thousands of categories; we count *all* of them exactly, then show the top N for
+  readability and report how many were omitted — counts are never distorted.
+- **Multi-valued dimensions counted per appearance, and said so.** A trial can span several
+  phases/countries; we count it in each and label `meta.units` accordingly rather than
+  silently picking one.
+
+> Full reasoning + tradeoffs for every decision: [`../../DESIGN_DECISIONS.md`](../../DESIGN_DECISIONS.md).
+
 ## Related modules
 
 - Input: `NormalizedStudy[]` from [`../clinicaltrials`](../clinicaltrials/README.md)

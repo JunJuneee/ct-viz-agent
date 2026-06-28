@@ -50,6 +50,23 @@ CtgovQueryParams  → passed to the clinicaltrials module
 - **Add a new filter**: reflect it in `PlanFilters` in `types.ts`, the `interpretation.ts` schema,
   the `queryBuilder.ts` mapping, and the `planner.ts` merge logic.
 
+## Rationale — why these choices
+
+- **One LLM call that only plans** (not an autonomous tool-calling loop, not two calls).
+  An autonomous loop could let the model drive retrieval and invent numbers; a single
+  "plan-only" call keeps the LLM from ever touching data, costs one call, and avoids
+  inconsistency between separate "extract" and "choose-chart" calls.
+- **A deterministic fallback parser.** Lets a reviewer run the whole pipeline with zero
+  config, keeps the service alive during an LLM outage (graceful degradation), and — since
+  the data path is identical with or without the LLM — makes the system easy to test.
+- **The `status` gate + zero-filter guard.** The assignment asks us to decide *if* a chart
+  is needed. Forcing a chart onto "what's the weather?" or "show me trials" would mislead,
+  and a filterless query would scan the whole registry (~600k) — so we refuse with guidance.
+- **Caller fields override inference.** Explicit intent beats a guess and lets a frontend
+  pin a filter deterministically; we don't auto-correct a wrong value (another unverifiable guess).
+
+> Full reasoning + tradeoffs for every decision: [`../../DESIGN_DECISIONS.md`](../../DESIGN_DECISIONS.md).
+
 ## Related modules
 
 - Next step: [`../clinicaltrials`](../clinicaltrials/README.md) (actual data retrieval)
